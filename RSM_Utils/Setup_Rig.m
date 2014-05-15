@@ -18,7 +18,7 @@
 
 function[ exp_session ] = Setup_Rig
 
-home_dir_base = 'PATH-2-RSM-DIR';
+home_dir_base = '/RSM';
 
 % Setup for experimental session constructor
 

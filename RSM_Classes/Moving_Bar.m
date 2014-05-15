@@ -51,6 +51,9 @@ classdef	Moving_Bar < handle
         wait_trigger
         wait_key
         repeat_num
+        
+        direction
+        interval
 	
 	end			% properties block
 	
@@ -60,85 +63,26 @@ classdef	Moving_Bar < handle
 		
         % Constructor method
         function[obj] = Moving_Bar( stimuli )
+            global display
             
-            
-            if (isfield(stimuli,'x_start'))
-                if (isfield(stimuli,'x_end'))
-                
-                    % flip around if needed for proper ordering
-                    if (stimuli.x_start > stimuli.x_end)
-                        temp = stimuli.x_start;
-                        stimuli.x_end = temp;
-                        stimuli.x_start = stimuli.x_end;
-                        clear temp
-                    end
-            
-                    obj.x_start = stimuli.x_start;
-                    obj.x_end = stimuli.x_end;
- 
-                
-                    obj.bar_width = stimuli.x_end - stimuli.x_start;   
-                    
-                else
-                    fprintf('\t RSM ERROR: x-end not recognized. Please define x_end value and try again. \n');
-                    return
-                end  
+            if (isfield(stimuli,'bar_width'))
+                obj.bar_width = stimuli.bar_width;
             else
-                fprintf('\t RSM ERROR: x-start not recognized. Please define x_start value and try again. \n');
+                fprintf('\t RSM ERROR: bar_width not recognized. Please define bar_width value and try again. \n');
                 return
             end  
-        
-        
-        
-            if (isfield(stimuli,'y_start'))
-                if (isfield(stimuli,'y_end'))
-                
-                    % flip around if needed for proper ordering
-                    if (stimuli.y_start > stimuli.y_end)
-                        temp = stimuli.y_start;
-                        stimuli.y_end = temp;
-                        stimuli.y_start = stimuli.y_end;
-                        clear temp
-                    end
             
-                    obj.y_start = stimuli.y_start;
-                    obj.y_end = stimuli.y_end;
-                
-                    obj.bar_height = stimuli.y_end - stimuli.y_start;
             
-                else
-                    fprintf('\t RSM ERROR: y-end not recognized. Please define y_end value and try again. \n');
-                    return
-                end  
-            else
-                fprintf('\t RSM ERROR: y-start recognized. Please define y_start value and try again. \n');
-                return
-            end  
+            if (isfield(stimuli,'delta'))
 
-        
-            if (isfield(stimuli,'x_delta'))
-                if (isfield(stimuli,'y_delta'))
-
-                    obj.x_delta = stimuli.x_delta;
-                    obj.y_delta = stimuli.y_delta;
+                    obj.x_delta = stimuli.delta*cos(stimuli.direction*pi/180);
+                    obj.y_delta = stimuli.delta*sin(stimuli.direction*pi/180);
             
-                else
-                    fprintf('\t RSM ERROR: y-delta not recognized. Please define y_delta value and try again. \n');
-                    return
-                end  
             else
-                fprintf('\t RSM ERROR: x-delta recognized. Please define x_delta value and try again. \n');
+                fprintf('\t RSM ERROR: delta recognized. Please define delta value and try again. \n');
                 return
             end  
    
-        
-            if (isfield(stimuli,'frames'))
-                obj.frames = stimuli.frames;                       
-            else
-                fprintf('\t RSM ERROR: frames not recognized. Please define frames value and try again. \n');
-                return
-            end
-        
         
             if (isfield(stimuli,'rgb'))
                obj.color = [stimuli.rgb(1); stimuli.rgb(2); stimuli.rgb(3)];
@@ -153,6 +97,60 @@ classdef	Moving_Bar < handle
                 obj.num_reps = stimuli.num_reps;
             else
                 fprintf('\t RSM ERROR: number of repetitions not recognized. Please define num_reps value and try again. \n');
+                return
+            end
+            
+            if (isfield(stimuli,'interval'))
+                obj.interval = stimuli.interval;
+            else
+                fprintf('\t RSM ERROR: interval not recognized. Please define interval value and try again. \n');
+                return
+            end
+            
+            if (isfield(stimuli,'direction'))
+                obj.direction = stimuli.direction;
+                L = 2000;
+                switch stimuli.direction
+                    case 0
+                        obj.x_start = [0; 0; stimuli.bar_width; stimuli.bar_width];
+                        obj.y_start = [0; display.height; display.height; 0];
+                        obj.frames = display.width/stimuli.delta;
+                    case 180
+                        obj.x_start = [display.width-stimuli.bar_width; display.width-stimuli.bar_width; display.width; display.width];
+                        obj.y_start = [0; display.height; display.height; 0];
+                        obj.frames = display.width/stimuli.delta;
+                    case 90
+                        obj.x_start = [0; 0; display.width; display.width];
+                        obj.y_start = [display.height-stimuli.bar_width; display.height; display.height; display.height-stimuli.bar_width];
+                        obj.frames = display.height/stimuli.delta;
+                    case 270
+                        obj.x_start = [0; 0; display.width; display.width];
+                        obj.y_start = [0; stimuli.bar_width; stimuli.bar_width; 0];
+                        obj.frames = display.height/stimuli.delta;
+                    case 45
+                        obj.x_start = [-L; L; L; -L];
+                        obj.y_start = [display.height-L; display.height+L; display.height-stimuli.bar_width*sqrt(2)+L; display.height-stimuli.bar_width*sqrt(2)-L];
+                        obj.frames = display.width*sqrt(2)/stimuli.delta;
+                    case 225
+                        obj.x_start = [0; L; L; 0];
+                        obj.y_start = [-display.width+stimuli.bar_width*sqrt(2); L-display.width+stimuli.bar_width*sqrt(2); L-display.width; -display.width];
+                        obj.frames = display.width*sqrt(2)/stimuli.delta;
+                    case 135
+                        obj.x_start = [L; 0; 0; L];
+                        obj.y_start = [display.height+display.width-stimuli.bar_width*sqrt(2)-L; display.height+display.width-stimuli.bar_width*sqrt(2); display.height+display.width; display.height+display.width-L];
+                        obj.frames = display.width*sqrt(2)/stimuli.delta;
+                    case 315
+                        obj.x_start = [L; -L; -L; L];
+                        obj.y_start = [-L; L; stimuli.bar_width*sqrt(2)+L; stimuli.bar_width*sqrt(2)-L];
+                        obj.frames = display.width*sqrt(2)/stimuli.delta;
+                    otherwise
+                        fprintf('\t RSM ERROR: invalid direction. Please define valid direction value and try again. \n');
+                        return
+                end
+                obj.frames = obj.frames + stimuli.interval;
+                
+            else
+                fprintf('\t RSM ERROR: direction not recognized. Please define direction value and try again. \n');
                 return
             end
 
@@ -193,8 +191,8 @@ classdef	Moving_Bar < handle
         
         function Run_Bar_Rep( obj )
             
-            x_lead_new = obj.x_end;
-            y_lead_new = obj.y_end;
+            x_new = obj.x_start;
+            y_new = obj.y_start;
 
             % OK: Time to tell DAQ we are starting
             Pulse_DigOut_Channel;
@@ -202,38 +200,15 @@ classdef	Moving_Bar < handle
             for frame_num = 1:obj.frames,
                 
                 % Set up x
-                if (obj.x_delta > 0)
-                    % Then case is Left 2 right motion
-                    
-                    % update x_vertices
-                    x_lead_new = x_lead_new + obj.x_delta;
-                    x_lag_new = x_lead_new - obj.bar_width;
-    
-                else
-                    x_lead_new = x_lead_new + obj.x_delta;
-                    x_lag_new = x_lead_new - obj.bar_width;
-    
-                end  % x step
+                % Then case is Left 2 right motion
+
+                % update x_vertices
+                x_new = x_new + obj.x_delta;
+                y_new = y_new - obj.y_delta;
                 
+                x_vertices = x_new;
                 
-               if (obj.y_delta > 0)
-                    % Then case is up to down
-                    
-                    % update x_vertices
-                    y_lead_new = y_lead_new + obj.y_delta;
-                    y_lag_new = y_lead_new - obj.bar_height;
-    
-               else
-                    y_lead_new = y_lead_new + obj.y_delta;
-                    y_lag_new = y_lead_new - obj.bar_height;
-    
-               end  % y step
-                
-    
-                
-                x_vertices = [x_lag_new; x_lead_new; x_lead_new; x_lag_new];
-                
-                y_vertices = [y_lag_new; y_lag_new; y_lead_new; y_lead_new];
+                y_vertices = y_new;
                 
 
                 % Draw the quad

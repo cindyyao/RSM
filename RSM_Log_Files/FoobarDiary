@@ -17576,3 +17576,1492 @@ Ready for next stimulus setup; "Stop_RSM" to quit.
 <strong> Cone-Isolating Pulse; As setup by S-file. </strong>
 Test takes a long time to complete.
 Enter [1] to run demo, or [0] to skip.0
+EJC: hardcoded host and rig in Setup_Rig.m
+EJC: hardcoded monitor path in Setup_Rig.m
+
+Configured for host: alligator // Rig ID: A 
+RSM Configuring display for 60.000 [Hz] 
+"display" object set for monitor: RigA_CRT1.
+RSM initialization complete.
+Cut and paste desired params. Enter: "RSM" to present stimuli; "Stop_RSM" to quit. 
+
+mglSetGammaTable( RSM_GLOBAL.monitor.red_table, RSM_GLOBAL.monitor.green_table, RSM_GLOBAL.monitor.blue_table );
+mglMoveWindow(5, 1055);
+
+
+<strong> Moving bar. </strong>
+
+******************************  Session: 15-May-2014_RigA  Stimulus #: 1  ******************************* 
+
+SAVING SETUP INFO: Moving_Bar 
+RUNNING STIMULUS: Moving_Bar 
+FINISHED WITH: Moving_Bar 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+cos(0.75*pi)
+
+ans =
+
+   -0.7071
+
+cos(pi)
+
+ans =
+
+    -1
+
+help mglQuad
+  <strong>mglQuad</strong>.m
+ 
+       $Id: <strong>mglQuad</strong>.m 18 2006-09-13 15:41:18Z justin $
+     usage: <strong>mglQuad</strong>( vX, vY, rgbColor, [antiAliasFlag] );
+        by: eli merriam, based on mglPoints.c by justin gardner & Jonas Larsson
+      date: 04/20/06
+   copyright: (c) 2006 Justin Gardner, Jonas Larsson (GPL see mgl/COPYING)
+   purpose: mex function to draw a quad in an OpenGL screen opened with mglOpen
+            vX: 4 row by N column matrix of 'X' coordinates
+            vY: 4 row by N column matrix of 'Y' coordinates
+            rgbColors: 3 row by N column of r-g-b specifing the
+                       color of each quad
+            antiAliasFlag: turns on antialiasing to smooth the edges   
+      e.g.:
+ 
+ 
+ mglOpen();
+ mglScreenCoordinates
+ <strong>mglQuad</strong>([100; 600; 600; 100], [100; 200; 600; 100], [1; 1; 1], 1);
+ mglFlush();
+
+mglScreenCoordinates
+mglQuad([100; 600; 600; 100], [-10; -20; 600; 100], [1; 1; 1], 1);
+mglFlush();
+help polar
+ <strong>polar</strong>  Polar coordinate plot.
+    <strong>polar</strong>(THETA, RHO) makes a plot using polar coordinates of
+    the angle THETA, in radians, versus the radius RHO.
+    <strong>polar</strong>(THETA, RHO, S) uses the linestyle specified in string S.
+    See PLOT for a description of legal linestyles.
+ 
+    <strong>polar</strong>(AX, ...) plots into AX instead of GCA.
+ 
+    H = <strong>polar</strong>(...) returns a handle to the plotted object in H.
+ 
+    Example:
+       t = 0 : .01 : 2 * pi;
+       polar(t, sin(2 * t) .* cos(2 * t), '--r');
+ 
+    See also <a href="matlab:help Plot">Plot</a>, <a href="matlab:help loglog">loglog</a>, <a href="matlab:help semilogx">semilogx</a>, <a href="matlab:help semilogy">semilogy</a>.
+
+    Overloaded methods:
+       <a href="matlab:help gpuArray/polar">gpuArray/polar</a>
+
+    Reference page in Help browser
+       <a href="matlab:doc polar">doc polar</a>
+
+edit dscellanalysis.m
+edit polar_plots_all
+edit DS131209.m
+edit get_spikescellstim.m
+help polar2cart
+
+polar2cart not found.
+
+Use the Help browser search field to <a href="matlab:docsearch polar2cart">search the documentation</a>, or
+type "<a href="matlab:help help">help help</a>" for help command options, such as help for methods.
+
+help pol2cart
+ <strong>pol2cart</strong> Transform polar to Cartesian coordinates.
+    [X,Y] = <strong>pol2cart</strong>(TH,R) transforms corresponding elements of data
+    stored in polar coordinates (angle TH, radius R) to Cartesian
+    coordinates X,Y.  The arrays TH and R must the same size (or
+    either can be scalar).  TH must be in radians.
+ 
+    [X,Y,Z] = <strong>pol2cart</strong>(TH,R,Z) transforms corresponding elements of
+    data stored in cylindrical coordinates (angle TH, radius R, height
+    Z) to Cartesian coordinates X,Y,Z. The arrays TH, R, and Z must be
+    the same size (or any of them can be scalar).  TH must be in radians.
+ 
+    Class support for inputs TH,R,Z:
+       float: double, single
+ 
+    See also <a href="matlab:help cart2sph">cart2sph</a>, <a href="matlab:help cart2pol">cart2pol</a>, <a href="matlab:help sph2cart">sph2cart</a>.
+
+    Reference page in Help browser
+       <a href="matlab:doc pol2cart">doc pol2cart</a>
+
+display
+
+display = 
+
+  <a href="matlab:helpPopup Monitor_Obj" style="font-weight:bold">Monitor_Obj</a> with properties:
+
+            monitor_name: 'RigA_CRT1'
+            num_lut_bits: 8
+             gamma_model: @BrainardModel
+      optometer_raw_data: [153x4 double]
+               red_table: [1x256 double]
+             green_table: [1x256 double]
+              blue_table: [1x256 double]
+              red_params: [2.5200 32 3.2181]
+            green_params: [2.5200 32 3.1320]
+             blue_params: [2.5200 32 3.1645]
+         gamma_test_date: '09-Jan-2014'
+                   width: 640
+          physical_width: 28.5000
+                  height: 480
+         physical_height: 21.5000
+     screen_refresh_freq: 60
+               cen_width: 320
+              cen_height: 240
+    default_mondesc_path: './RSM_Monitors/'
+                 mon_num: 0
+           backgrndcolor: [0.5000 0.5000 0.5000]
+
+edit run_stimulus.m
+edit q_RSM
+edit Moving_Bar.m
+help or
+ |   Logical <strong>or</strong>.
+    A | B performs a logical <strong>or</strong> of arrays A and B and returns an array
+    containing elements set to either logical 1 (TRUE) or logical 0
+    (FALSE).  An element of the output array is set to 1 if either input
+    array contains a non-zero element at that same array location.
+    Otherwise, that element is set to 0.  A and B must have the same 
+    dimensions unless one is a scalar.  
+ 
+    C = <strong>or</strong>(A,B) is called for the syntax 'A | B' when A or B is an
+    object.
+ 
+    Note that there are two logical <strong>or</strong> operators in MATLAB.  The |
+    operator performs an element-by-element <strong>or</strong> between matrices, while 
+    the || operator performs a short-circuit <strong>or</strong> between scalar values.
+    These operations are explained in the MATLAB Programming documentation 
+    on logical operators, under the topic of Basic Program Components.
+ 
+    See also <a href="matlab:help relop">relop</a>, <a href="matlab:help and">and</a>, <a href="matlab:help xor">xor</a>, <a href="matlab:help not">not</a>
+
+    Overloaded methods:
+       <a href="matlab:help codistributed/or">codistributed/or</a>
+       <a href="matlab:help gpuArray/or">gpuArray/or</a>
+
+    Reference page in Help browser
+       <a href="matlab:doc or">doc or</a>
+
+direction = 45;
+switch diretion
+    case(45 | 135)
+        a = 1
+end
+{Undefined function or variable 'diretion'.
+} 
+direction = 45;
+switch direction
+    case(45 | 135)
+        a = 1
+end
+direction = 45;
+switch direction
+case 45 | 135
+a = 1
+end
+a
+{Undefined function or variable 'a'.
+} 
+direction = 45;
+switch direction
+    case 45 
+        a = 1
+end
+
+a =
+
+     1
+
+direction = 45;
+switch direction
+    case 45|135 
+        a = 1
+end
+direction = 45;
+switch direction
+    case 45||135 
+        a = 1
+end
+help mod
+ <strong>mod</strong>    Modulus after division.
+    <strong>mod</strong>(x,y) is x - n.*y where n = floor(x./y) if y ~= 0.  If y is not an
+    integer and the quotient x./y is within roundoff error of an integer,
+    then n is that integer.  The inputs x and y must be real arrays of the
+    same size, or real scalars.
+ 
+    The statement "x and y are congruent mod m" means mod(x,m) == mod(y,m).
+ 
+    By convention:
+       <strong>mod</strong>(x,0) is x.
+       <strong>mod</strong>(x,x) is 0.
+       <strong>mod</strong>(x,y), for x~=y and y~=0, has the same sign as y.
+ 
+    Note: REM(x,y), for x~=y and y~=0, has the same sign as x.
+    <strong>mod</strong>(x,y) and REM(x,y) are equal if x and y have the same sign, but
+    differ by y if x and y have different signs.
+ 
+    See also <a href="matlab:help rem">rem</a>.
+
+    Overloaded methods:
+       <a href="matlab:help codistributed/mod">codistributed/mod</a>
+       <a href="matlab:help gpuArray/mod">gpuArray/mod</a>
+       <a href="matlab:help sym/mod">sym/mod</a>
+
+    Reference page in Help browser
+       <a href="matlab:doc mod">doc mod</a>
+
+mod(45, 90)
+
+ans =
+
+    45
+
+mod(135, 90)
+
+ans =
+
+    45
+
+mod(215, 90)
+
+ans =
+
+    35
+
+mod(225, 90)
+
+ans =
+
+    45
+
+mod(315, 90)
+
+ans =
+
+    45
+
+display
+
+display = 
+
+  <a href="matlab:helpPopup Monitor_Obj" style="font-weight:bold">Monitor_Obj</a> with properties:
+
+            monitor_name: 'RigA_CRT1'
+            num_lut_bits: 8
+             gamma_model: @BrainardModel
+      optometer_raw_data: [153x4 double]
+               red_table: [1x256 double]
+             green_table: [1x256 double]
+              blue_table: [1x256 double]
+              red_params: [2.5200 32 3.2181]
+            green_params: [2.5200 32 3.1320]
+             blue_params: [2.5200 32 3.1645]
+         gamma_test_date: '09-Jan-2014'
+                   width: 640
+          physical_width: 28.5000
+                  height: 480
+         physical_height: 21.5000
+     screen_refresh_freq: 60
+               cen_width: 320
+              cen_height: 240
+    default_mondesc_path: './RSM_Monitors/'
+                 mon_num: 0
+           backgrndcolor: [0.5000 0.5000 0.5000]
+
+[1,2,3]
+
+ans =
+
+     1     2     3
+
+(1,2,3)
+ (1,2,3)
+   |
+{Error: Expression or statement is incorrect--possibly unbalanced (, {, or [.
+} 
+L = 500;
+obj.x_start = [-L, L, L, -L];
+                        obj.y_start = [display.height+L, display_height-L, display_height-stimuli.bar_width*sqrt(2)-L, display_height-stimuli.bar_width*sqrt(2)+L];
+{Undefined function or variable 'display_height'.
+} 
+obj.y_start = [display.height+L, display.height-L, display.height-stimuli.bar_width*sqrt(2)-L, display.height-stimuli.bar_width*sqrt(2)+L];
+{Undefined variable "stimuli" or function "stimuli.bar_width".
+} 
+stimulus = [];
+stimulus.type = 'MB';
+stimulus.rgb = 0.48 * [1.0, -1.0, -1.0];
+stimulus.back_rgb = [0.5, 0.5, 0.5];
+stimulus.bar_width = 100;
+stimulus.direction = 45;
+stimulus.delta = 0.5;      
+stimulus.ISI = 120; %frame
+stimulus.num_reps = 2;
+stimulus.wait_trigger = 0;
+stimulus.wait_key = 0;
+obj.y_start = [display.height+L, display.height-L, display.height-stimuli.bar_width*sqrt(2)-L, display.height-stimuli.bar_width*sqrt(2)+L];
+{Undefined variable "stimuli" or function "stimuli.bar_width".
+} 
+stimuli = stimulus
+
+stimuli = 
+
+            type: 'MB'
+             rgb: [0.4800 -0.4800 -0.4800]
+        back_rgb: [0.5000 0.5000 0.5000]
+       bar_width: 100
+       direction: 45
+           delta: 0.5000
+             ISI: 120
+        num_reps: 2
+    wait_trigger: 0
+        wait_key: 0
+
+obj.y_start = [display.height+L, display.height-L, display.height-stimuli.bar_width*sqrt(2)-L, display.height-stimuli.bar_width*sqrt(2)+L];
+                        obj.frames = display.width*sqrt(2);
+obj.x_start = [-L, L, L, -L];
+mglScreenCoordinates
+  mglQuad(obj.x_start, obj.y_start, [1; 1; 1], 1);
+(mglQuad) vX does not have 4 rows
+mglFlush();
+obj.x_start = [-L; L; L; -L];
+                        obj.y_start = [display.height+L; display.height-L; display.height-stimuli.bar_width*sqrt(2)-L; display.height-stimuli.bar_width*sqrt(2)+L];
+mglScreenCoordinates
+  mglQuad(obj.x_start, obj.y_start, [1; 1; 1], 1);
+mglFlush();
+mglClearScreen
+mglScreenCoordinates
+  mglQuad(obj.x_start, obj.y_start, [1; 1; 1], 1);
+mglFlush();
+obj.x_start
+
+ans =
+
+  -500
+   500
+   500
+  -500
+
+obj.y_start
+
+ans =
+
+  980.0000
+  -20.0000
+ -161.4214
+  838.5786
+
+obj.x_start = [-L; L; L; -L];
+                        obj.y_start = [display.height-L; display.height+L; display.height-stimuli.bar_width*sqrt(2)+L; display.height-stimuli.bar_width*sqrt(2)-L];
+mglClearScreen
+mglScreenCoordinates
+  mglQuad(obj.x_start, obj.y_start, [1; 1; 1], 1);
+mglFlush();
+mglClearScreen
+mglScreenCoordinates
+  mglQuad(obj.x_start+1, obj.y_start+1, [1; 1; 1], 1);
+mglFlush();
+mglClearScreen
+mglScreenCoordinates
+  mglQuad(obj.x_start+10, obj.y_start+10, [1; 1; 1], 1);
+mglFlush();
+mglClearScreen
+mglScreenCoordinates
+  mglQuad(obj.x_start+10, obj.y_start-10, [1; 1; 1], 1);
+mglFlush();
+obj.x_start = [0; L; L; 0];
+                        obj.y_start = [-display.width+stimuli.bar_width*sqrt(2); L-display.width+stimuli.bar_width*sqrt(2); L-display.width; -display.width];
+mglClearScreen
+ mglScreenCoordinates
+  mglQuad(obj.x_start, obj.y_start, [1; 1; 1], 1);
+mglFlush();
+mglClearScreen
+ mglScreenCoordinates
+  mglQuad(obj.x_start, obj.y_start, [1; 1; 1], 1);
+mglFlush();
+obj.x_start
+
+ans =
+
+     0
+   500
+   500
+     0
+
+obj.y_start
+
+ans =
+
+ -498.5786
+    1.4214
+ -140.0000
+ -640.0000
+
+L = 2000;
+obj.x_start = [0; L; L; 0];
+                        obj.y_start = [-display.width+stimuli.bar_width*sqrt(2); L-display.width+stimuli.bar_width*sqrt(2); L-display.width; -display.width];
+mglClearScreen
+ mglScreenCoordinates
+  mglQuad(obj.x_start, obj.y_start, [1; 1; 1], 1);
+mglFlush();
+mglClearScreen
+ mglScreenCoordinates
+  mglQuad(obj.x_start-10, obj.y_start+10, [1; 1; 1], 1);
+mglFlush();
+obj.x_start = [L; 0; 0; L];
+                        obj.y_start = [display.height+display.width-stimuli.bar_width*sqrt(2)-L; display.height+display.width-stimuli.bar_width*sqrt(2); display.height+display.width; display.height+display.width-L];
+mglClearScreen
+ mglScreenCoordinates
+  mglQuad(obj.x_start-0, obj.y_start+0, [1; 1; 1], 1);
+mglFlush();
+mglClearScreen
+ mglScreenCoordinates
+  mglQuad(obj.x_start-10, obj.y_start-10, [1; 1; 1], 1);
+mglFlush();
+obj.x_start = [L; -L; -L; L];
+                        obj.y_start = [-L; L; stimuli.bar_width*sqrt(2)+L; stimuli.bar_width*sqrt(2)-L];
+mglClearScreen
+ mglScreenCoordinates
+  mglQuad(obj.x_start, obj.y_start, [1; 1; 1], 1);
+mglFlush();
+mglClearScreen
+ mglScreenCoordinates
+  mglQuad(obj.x_start+10, obj.y_start+10, [1; 1; 1], 1);
+mglFlush();
+stimulus = [];
+stimulus.type = 'MB';
+stimulus.rgb = 0.48 * [1.0, -1.0, -1.0];
+stimulus.back_rgb = [0.5, 0.5, 0.5];
+stimulus.bar_width = 100;
+stimulus.direction = 45;
+stimulus.delta = 0.5;      
+stimulus.interval = 120; %frame
+stimulus.num_reps = 2;
+stimulus.wait_trigger = 0;
+stimulus.wait_key = 0;
+
+
+run_stimulus(display, stimulus);
+{Undefined variable "display" or class "display.height".
+
+Error in <a href="matlab:helpUtils.errorDocCallback('Moving_Bar', '/RSM/RSM_Classes/Moving_Bar.m', 132)" style="font-weight:bold">Moving_Bar</a> (<a href="matlab: opentoline('/RSM/RSM_Classes/Moving_Bar.m',132,0)">line 132</a>)
+                        obj.y_start = [display.height-L; display.height+L;
+                        display.height-stimuli.bar_width*sqrt(2)+L;
+                        display.height-stimuli.bar_width*sqrt(2)-L];
+
+Error in <a href="matlab:helpUtils.errorDocCallback('q_RSM', '/RSM/RSM_Utils/q_RSM.m', 76)" style="font-weight:bold">q_RSM</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/q_RSM.m',76,0)">line 76</a>)
+        exp_obj.pending_stimuli{num_pending + 1} = Moving_Bar(stimulus);
+
+Error in <a href="matlab:helpUtils.errorDocCallback('run_stimulus', '/RSM/RSM_Utils/run_stimulus.m', 27)" style="font-weight:bold">run_stimulus</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/run_stimulus.m',27,0)">line 27</a>)
+        RSM_GLOBAL = q_RSM(RSM_GLOBAL, stim_in);
+} 
+stimulus = [];
+stimulus.type = 'MB';
+stimulus.rgb = 0.48 * [1.0, -1.0, -1.0];
+stimulus.back_rgb = [0.5, 0.5, 0.5];
+stimulus.bar_width = 100;
+stimulus.direction = 45;
+stimulus.delta = 0.5;      
+stimulus.interval = 120; %frame
+stimulus.num_reps = 2;
+stimulus.wait_trigger = 0;
+stimulus.wait_key = 0;
+
+
+run_stimulus(display, stimulus);
+{Undefined variable "display" or class "display.height".
+
+Error in <a href="matlab:helpUtils.errorDocCallback('Moving_Bar', '/RSM/RSM_Classes/Moving_Bar.m', 132)" style="font-weight:bold">Moving_Bar</a> (<a href="matlab: opentoline('/RSM/RSM_Classes/Moving_Bar.m',132,0)">line 132</a>)
+                        obj.y_start = [display.height-L; display.height+L;
+                        display.height-stimuli.bar_width*sqrt(2)+L;
+                        display.height-stimuli.bar_width*sqrt(2)-L];
+
+Error in <a href="matlab:helpUtils.errorDocCallback('q_RSM', '/RSM/RSM_Utils/q_RSM.m', 76)" style="font-weight:bold">q_RSM</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/q_RSM.m',76,0)">line 76</a>)
+        exp_obj.pending_stimuli{num_pending + 1} = Moving_Bar(stimulus);
+
+Error in <a href="matlab:helpUtils.errorDocCallback('run_stimulus', '/RSM/RSM_Utils/run_stimulus.m', 27)" style="font-weight:bold">run_stimulus</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/run_stimulus.m',27,0)">line 27</a>)
+        RSM_GLOBAL = q_RSM(RSM_GLOBAL, stim_in);
+} 
+clear all
+Start_RSM;
+EJC: key globals being assigned in Setup_Rig.m
+EJC: hardcoded host and rig in Setup_Rig.m
+EJC: hardcoded monitor path in Setup_Rig.m
+
+Configured for host: alligator // Rig ID: A 
+RSM Configuring display for 60.000 [Hz] 
+"display" object set for monitor: RigA_CRT1.
+RSM initialization complete.
+Cut and paste desired params. Enter: "RSM" to present stimuli; "Stop_RSM" to quit. 
+
+mglSetGammaTable( RSM_GLOBAL.monitor.red_table, RSM_GLOBAL.monitor.green_table, RSM_GLOBAL.monitor.blue_table );
+
+mglMoveWindow(5, 1055);
+stimulus = [];
+stimulus.type = 'MB';
+stimulus.rgb = 0.48 * [1.0, -1.0, -1.0];
+stimulus.back_rgb = [0.5, 0.5, 0.5];
+stimulus.bar_width = 100;
+stimulus.direction = 45;
+stimulus.delta = 0.5;      
+stimulus.interval = 120; %frame
+stimulus.num_reps = 2;
+stimulus.wait_trigger = 0;
+stimulus.wait_key = 0;
+
+
+run_stimulus(display, stimulus);
+{Undefined variable "display" or class "display.height".
+
+Error in <a href="matlab:helpUtils.errorDocCallback('Moving_Bar', '/RSM/RSM_Classes/Moving_Bar.m', 132)" style="font-weight:bold">Moving_Bar</a> (<a href="matlab: opentoline('/RSM/RSM_Classes/Moving_Bar.m',132,0)">line 132</a>)
+                        obj.y_start = [display.height-L; display.height+L;
+                        display.height-stimuli.bar_width*sqrt(2)+L;
+                        display.height-stimuli.bar_width*sqrt(2)-L];
+
+Error in <a href="matlab:helpUtils.errorDocCallback('q_RSM', '/RSM/RSM_Utils/q_RSM.m', 76)" style="font-weight:bold">q_RSM</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/q_RSM.m',76,0)">line 76</a>)
+        exp_obj.pending_stimuli{num_pending + 1} = Moving_Bar(stimulus);
+
+Error in <a href="matlab:helpUtils.errorDocCallback('run_stimulus', '/RSM/RSM_Utils/run_stimulus.m', 27)" style="font-weight:bold">run_stimulus</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/run_stimulus.m',27,0)">line 27</a>)
+        RSM_GLOBAL = q_RSM(RSM_GLOBAL, stim_in);
+} 
+stimulus = [];
+stimulus.type = 'MB';
+stimulus.rgb = 0.48 * [1.0, -1.0, -1.0];
+stimulus.back_rgb = [0.5, 0.5, 0.5];
+stimulus.bar_width = 100;
+stimulus.direction = 45;
+stimulus.delta = 0.5;      
+stimulus.interval = 120; %frame
+stimulus.num_reps = 2;
+stimulus.wait_trigger = 0;
+stimulus.wait_key = 0;
+
+
+run_stimulus(display, stimulus);
+
+******************************  Session: 15-May-2014_RigA  Stimulus #: 1  ******************************* 
+
+SAVING SETUP INFO: Moving_Bar 
+RUNNING STIMULUS: Moving_Bar 
+<a href="matlab: opentoline('/RSM/RSM_Classes/Moving_Bar.m',195,1)">195 </a>            y_new = obj.y_start;
+if system_dependent('IsDebugMode')==1, dbquit; end
+stimulus = [];
+stimulus.type = 'MB';
+stimulus.rgb = 0.48 * [1.0, -1.0, -1.0];
+stimulus.back_rgb = [0.5, 0.5, 0.5];
+stimulus.bar_width = 100;
+stimulus.direction = 45;
+stimulus.delta = 0.5;      
+stimulus.interval = 120; %frame
+stimulus.num_reps = 2;
+stimulus.wait_trigger = 0;
+stimulus.wait_key = 0;
+
+
+run_stimulus(display, stimulus);
+
+******************************  Session: 15-May-2014_RigA  Stimulus #: 1  ******************************* 
+
+SAVING SETUP INFO: Moving_Bar 
+RUNNING STIMULUS: Moving_Bar 
+FINISHED WITH: Moving_Bar 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+stimulus = [];
+stimulus.type = 'MB';
+stimulus.rgb = 0.48 * [1.0, -1.0, -1.0];
+stimulus.back_rgb = [0.5, 0.5, 0.5];
+stimulus.bar_width = 100;
+stimulus.direction = 45;
+stimulus.delta = 100;      
+stimulus.interval = 120; %frame
+stimulus.num_reps = 2;
+stimulus.wait_trigger = 0;
+stimulus.wait_key = 0;
+
+
+run_stimulus(display, stimulus);
+
+******************************  Session: 15-May-2014_RigA  Stimulus #: 2  ******************************* 
+
+SAVING SETUP INFO: Moving_Bar 
+RUNNING STIMULUS: Moving_Bar 
+FINISHED WITH: Moving_Bar 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+clear stimulus;
+stimulus = [];
+stimulus.type = 'MB';
+stimulus.rgb = 0.48 * [1.0, -1.0, -1.0];
+stimulus.back_rgb = [0.5, 0.5, 0.5];
+stimulus.bar_width = 10;
+stimulus.direction = 45;
+stimulus.delta = 10;      
+stimulus.interval = 120; %frame
+stimulus.num_reps = 2;
+stimulus.wait_trigger = 0;
+stimulus.wait_key = 0;
+
+
+run_stimulus(display, stimulus);
+
+******************************  Session: 15-May-2014_RigA  Stimulus #: 3  ******************************* 
+
+SAVING SETUP INFO: Moving_Bar 
+RUNNING STIMULUS: Moving_Bar 
+FINISHED WITH: Moving_Bar 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+clear stimulus;
+stimulus = [];
+stimulus.type = 'MB';
+stimulus.rgb = 0.48 * [1.0, -1.0, -1.0];
+stimulus.back_rgb = [0.5, 0.5, 0.5];
+stimulus.bar_width = 10;
+stimulus.direction = 45;
+stimulus.delta = 10;      
+stimulus.interval = 120; %frame
+stimulus.num_reps = 2;
+stimulus.wait_trigger = 0;
+stimulus.wait_key = 0;
+
+
+run_stimulus(display, stimulus);
+<a href="matlab: opentoline('/RSM/RSM_Classes/Moving_Bar.m',66,1)">66  </a>            global display
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+obj
+
+obj = 
+
+  <a href="matlab:helpPopup Moving_Bar" style="font-weight:bold">Moving_Bar</a> with properties:
+
+           stim_name: []
+       run_date_time: []
+      run_time_total: []
+        main_trigger: []
+              tmain0: []
+         rep_trigger: []
+               trep0: []
+        run_duration: []
+    stim_update_freq: []
+          run_script: []
+               color: []
+       backgrndcolor: []
+           bar_width: 10
+          bar_height: []
+             x_start: []
+               x_end: []
+             y_start: []
+               y_end: []
+            num_reps: []
+            reps_run: []
+             x_delta: 7.0711
+             y_delta: 7.0711
+              frames: []
+        wait_trigger: []
+            wait_key: []
+          repeat_num: []
+           direction: []
+            interval: []
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+stimulus = [];
+stimulus.type = 'MB';
+stimulus.rgb = 0.48 * [1.0, -1.0, -1.0];
+stimulus.back_rgb = [0.5, 0.5, 0.5];
+stimulus.bar_width = 10;
+stimulus.direction = 90;
+stimulus.delta = 10;      
+stimulus.interval = 120; %frame
+stimulus.num_reps = 2;
+stimulus.wait_trigger = 0;
+stimulus.wait_key = 0;
+
+
+run_stimulus(display, stimulus);
+<a href="matlab: opentoline('/RSM/RSM_Classes/Moving_Bar.m',66,1)">66  </a>            global display
+if system_dependent('IsDebugMode')==1, dbquit; end
+stimulus = [];
+stimulus.type = 'MB';
+stimulus.rgb = 0.48 * [1.0, -1.0, -1.0];
+stimulus.back_rgb = [0.5, 0.5, 0.5];
+stimulus.bar_width = 10;
+stimulus.direction = 90;
+stimulus.delta = 10;      
+stimulus.interval = 120; %frame
+stimulus.num_reps = 2;
+stimulus.wait_trigger = 0;
+stimulus.wait_key = 0;
+
+
+run_stimulus(display, stimulus);
+
+******************************  Session: 15-May-2014_RigA  Stimulus #: 4  ******************************* 
+
+SAVING SETUP INFO: Moving_Bar 
+RUNNING STIMULUS: Moving_Bar 
+FINISHED WITH: Moving_Bar 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+clear stimulus;
+stimulus = [];
+stimulus.type = 'MB';
+stimulus.rgb = 0.48 * [1.0, -1.0, -1.0];
+stimulus.back_rgb = [0.5, 0.5, 0.5];
+stimulus.bar_width = 10;
+stimulus.direction = 90;
+stimulus.delta = 10;      
+stimulus.interval = 120; %frame
+stimulus.num_reps = 2;
+stimulus.wait_trigger = 0;
+stimulus.wait_key = 0;
+
+
+run_stimulus(display, stimulus);
+
+******************************  Session: 15-May-2014_RigA  Stimulus #: 5  ******************************* 
+
+SAVING SETUP INFO: Moving_Bar 
+RUNNING STIMULUS: Moving_Bar 
+FINISHED WITH: Moving_Bar 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+clear stimulus;
+stimulus = [];
+stimulus.type = 'MB';
+stimulus.rgb = 0.48 * [1.0, -1.0, -1.0];
+stimulus.back_rgb = [0.5, 0.5, 0.5];
+stimulus.bar_width = 10;
+stimulus.direction = 90;
+stimulus.delta = 10;      
+stimulus.interval = 120; %frame
+stimulus.num_reps = 2;
+stimulus.wait_trigger = 0;
+stimulus.wait_key = 0;
+
+
+run_stimulus(display, stimulus);
+<a href="matlab: opentoline('/RSM/RSM_Classes/Moving_Bar.m',66,1)">66  </a>            global display
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+obj.frames
+
+ans =
+
+   184
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+
+******************************  Session: 15-May-2014_RigA  Stimulus #: 6  ******************************* 
+
+SAVING SETUP INFO: Moving_Bar 
+RUNNING STIMULUS: Moving_Bar 
+FINISHED WITH: Moving_Bar 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+if system_dependent('IsDebugMode')==1, dbcont; end
+clear stimulus;
+stimulus = [];
+stimulus.type = 'MB';
+stimulus.rgb = 0.48 * [1.0, -1.0, -1.0];
+stimulus.back_rgb = [0.5, 0.5, 0.5];
+stimulus.bar_width = 10;
+stimulus.direction = 90;
+stimulus.delta = 10;      
+stimulus.interval = 120; %frame
+stimulus.num_reps = 2;
+stimulus.wait_trigger = 0;
+stimulus.wait_key = 0;
+
+
+run_stimulus(display, stimulus);
+<a href="matlab: opentoline('/RSM/RSM_Classes/Moving_Bar.m',66,1)">66  </a>            global display
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+first_nonempty
+
+first_nonempty =
+
+     1
+
+num_pending_stim
+
+num_pending_stim =
+
+     1
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+exp_obj.stimulus
+
+ans = 
+
+  <a href="matlab:helpPopup Moving_Bar" style="font-weight:bold">Moving_Bar</a> with properties:
+
+           stim_name: 'Moving_Bar'
+       run_date_time: []
+      run_time_total: []
+        main_trigger: 0
+              tmain0: []
+         rep_trigger: 0
+               trep0: []
+        run_duration: []
+    stim_update_freq: []
+          run_script: 'Run_Bar_Rep( exp_obj.stimulus );'
+               color: [3x1 double]
+       backgrndcolor: [3x1 double]
+           bar_width: 10
+          bar_height: []
+             x_start: [4x1 double]
+               x_end: []
+             y_start: [4x1 double]
+               y_end: []
+            num_reps: 2
+            reps_run: 0
+             x_delta: 6.1232e-16
+             y_delta: 10
+              frames: 184
+        wait_trigger: 0
+            wait_key: 0
+          repeat_num: 0
+           direction: 90
+            interval: 120
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+******************************  Session: 15-May-2014_RigA  Stimulus #: 7  ******************************* 
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+SAVING SETUP INFO: Moving_Bar 
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+RUNNING STIMULUS: Moving_Bar 
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep in; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+x_new
+
+x_new =
+
+     0
+     0
+   640
+   640
+
+y_new
+
+y_new =
+
+   470
+   480
+   480
+   470
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+x_new
+
+x_new =
+
+    0.0000
+    0.0000
+  640.0000
+  640.0000
+
+y_new
+
+y_new =
+
+   480
+   490
+   490
+   480
+
+obj
+
+obj = 
+
+  <a href="matlab:helpPopup Moving_Bar" style="font-weight:bold">Moving_Bar</a> with properties:
+
+           stim_name: 'Moving_Bar'
+       run_date_time: [2014 5 15 15 45 43.4225]
+      run_time_total: []
+        main_trigger: 1
+              tmain0: 1.4794e+06
+         rep_trigger: 0
+               trep0: 1.4794e+06
+        run_duration: []
+    stim_update_freq: []
+          run_script: 'Run_Bar_Rep( exp_obj.stimulus );'
+               color: [3x1 double]
+       backgrndcolor: [3x1 double]
+           bar_width: 10
+          bar_height: []
+             x_start: [4x1 double]
+               x_end: []
+             y_start: [4x1 double]
+               y_end: []
+            num_reps: 2
+            reps_run: 0
+             x_delta: 6.1232e-16
+             y_delta: 10
+              frames: 184
+        wait_trigger: 0
+            wait_key: 0
+          repeat_num: 1
+           direction: 90
+            interval: 120
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+stimulus = [];
+stimulus.type = 'MB';
+stimulus.rgb = 0.48 * [1.0, -1.0, -1.0];
+stimulus.back_rgb = [0.5, 0.5, 0.5];
+stimulus.bar_width = 10;
+stimulus.direction = 90;
+stimulus.delta = 10;      
+stimulus.interval = 120; %frame
+stimulus.num_reps = 2;
+stimulus.wait_trigger = 0;
+stimulus.wait_key = 0;
+
+
+run_stimulus(display, stimulus);
+[Warning: The class file for 'Moving_Bar' has been changed, but the change cannot be applied because
+objects based on the old class file still exist. If you use those objects, you might get unexpected
+results. You can use the 'clear' command to remove those objects. See 'help clear' for information on how
+to remove those objects.] 
+[> In <a href="matlab: opentoline('/RSM/RSM_Utils/q_RSM.m',76,1)">q_RSM at 76</a>
+  In <a href="matlab: opentoline('/RSM/RSM_Utils/run_stimulus.m',27,1)">run_stimulus at 27</a>] 
+<a href="matlab: opentoline('/RSM/RSM_Classes/Moving_Bar.m',66,1)">66  </a>            global display
+if system_dependent('IsDebugMode')==1, dbquit; end
+clear all
+Start_RSM;
+EJC: key globals being assigned in Setup_Rig.m
+EJC: hardcoded host and rig in Setup_Rig.m
+EJC: hardcoded monitor path in Setup_Rig.m
+
+Configured for host: alligator // Rig ID: A 
+RSM Configuring display for 60.000 [Hz] 
+"display" object set for monitor: RigA_CRT1.
+RSM initialization complete.
+Cut and paste desired params. Enter: "RSM" to present stimuli; "Stop_RSM" to quit. 
+
+mglSetGammaTable( RSM_GLOBAL.monitor.red_table, RSM_GLOBAL.monitor.green_table, RSM_GLOBAL.monitor.blue_table );
+
+mglMoveWindow(5, 1055);
+stimulus = [];
+stimulus.type = 'MB';
+stimulus.rgb = 0.48 * [1.0, -1.0, -1.0];
+stimulus.back_rgb = [0.5, 0.5, 0.5];
+stimulus.bar_width = 10;
+stimulus.direction = 90;
+stimulus.delta = 10;      
+stimulus.interval = 120; %frame
+stimulus.num_reps = 2;
+stimulus.wait_trigger = 0;
+stimulus.wait_key = 0;
+
+
+run_stimulus(display, stimulus);
+
+******************************  Session: 15-May-2014_RigA  Stimulus #: 1  ******************************* 
+
+SAVING SETUP INFO: Moving_Bar 
+RUNNING STIMULUS: Moving_Bar 
+FINISHED WITH: Moving_Bar 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+clear stimulus;
+stimulus = [];
+stimulus.type = 'MB';
+stimulus.rgb = 0.48 * [1.0, -1.0, -1.0];
+stimulus.back_rgb = [0.5, 0.5, 0.5];
+stimulus.bar_width = 100;
+stimulus.direction = 90;
+stimulus.delta = 2;      
+stimulus.interval = 120; %frame
+stimulus.num_reps = 2;
+stimulus.wait_trigger = 0;
+stimulus.wait_key = 0;
+
+
+run_stimulus(display, stimulus);
+
+******************************  Session: 15-May-2014_RigA  Stimulus #: 2  ******************************* 
+
+SAVING SETUP INFO: Moving_Bar 
+RUNNING STIMULUS: Moving_Bar 
+FINISHED WITH: Moving_Bar 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+clear stimulus;
+stimulus = [];
+stimulus.type = 'MB';
+stimulus.rgb = 0.48 * [1.0, -1.0, -1.0];
+stimulus.back_rgb = [0.5, 0.5, 0.5];
+stimulus.bar_width = 100;
+stimulus.direction = 90;
+stimulus.delta = 2;      
+stimulus.interval = 120; %frame
+stimulus.num_reps = 2;
+stimulus.wait_trigger = 0;
+stimulus.wait_key = 0;
+
+
+run_stimulus(display, stimulus);
+
+******************************  Session: 15-May-2014_RigA  Stimulus #: 3  ******************************* 
+
+SAVING SETUP INFO: Moving_Bar 
+RUNNING STIMULUS: Moving_Bar 
+FINISHED WITH: Moving_Bar 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+clear stimulus;
+stimulus = [];
+stimulus.type = 'MB';
+stimulus.rgb = 0.48 * [1.0, -1.0, -1.0];
+stimulus.back_rgb = [0.5, 0.5, 0.5];
+stimulus.bar_width = 100;
+stimulus.direction = 90;
+stimulus.delta = 2;      
+stimulus.interval = 120; %frame
+stimulus.num_reps = 2;
+stimulus.wait_trigger = 0;
+stimulus.wait_key = 0;
+
+
+run_stimulus(display, stimulus);
+
+******************************  Session: 15-May-2014_RigA  Stimulus #: 4  ******************************* 
+
+SAVING SETUP INFO: Moving_Bar 
+RUNNING STIMULUS: Moving_Bar 
+FINISHED WITH: Moving_Bar 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+clear stimulus;
+stimulus = [];
+stimulus.type = 'MB';
+stimulus.rgb = 0.48 * [1.0, -1.0, -1.0];
+stimulus.back_rgb = [0.5, 0.5, 0.5];
+stimulus.bar_width = 100;
+stimulus.direction = 90;
+stimulus.delta = 2;      
+stimulus.interval = 120; %frame
+stimulus.num_reps = 2;
+stimulus.wait_trigger = 0;
+stimulus.wait_key = 0;
+
+
+run_stimulus(display, stimulus);
+
+******************************  Session: 15-May-2014_RigA  Stimulus #: 5  ******************************* 
+
+SAVING SETUP INFO: Moving_Bar 
+RUNNING STIMULUS: Moving_Bar 
+FINISHED WITH: Moving_Bar 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+clear stimulus;
+stimulus = [];
+stimulus.type = 'MB';
+stimulus.rgb = 0.48 * [1.0, -1.0, -1.0];
+stimulus.back_rgb = [0.5, 0.5, 0.5];
+stimulus.bar_width = 100;
+stimulus.direction = 90;
+stimulus.delta = 5;      
+stimulus.interval = 120; %frame
+stimulus.num_reps = 2;
+stimulus.wait_trigger = 0;
+stimulus.wait_key = 0;
+
+
+run_stimulus(display, stimulus);
+
+******************************  Session: 15-May-2014_RigA  Stimulus #: 6  ******************************* 
+
+SAVING SETUP INFO: Moving_Bar 
+RUNNING STIMULUS: Moving_Bar 
+FINISHED WITH: Moving_Bar 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+clear stimulus;
+stimulus = [];
+stimulus.type = 'MB';
+stimulus.rgb = 0.48 * [1.0, -1.0, -1.0];
+stimulus.back_rgb = [0.5, 0.5, 0.5];
+stimulus.bar_width = 100;
+stimulus.direction = 90;
+stimulus.delta = 5;      
+stimulus.interval = 120; %frame
+stimulus.num_reps = 2;
+stimulus.wait_trigger = 0;
+stimulus.wait_key = 0;
+
+
+run_stimulus(display, stimulus);
+
+******************************  Session: 15-May-2014_RigA  Stimulus #: 7  ******************************* 
+
+SAVING SETUP INFO: Moving_Bar 
+RUNNING STIMULUS: Moving_Bar 
+FINISHED WITH: Moving_Bar 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+clear stimulus;
+stimulus = [];
+stimulus.type = 'MB';
+stimulus.rgb = 0.48 * [1.0, -1.0, -1.0];
+stimulus.back_rgb = [0.5, 0.5, 0.5];
+stimulus.bar_width = 100;
+stimulus.direction = 90;
+stimulus.delta = 5;      
+stimulus.interval = 120; %frame
+stimulus.num_reps = 2;
+stimulus.wait_trigger = 0;
+stimulus.wait_key = 0;
+
+
+run_stimulus(display, stimulus);
+{No appropriate method, property, or field heigh for class Monitor_Obj.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('Moving_Bar', '/RSM/RSM_Classes/Moving_Bar.m', 125)" style="font-weight:bold">Moving_Bar</a> (<a href="matlab: opentoline('/RSM/RSM_Classes/Moving_Bar.m',125,0)">line 125</a>)
+                        obj.frames = display.heigh/stimuli.delta;
+
+Error in <a href="matlab:helpUtils.errorDocCallback('q_RSM', '/RSM/RSM_Utils/q_RSM.m', 76)" style="font-weight:bold">q_RSM</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/q_RSM.m',76,0)">line 76</a>)
+        exp_obj.pending_stimuli{num_pending + 1} = Moving_Bar(stimulus);
+
+Error in <a href="matlab:helpUtils.errorDocCallback('run_stimulus', '/RSM/RSM_Utils/run_stimulus.m', 27)" style="font-weight:bold">run_stimulus</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/run_stimulus.m',27,0)">line 27</a>)
+        RSM_GLOBAL = q_RSM(RSM_GLOBAL, stim_in);
+} 
+stimulus = [];
+stimulus.type = 'MB';
+stimulus.rgb = 0.48 * [1.0, -1.0, -1.0];
+stimulus.back_rgb = [0.5, 0.5, 0.5];
+stimulus.bar_width = 100;
+stimulus.direction = 90;
+stimulus.delta = 5;      
+stimulus.interval = 120; %frame
+stimulus.num_reps = 2;
+stimulus.wait_trigger = 0;
+stimulus.wait_key = 0;
+
+
+run_stimulus(display, stimulus);
+
+******************************  Session: 15-May-2014_RigA  Stimulus #: 8  ******************************* 
+
+SAVING SETUP INFO: Moving_Bar 
+RUNNING STIMULUS: Moving_Bar 
+FINISHED WITH: Moving_Bar 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+clear stimulus;
+stimulus = [];
+stimulus.type = 'MB';
+stimulus.rgb = 0.48 * [1.0, -1.0, -1.0];
+stimulus.back_rgb = [0.5, 0.5, 0.5];
+stimulus.bar_width = 100;
+stimulus.direction = 90;
+stimulus.delta = 5;      
+stimulus.interval = 120; %frame
+stimulus.num_reps = 3;
+stimulus.wait_trigger = 0;
+stimulus.wait_key = 0;
+
+
+run_stimulus(display, stimulus);
+
+******************************  Session: 15-May-2014_RigA  Stimulus #: 9  ******************************* 
+
+SAVING SETUP INFO: Moving_Bar 
+RUNNING STIMULUS: Moving_Bar 
+FINISHED WITH: Moving_Bar 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+clear stimulus;
+stimulus = [];
+stimulus.type = 'MB';
+stimulus.rgb = 0.48 * [1.0, -1.0, -1.0];
+stimulus.back_rgb = [0.5, 0.5, 0.5];
+stimulus.bar_width = 100;
+stimulus.direction = 90;
+stimulus.delta = 5;      
+stimulus.interval = 120; %frame
+stimulus.num_reps = 3;
+stimulus.wait_trigger = 0;
+stimulus.wait_key = 0;
+
+
+run_stimulus(display, stimulus);
+
+******************************  Session: 15-May-2014_RigA  Stimulus #: 10  ******************************* 
+
+SAVING SETUP INFO: Moving_Bar 
+RUNNING STIMULUS: Moving_Bar 
+FINISHED WITH: Moving_Bar 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+clear stimulus;
+stimulus = [];
+stimulus.type = 'MB';
+stimulus.rgb = 0.48 * [1.0, -1.0, -1.0];
+stimulus.back_rgb = [0.5, 0.5, 0.5];
+stimulus.bar_width = 100;
+stimulus.direction = 45;
+stimulus.delta = 5;      
+stimulus.interval = 120; %frame
+stimulus.num_reps = 3;
+stimulus.wait_trigger = 0;
+stimulus.wait_key = 0;
+
+
+run_stimulus(display, stimulus);
+
+******************************  Session: 15-May-2014_RigA  Stimulus #: 11  ******************************* 
+
+SAVING SETUP INFO: Moving_Bar 
+RUNNING STIMULUS: Moving_Bar 
+FINISHED WITH: Moving_Bar 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+clear stimulus;
+stimulus = [];
+stimulus.type = 'MB';
+stimulus.rgb = 0.48 * [1.0, -1.0, -1.0];
+stimulus.back_rgb = [0.5, 0.5, 0.5];
+stimulus.bar_width = 100;
+stimulus.direction = 45;
+stimulus.delta = 5;      
+stimulus.interval = 120; %frame
+stimulus.num_reps = 3;
+stimulus.wait_trigger = 0;
+stimulus.wait_key = 0;
+
+
+run_stimulus(display, stimulus);
+
+******************************  Session: 15-May-2014_RigA  Stimulus #: 12  ******************************* 
+
+SAVING SETUP INFO: Moving_Bar 
+RUNNING STIMULUS: Moving_Bar 
+FINISHED WITH: Moving_Bar 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+clear stimulus;
+stimulus = [];
+stimulus.type = 'MB';
+stimulus.rgb = 0.48 * [1.0, -1.0, -1.0];
+stimulus.back_rgb = [0.5, 0.5, 0.5];
+stimulus.bar_width = 100;
+stimulus.direction = 0;
+stimulus.delta = 10;      
+stimulus.interval = 120; %frame
+stimulus.num_reps = 2;
+stimulus.wait_trigger = 0;
+stimulus.wait_key = 0;
+
+
+run_stimulus(display, stimulus);
+
+******************************  Session: 15-May-2014_RigA  Stimulus #: 13  ******************************* 
+
+SAVING SETUP INFO: Moving_Bar 
+RUNNING STIMULUS: Moving_Bar 
+FINISHED WITH: Moving_Bar 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+clear stimulus;
+
+
+<strong> Moving bar. </strong>
+
+******************************  Session: 15-May-2014_RigA  Stimulus #: 14  ******************************* 
+
+SAVING SETUP INFO: Moving_Bar 
+RUNNING STIMULUS: Moving_Bar 
+FINISHED WITH: Moving_Bar 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving bar. </strong>
+
+******************************  Session: 15-May-2014_RigA  Stimulus #: 15  ******************************* 
+
+SAVING SETUP INFO: Moving_Bar 
+RUNNING STIMULUS: Moving_Bar 
+FINISHED WITH: Moving_Bar 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving bar. </strong>
+
+******************************  Session: 15-May-2014_RigA  Stimulus #: 16  ******************************* 
+
+SAVING SETUP INFO: Moving_Bar 
+RUNNING STIMULUS: Moving_Bar 
+FINISHED WITH: Moving_Bar 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving bar. </strong>
+
+******************************  Session: 15-May-2014_RigA  Stimulus #: 17  ******************************* 
+
+SAVING SETUP INFO: Moving_Bar 
+RUNNING STIMULUS: Moving_Bar 
+FINISHED WITH: Moving_Bar 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit

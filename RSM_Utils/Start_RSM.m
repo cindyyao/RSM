@@ -28,6 +28,9 @@ prerun_obj = Experimental_Session(exp_setup);
 clear exp_setup;
 
 RSM_GLOBAL.RSM_ver = 1.0;
+RSM_GLOBAL.monitor.mon_num = 0;
+RSM_GLOBAL.monitor.screen_refresh_freq = 60;
+
 
 % Before we begin in earnest we change directories to the home directory
 cd( RSM_GLOBAL.home_dir_name );
@@ -50,15 +53,15 @@ mglFlush;
 
 % Finally lets initialize the DIO (we will simply use the default port
 % values specified by Justin
-mglDigIO('init');
+% mglDigIO('init');
 
 % 6501 Output line starts high (~ +4.4 V), clear the line with a pulse
-Pulse_DigOut_Channel;
+% Pulse_DigOut_Channel;
 
 % NB: THIS DOES NOT OUTPUT A PULSE. It merely causes the line voltage to
 % drop low. 
 
-Prerun_RNstim( prerun_obj ); 
+% Prerun_RNstim( prerun_obj ); 
 
 clear prerun_obj;
 
