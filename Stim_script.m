@@ -3,6 +3,7 @@
 Start_RSM;
 mglSetGammaTable( RSM_GLOBAL.monitor.red_table, RSM_GLOBAL.monitor.green_table, RSM_GLOBAL.monitor.blue_table );
 
+mglMoveWindow(5, 1055);
 
 %% Stimulus
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -69,13 +70,12 @@ fprintf('\n\n<strong> Moving bar. </strong>\n');
 %------------------------------------------------------------------------------
 stimulus = [];
 stimulus.type = 'MB';
-stimulus.rgb = 0.48 * [1.0, -1.0, -1.0];
+stimulus.rgb = 0.48 * [1.0, 1.0, 1.0];
 stimulus.back_rgb = [0.5, 0.5, 0.5];
-stimulus.x_start = 50;      stimulus.x_end = 100;
-stimulus.y_start = 0;      stimulus.y_end = 480;
-stimulus.x_delta = 0.5;      stimulus.y_delta = 0;
-stimulus.ISI = 120; %frame
-stimulus.frames = (640 - stimulus.x_start)/stimulus.x_delta + stimulus.ISI;
+stimulus.bar_width = 100;
+stimulus.direction = 315;
+stimulus.delta = 0.1;      
+stimulus.interval = 60; %frame
 stimulus.num_reps = 2;
 stimulus.wait_trigger = 0;
 stimulus.wait_key = 0;

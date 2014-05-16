@@ -19064,4 +19064,146 @@ FINISHED WITH: Moving_Bar
 
 ***********************************************************************************************
 
-Ready for next stimulus setup; "Stop_RSM" to quit
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving bar. </strong>
+
+******************************  Session: 15-May-2014_RigA  Stimulus #: 18  ******************************* 
+
+SAVING SETUP INFO: Moving_Bar 
+RUNNING STIMULUS: Moving_Bar 
+FINISHED WITH: Moving_Bar 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving bar. </strong>
+
+******************************  Session: 15-May-2014_RigA  Stimulus #: 19  ******************************* 
+
+SAVING SETUP INFO: Moving_Bar 
+RUNNING STIMULUS: Moving_Bar 
+FINISHED WITH: Moving_Bar 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving bar. </strong>
+
+******************************  Session: 15-May-2014_RigA  Stimulus #: 20  ******************************* 
+
+SAVING SETUP INFO: Moving_Bar 
+RUNNING STIMULUS: Moving_Bar 
+FINISHED WITH: Moving_Bar 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving bar. </strong>
+
+******************************  Session: 15-May-2014_RigA  Stimulus #: 21  ******************************* 
+
+SAVING SETUP INFO: Moving_Bar 
+RUNNING STIMULUS: Moving_Bar 
+FINISHED WITH: Moving_Bar 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+edit DS131209.m
+opt = struct('load_params', 1,'load_neurons', 1, 'load_ei', 1);
+
+% load data
+datarun{1} = load_data('/Analysis/xyao/2013-12-09-0/data001-map/data001-map', opt);
+Examining 199 cells (RRS v.32) ... extracted 198 cells.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!   WARNING: array IDs have not been set yet for values >= 1500   !!!!!!!!!!!
+!!!!!!!!   In addition, this is an unknown > 1500 array id;              !!!!!!!!!!!
+!!!!!!!!       transforms may be broken                                  !!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+datarun{1}.names.stimulus_path = '/Analysis/xyao/2013-12-09-0/stimuli/s01';
+datarun{1} = load_stim(datarun{1}, 'user_defined_trigger_interval', 10);
+{Error using <a href="matlab:helpUtils.errorDocCallback('load_stim', '/Users/xyao/Dropbox/Lab/Development/matlab-standard/code/lab/load_stim.m', 14)" style="font-weight:bold">load_stim</a> (<a href="matlab: opentoline('/Users/xyao/Dropbox/Lab/Development/matlab-standard/code/lab/load_stim.m',14,0)">line 14</a>)
+Argument 'user_defined_trigger_interval' did not match any valid parameter of the parser.
+} 
+datarun{1} = load_data('/Analysis/xyao/2013-12-09-0/data001-map/data001-map', opt);
+Examining 199 cells (RRS v.32) ... extracted 198 cells.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!   WARNING: array IDs have not been set yet for values >= 1500   !!!!!!!!!!!
+!!!!!!!!   In addition, this is an unknown > 1500 array id;              !!!!!!!!!!!
+!!!!!!!!       transforms may be broken                                  !!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+datarun{1}.names.stimulus_path = '/Analysis/xyao/2013-12-09-0/stimuli/s01';
+datarun{1} = load_stim(datarun{1});
+Caught "std::exception" Exception message is:
+basic_string::at
+help mglOpen
+  <strong>mglOpen</strong>: Open an mgl window
+ 
+         $Id: <strong>mglOpen</strong>.m 1063 2013-02-01 04:23:50Z justin $
+       usage: <strong>mglOpen</strong>(whichScreen, screenWidth,screenHeight,frameRate,bitDepth)
+          by: justin gardner
+        date: 04/10/06
+   copyright: (c) 2006 Justin Gardner, Jonas Larsson (GPL see mgl/COPYING)
+     purpose: Opens an openGL window
+       usage: open last monitor in list wwith current window settings
+              <strong>mglOpen</strong>
+  
+              Open with resolution 800x600 60Hz 32bit fullscreen
+              <strong>mglOpen</strong>(1,800,600,60,32);
+ 
+              Open in a window
+              <strong>mglOpen</strong>(0);
+ 
+
+
+
+<strong> Moving bar. </strong>
+
+******************************  Session: 15-May-2014_RigA  Stimulus #: 22  ******************************* 
+
+SAVING SETUP INFO: Moving_Bar 
+RUNNING STIMULUS: Moving_Bar 
+FINISHED WITH: Moving_Bar 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+a = 1:10
+
+a =
+
+     1     2     3     4     5     6     7     8     9    10
+
+a1 = a*sqrt(2)
+
+a1 =
+
+    1.4142    2.8284    4.2426    5.6569    7.0711    8.4853    9.8995   11.3137   12.7279   14.1421
+
+a2 = a1/2
+
+a2 =
+
+    0.7071    1.4142    2.1213    2.8284    3.5355    4.2426    4.9497    5.6569    6.3640    7.0711
+
+
+
+<strong> Moving bar. </strong>
+
+******************************  Session: 15-May-2014_RigA  Stimulus #: 23  ******************************* 
+
+SAVING SETUP INFO: Moving_Bar 
+RUNNING STIMULUS: Moving_Bar 
+FINISHED WITH: Moving_Bar 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
