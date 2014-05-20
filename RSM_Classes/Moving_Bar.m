@@ -71,18 +71,6 @@ classdef	Moving_Bar < handle
                 fprintf('\t RSM ERROR: bar_width not recognized. Please define bar_width value and try again. \n');
                 return
             end  
-            
-            
-            if (isfield(stimuli,'delta'))
-
-                    obj.x_delta = stimuli.delta*cos(stimuli.direction*pi/180);
-                    obj.y_delta = stimuli.delta*sin(stimuli.direction*pi/180);
-            
-            else
-                fprintf('\t RSM ERROR: delta recognized. Please define delta value and try again. \n');
-                return
-            end  
-   
         
             if (isfield(stimuli,'rgb'))
                obj.color = [stimuli.rgb(1); stimuli.rgb(2); stimuli.rgb(3)];
@@ -110,44 +98,52 @@ classdef	Moving_Bar < handle
             if (isfield(stimuli,'direction'))
                 obj.direction = stimuli.direction;
                 L = 2000;
-                switch stimuli.direction
-                    case 0
-                        obj.x_start = [0; 0; stimuli.bar_width; stimuli.bar_width];
-                        obj.y_start = [0; display.height; display.height; 0];
-                        obj.frames = display.width/stimuli.delta;
-                    case 180
-                        obj.x_start = [display.width-stimuli.bar_width; display.width-stimuli.bar_width; display.width; display.width];
-                        obj.y_start = [0; display.height; display.height; 0];
-                        obj.frames = display.width/stimuli.delta;
-                    case 90
-                        obj.x_start = [0; 0; display.width; display.width];
-                        obj.y_start = [display.height-stimuli.bar_width; display.height; display.height; display.height-stimuli.bar_width];
-                        obj.frames = display.height/stimuli.delta;
-                    case 270
-                        obj.x_start = [0; 0; display.width; display.width];
-                        obj.y_start = [0; stimuli.bar_width; stimuli.bar_width; 0];
-                        obj.frames = display.height/stimuli.delta;
-                    case 45
-                        obj.x_start = [-L; L; L; -L];
-                        obj.y_start = [display.height-L; display.height+L; display.height-stimuli.bar_width*sqrt(2)+L; display.height-stimuli.bar_width*sqrt(2)-L];
-                        obj.frames = display.width*sqrt(2)/stimuli.delta;
-                    case 225
-                        obj.x_start = [0; L; L; 0];
-                        obj.y_start = [-display.width+stimuli.bar_width*sqrt(2); L-display.width+stimuli.bar_width*sqrt(2); L-display.width; -display.width];
-                        obj.frames = display.width*sqrt(2)/stimuli.delta;
-                    case 135
-                        obj.x_start = [L; 0; 0; L];
-                        obj.y_start = [display.height+display.width-stimuli.bar_width*sqrt(2)-L; display.height+display.width-stimuli.bar_width*sqrt(2); display.height+display.width; display.height+display.width-L];
-                        obj.frames = display.width*sqrt(2)/stimuli.delta;
-                    case 315
-                        obj.x_start = [L; -L; -L; L];
-                        obj.y_start = [-L; L; stimuli.bar_width*sqrt(2)+L; stimuli.bar_width*sqrt(2)-L];
-                        obj.frames = display.width*sqrt(2)/stimuli.delta;
-                    otherwise
-                        fprintf('\t RSM ERROR: invalid direction. Please define valid direction value and try again. \n');
-                        return
+                if stimuli.direction >= 0 && stimuli.direction < 90
+                    r0 = [0, display.height];
+                    obj.x_start = [0; 0; stimuli.bar_width; stimuli.bar_width];
+                    obj.y_start = [L; -L; -L; L];
+                    [obj.x_start, obj.y_start] = rotateData(obj.x_start, obj.y_start, r0(1), r0(2), stimuli.direction*pi/180);
+                elseif stimuli.direction >= 90 && stimuli.direction < 180
+                    r0 = [display.width, display.height];
+                    obj.x_start = [-L; -L; L; L];
+                    obj.y_start = [display.height-stimuli.bar_width; display.height; display.height; display.height-stimuli.bar_width];
+                    [obj.x_start, obj.y_start] = rotateData(obj.x_start, obj.y_start, r0(1), r0(2), (stimuli.direction-90)*pi/180);
+                elseif stimuli.direction >= 180 && stimuli.direction < 270
+                    r0 = [display.width, 0];
+                    obj.x_start = [display.width-stimuli.bar_width; display.width-stimuli.bar_width; display.width; display.width];
+                    obj.y_start = [L; -L; -L; L];
+                    [obj.x_start, obj.y_start] = rotateData(obj.x_start, obj.y_start, r0(1), r0(2), (stimuli.direction-180)*pi/180);
+                elseif stimuli.direction >= 270 && stimuli.direction < 360
+                    r0 = [0, 0];
+                    obj.x_start = [-L; -L; L; L];
+                    obj.y_start = [0; stimuli.bar_width; stimuli.bar_width; 0]; 
+                    [obj.x_start, obj.y_start] = rotateData(obj.x_start, obj.y_start, r0(1), r0(2), (stimuli.direction-270)*pi/180);
+                else
+                    fprintf('\t RSM ERROR: invalid direction. Please define valid direction value and try again. \n');
+                    return
                 end
-                obj.frames = obj.frames + stimuli.interval;
+                obj.x_start = obj.x_start';
+                obj.y_start = obj.y_start';
+                x_dis = (abs(tan(stimuli.direction*pi/180)*display.height)+display.width);
+                y_dis = (abs(display.width/tan(stimuli.direction*pi/180))+display.height);
+                [dis, I] = min([x_dis, y_dis]);
+                if (isfield(stimuli,'delta'))
+                    switch I
+                    case 1                        
+                        obj.x_delta = stimuli.delta/cos(stimuli.direction*pi/180);
+                        obj.y_delta = 0;
+                        obj.frames = abs(dis/obj.x_delta) + stimuli.interval;
+                    case 2
+                        obj.y_delta = stimuli.delta/sin(stimuli.direction*pi/180);
+                        obj.x_delta = 0;
+                        obj.frames = abs(dis/obj.y_delta) + stimuli.interval;
+                    end
+
+                else
+                    fprintf('\t RSM ERROR: delta recognized. Please define delta value and try again. \n');
+                    return
+                end  
+                
                 
             else
                 fprintf('\t RSM ERROR: direction not recognized. Please define direction value and try again. \n');
