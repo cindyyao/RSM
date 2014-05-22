@@ -326,7 +326,7 @@ classdef	Moving_Grating < handle
                 % The phase switch in the phase (phi) is because
                 % mglMakeGrating adds the phase offset; whereas we want a
                 % subtracted phase offset.
-                grating = mglMakeGrating(obj.physical_width/4, obj.physical_height/4, 4 * obj.grating_sf_dva, obj.grating_angle, (-1*phi));
+                grating = mglMakeGrating(obj.physical_width/4, obj.physical_height/4, 4 * obj.grating_sf_dva, obj.grating_angle, (phi));
 
                 grating = 255*(grating+1)/2; 
                 

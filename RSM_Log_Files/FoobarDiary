@@ -29238,3 +29238,3939 @@ if system_dependent('IsDebugMode')==1, dbstep; end
 obj.y_delta
 
 ans =
+
+   -2.8284
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+
+
+<strong> Moving bar. </strong>
+
+******************************  Session: 19-May-2014_RigA  Stimulus #: 47  ******************************* 
+
+SAVING SETUP INFO: Moving_Bar 
+RUNNING STIMULUS: Moving_Bar 
+FINISHED WITH: Moving_Bar 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 19-May-2014_RigA  Stimulus #: 48  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+edit Moving_Grating.m
+EJC: hardcoded host and rig in Setup_Rig.m
+EJC: hardcoded monitor path in Setup_Rig.m
+
+Configured for host: alligator // Rig ID: A 
+RSM Configuring display for 60.000 [Hz] 
+"display" object set for monitor: RigA_CRT1.
+RSM initialization complete.
+Cut and paste desired params. Enter: "RSM" to present stimuli; "Stop_RSM" to quit. 
+
+mglSetGammaTable( RSM_GLOBAL.monitor.red_table, RSM_GLOBAL.monitor.green_table, RSM_GLOBAL.monitor.blue_table );
+
+mglMoveWindow(5, 1055);
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 1  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+<a href="matlab: opentoline('/RSM/RSM_Utils/Stim_Engine.m',116,1)">116 </a>        if ( ~isempty( findprop(exp_obj.stimulus, 'frames_shown') ) )
+exp_obj.stimulus
+
+ans = 
+
+  <a href="matlab:helpPopup Moving_Grating" style="font-weight:bold">Moving_Grating</a> with properties:
+
+           stim_name: 'Moving_Grating'
+       run_date_time: [2014 5 20 11 53 34.3049]
+      run_time_total: []
+        main_trigger: 1
+              tmain0: 1.8975e+06
+         rep_trigger: 0
+               trep0: 1.8975e+06
+        run_duration: []
+    stim_update_freq: []
+          run_script: 'Run_PhaseLoop_Rep( exp_obj.stimulus );'
+            wait_key: 0
+        wait_trigger: 0
+           n_repeats: 1
+          repeat_num: 1
+       backgrndcolor: [3x1 double]
+            num_reps: []
+            n_frames: 640
+        frames_shown: 641
+            reps_run: 0
+      physical_width: 28.5000
+     physical_height: 21.5000
+               color: [3x1 double]
+            phase_t0: 0
+      phase_velocity: 360
+      grating_sf_pix: 60
+      grating_sf_dva: 0.3743
+       grating_angle: 0
+
+exp_obj
+
+exp_obj = 
+
+  <a href="matlab:helpPopup Experimental_Session" style="font-weight:bold">Experimental_Session</a> with properties:
+
+          debug_flag: 0
+          dio_config: [1x1 struct]
+       home_dir_name: '/RSM'
+    monitor_dir_name: '/RSM/RSM_Monitors'
+          movie_path: '/RSM/RSM_Movie_Vault'
+            map_path: '/RSM/RSM_Map_Vault'
+           host_name: 'alligator'
+        log_file_dir: '/RSM/RSM_Log_Files'
+        mex_rng_flag: []
+             monitor: [1x1 Monitor_Obj]
+        num_stim_ran: 0
+        past_stimuli: []
+     pending_stimuli: {[]}
+              rig_ID: 'A'
+            rig_geom: [1x1 struct]
+             RSM_ver: 1
+          session_fn: 'Foobar'
+        session_name: '20-May-2014_RigA'
+        stealth_flag: 0
+            stimulus: [1x1 Moving_Grating]
+         prerun_path: '/RSM/RSM_Utils/RAWMOV_UTILS'
+
+exp_obj.dio_config
+
+ans = 
+
+    numframes_per_pulse: 100
+    trigger_sample_rate: 100
+      outpulse_duration: 1.0000e-03
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Random Noise : Binary. </strong>
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 2  ******************************* 
+
+SAVING SETUP INFO: Random Noise 
+RUNNING STIMULUS: Random Noise 
+<a href="matlab: opentoline('/RSM/RSM_Utils/Stim_Engine.m',116,1)">116 </a>        if ( ~isempty( findprop(exp_obj.stimulus, 'frames_shown') ) )
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+FINISHED WITH: Random Noise 
+{Attempted to access diff_vect(2); index out of bounds because numel(diff_vect)=0.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('Analyze_Timestamps', '/RSM/RSM_Utils/Analyze_Timestamps.m', 39)" style="font-weight:bold">Analyze_Timestamps</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/Analyze_Timestamps.m',39,0)">line 39</a>)
+    if ((diff_vect(ind) * diff_vect(ind-1)) == 1)
+
+Error in <a href="matlab:helpUtils.errorDocCallback('Stim_Engine', '/RSM/RSM_Utils/Stim_Engine.m', 212)" style="font-weight:bold">Stim_Engine</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/Stim_Engine.m',212,0)">line 212</a>)
+        Analyze_Timestamps( exp_obj );
+
+Error in <a href="matlab:helpUtils.errorDocCallback('run_RSM', '/RSM/RSM_Utils/run_RSM.m', 28)" style="font-weight:bold">run_RSM</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/run_RSM.m',28,0)">line 28</a>)
+    [ exp_obj ] = Stim_Engine( exp_obj );
+
+Error in <a href="matlab:helpUtils.errorDocCallback('run_stimulus', '/RSM/RSM_Utils/run_stimulus.m', 28)" style="font-weight:bold">run_stimulus</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/run_stimulus.m',28,0)">line 28</a>)
+        RSM_GLOBAL = run_RSM(RSM_GLOBAL);
+} 
+
+
+<strong> Random Noise : Binary. </strong>
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 3  ******************************* 
+
+SAVING SETUP INFO: Random Noise 
+RUNNING STIMULUS: Random Noise 
+<a href="matlab: opentoline('/RSM/RSM_Utils/Stim_Engine.m',116,1)">116 </a>        if ( ~isempty( findprop(exp_obj.stimulus, 'frames_shown') ) )
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbquit; end
+exp_obj.stimulus.run_script
+{Undefined variable "exp_obj" or function "exp_obj.stimulus.run_script".
+} 
+mglClearScreen
+mglFlush
+edit rand_stim
+exist rand_stim
+
+ans =
+
+     0
+
+stimulus = [];
+stimulus.type = 'MG';  
+stimulus.rgb = [1.0, 1.0, 1.0];
+stimulus.back_rgb = [0.0, 0.0, 0.0];
+stimulus.phase0 = 0; 
+stimulus.temporal_period = [0.5 1 2];  % sec
+stimulus.spatial_period = [30 60 120];  % frame
+stimulus.direction = [0 90 180 270]; % Convention 0 deg is 3 oclock
+stimulus.repeats = 2;
+% stimulus.frames = 640;        
+stimulus.wait_trigger = 0;
+stimulus.wait_key = 0;
+stimulus
+
+stimulus = 
+
+               type: 'MG'
+                rgb: [1 1 1]
+           back_rgb: [0 0 0]
+             phase0: 0
+    temporal_period: [0.5000 1 2]
+     spatial_period: [30 60 120]
+          direction: [0 90 180 270]
+            repeats: 2
+       wait_trigger: 0
+           wait_key: 0
+
+stimulus = [];
+stimulus.type = 'MG';  
+stimulus.rgb = [1.0, 1.0, 1.0];
+stimulus.back_rgb = [0.0, 0.0, 0.0];
+stimulus.phase0 = 0; 
+stimulus.temporal_period = [0.5 1 2];  % sec
+stimulus.spatial_period = [30 60 120];  % frame
+stimulus.direction = [0 90 180 270]; % Convention 0 deg is 3 oclock
+stimulus.repeats = 2;
+stimulus.frames = 300;        
+stimulus.wait_trigger = 0;
+stimulus.wait_key = 0;
+stimulus
+
+stimulus = 
+
+               type: 'MG'
+                rgb: [1 1 1]
+           back_rgb: [0 0 0]
+             phase0: 0
+    temporal_period: [0.5000 1 2]
+     spatial_period: [30 60 120]
+          direction: [0 90 180 270]
+            repeats: 2
+             frames: 300
+       wait_trigger: 0
+           wait_key: 0
+
+tp = stimulus.temporal_period;
+tp
+
+tp =
+
+    0.5000    1.0000    2.0000
+
+tp = stimulus.temporal_period;
+sp = stimulus.spatial_peroid;
+{Reference to non-existent field 'spatial_peroid'.
+} 
+tp = stimulus.temporal_period;
+sp = stimulus.spatial_period;
+dr = stimulus.direction;
+rp = stimulus.repeats;
+
+trial_num = length(tp)*length(sp)*length(dr)*length(rp);
+trial_num
+
+trial_num =
+
+    36
+
+tp
+
+tp =
+
+    0.5000    1.0000    2.0000
+
+sp
+
+sp =
+
+    30    60   120
+
+dr
+
+dr =
+
+     0    90   180   270
+
+tp = stimulus.temporal_period;
+sp = stimulus.spatial_period;
+dr = stimulus.direction;
+rp = stimulus.repeats;
+
+trial_num = length(tp)*length(sp)*length(dr)*rp;
+trial_num
+
+trial_num =
+
+    72
+
+stimulus(1:5) = stim_in
+{Undefined function or variable 'stim_in'.
+} 
+a(1:5) = stimulus
+
+a = 
+
+1x5 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+
+    type
+    rgb
+    back_rgb
+    phase0
+    temporal_period
+    spatial_period
+    direction
+    repeats
+    frames
+    wait_trigger
+    wait_key
+
+a
+
+a = 
+
+1x5 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+
+    type
+    rgb
+    back_rgb
+    phase0
+    temporal_period
+    spatial_period
+    direction
+    repeats
+    frames
+    wait_trigger
+    wait_key
+
+a{1}
+{Cell contents reference from a non-cell array object.
+} 
+a(1)
+
+ans = 
+
+               type: 'MG'
+                rgb: [1 1 1]
+           back_rgb: [0 0 0]
+             phase0: 0
+    temporal_period: [0.5000 1 2]
+     spatial_period: [30 60 120]
+          direction: [0 90 180 270]
+            repeats: 2
+             frames: 300
+       wait_trigger: 0
+           wait_key: 0
+
+a(2)
+
+ans = 
+
+               type: 'MG'
+                rgb: [1 1 1]
+           back_rgb: [0 0 0]
+             phase0: 0
+    temporal_period: [0.5000 1 2]
+     spatial_period: [30 60 120]
+          direction: [0 90 180 270]
+            repeats: 2
+             frames: 300
+       wait_trigger: 0
+           wait_key: 0
+
+stimulus
+
+stimulus = 
+
+               type: 'MG'
+                rgb: [1 1 1]
+           back_rgb: [0 0 0]
+             phase0: 0
+    temporal_period: [0.5000 1 2]
+     spatial_period: [30 60 120]
+          direction: [0 90 180 270]
+            repeats: 2
+             frames: 300
+       wait_trigger: 0
+           wait_key: 0
+
+stim_in = stimulus
+
+stim_in = 
+
+               type: 'MG'
+                rgb: [1 1 1]
+           back_rgb: [0 0 0]
+             phase0: 0
+    temporal_period: [0.5000 1 2]
+     spatial_period: [30 60 120]
+          direction: [0 90 180 270]
+            repeats: 2
+             frames: 300
+       wait_trigger: 0
+           wait_key: 0
+
+clear stimulus
+stim_in
+
+stim_in = 
+
+               type: 'MG'
+                rgb: [1 1 1]
+           back_rgb: [0 0 0]
+             phase0: 0
+    temporal_period: [0.5000 1 2]
+     spatial_period: [30 60 120]
+          direction: [0 90 180 270]
+            repeats: 2
+             frames: 300
+       wait_trigger: 0
+           wait_key: 0
+
+tp = stim_in.temporal_period;
+sp = stim_in.spatial_period;
+dr = stim_in.direction;
+rp = stim_in.repeats;
+
+trial_num = length(tp)*length(sp)*length(dr)*rp;
+trial_num
+
+trial_num =
+
+    72
+
+stimulus(1:trial_num) = stim_in;
+stimulus
+
+stimulus = 
+
+1x72 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+
+    type
+    rgb
+    back_rgb
+    phase0
+    temporal_period
+    spatial_period
+    direction
+    repeats
+    frames
+    wait_trigger
+    wait_key
+
+stimulus(1)
+
+ans = 
+
+               type: 'MG'
+                rgb: [1 1 1]
+           back_rgb: [0 0 0]
+             phase0: 0
+    temporal_period: [0.5000 1 2]
+     spatial_period: [30 60 120]
+          direction: [0 90 180 270]
+            repeats: 2
+             frames: 300
+       wait_trigger: 0
+           wait_key: 0
+
+stimulus
+
+stimulus = 
+
+1x72 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+
+    type
+    rgb
+    back_rgb
+    phase0
+    temporal_period
+    spatial_period
+    direction
+    repeats
+    frames
+    wait_trigger
+    wait_key
+
+i = 1
+
+i =
+
+     1
+
+j = 1
+
+j =
+
+     1
+
+k = 1
+
+k =
+
+     1
+
+length(tp)*length(dr)*(i-1) + length(dr)*(j-1) + k
+
+ans =
+
+     1
+
+k = 2
+
+k =
+
+     2
+
+length(tp)*length(dr)*(i-1) + length(dr)*(j-1) + k
+
+ans =
+
+     2
+
+j = 2
+
+j =
+
+     2
+
+k = 1
+
+k =
+
+     1
+
+length(tp)*length(dr)*(i-1) + length(dr)*(j-1) + k
+
+ans =
+
+     5
+
+j = 1
+
+j =
+
+     1
+
+i = 2
+
+i =
+
+     2
+
+length(tp)*length(dr)*(i-1) + length(dr)*(j-1) + k
+
+ans =
+
+    13
+
+tp
+
+tp =
+
+    0.5000    1.0000    2.0000
+
+tp = stim_in.temporal_period;
+sp = stim_in.spatial_period;
+dr = stim_in.direction;
+rp = stim_in.repeats;
+
+trial_num = length(tp)*length(sp)*length(dr);
+trial_num_total = trial_num*rp;
+stimulus_temp(1:trial_num) = stim_in;
+
+for i = 1:length(sp)
+    for j = 1:length(tp)
+        for k = 1:length(dr)
+            idx = length(tp)*length(dr)*(i-1) + length(dr)*(j-1) + k;
+            stimulus_temp(idx).temporal_period = tp(i);
+            stimulus_temp(idx).spatial_period = sp(j);
+            stimulus_temp(idx).direction = dr(k);
+        end
+    end
+end
+stimulus_temp
+
+stimulus_temp = 
+
+1x36 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+
+    type
+    rgb
+    back_rgb
+    phase0
+    temporal_period
+    spatial_period
+    direction
+    repeats
+    frames
+    wait_trigger
+    wait_key
+
+stimulus_temp(1)
+
+ans = 
+
+               type: 'MG'
+                rgb: [1 1 1]
+           back_rgb: [0 0 0]
+             phase0: 0
+    temporal_period: 0.5000
+     spatial_period: 30
+          direction: 0
+            repeats: 2
+             frames: 300
+       wait_trigger: 0
+           wait_key: 0
+
+stimulus_temp(2)
+
+ans = 
+
+               type: 'MG'
+                rgb: [1 1 1]
+           back_rgb: [0 0 0]
+             phase0: 0
+    temporal_period: 0.5000
+     spatial_period: 30
+          direction: 90
+            repeats: 2
+             frames: 300
+       wait_trigger: 0
+           wait_key: 0
+
+stimulus_temp(3)
+
+ans = 
+
+               type: 'MG'
+                rgb: [1 1 1]
+           back_rgb: [0 0 0]
+             phase0: 0
+    temporal_period: 0.5000
+     spatial_period: 30
+          direction: 180
+            repeats: 2
+             frames: 300
+       wait_trigger: 0
+           wait_key: 0
+
+stimulus_temp(4)
+
+ans = 
+
+               type: 'MG'
+                rgb: [1 1 1]
+           back_rgb: [0 0 0]
+             phase0: 0
+    temporal_period: 0.5000
+     spatial_period: 30
+          direction: 270
+            repeats: 2
+             frames: 300
+       wait_trigger: 0
+           wait_key: 0
+
+stimulus_temp(5)
+
+ans = 
+
+               type: 'MG'
+                rgb: [1 1 1]
+           back_rgb: [0 0 0]
+             phase0: 0
+    temporal_period: 0.5000
+     spatial_period: 60
+          direction: 0
+            repeats: 2
+             frames: 300
+       wait_trigger: 0
+           wait_key: 0
+
+a(1:5) = stim_in
+
+a = 
+
+1x5 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+
+    type
+    rgb
+    back_rgb
+    phase0
+    temporal_period
+    spatial_period
+    direction
+    repeats
+    frames
+    wait_trigger
+    wait_key
+
+a(2) = []
+
+a = 
+
+1x4 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+
+    type
+    rgb
+    back_rgb
+    phase0
+    temporal_period
+    spatial_period
+    direction
+    repeats
+    frames
+    wait_trigger
+    wait_key
+
+help randi
+ <strong>randi</strong> Pseudorandom integers from a uniform discrete distribution.
+    R = <strong>randi</strong>(IMAX,N) returns an N-by-N matrix containing pseudorandom
+    integer values drawn from the discrete uniform distribution on 1:IMAX.
+    <strong>randi</strong>(IMAX,M,N) or <strong>randi</strong>(IMAX,[M,N]) returns an M-by-N matrix.
+    <strong>randi</strong>(IMAX,M,N,P,...) or <strong>randi</strong>(IMAX,[M,N,P,...]) returns an
+    M-by-N-by-P-by-... array.  <strong>randi</strong>(IMAX) returns a scalar.
+    <strong>randi</strong>(IMAX,SIZE(A)) returns an array the same size as A.
+ 
+    R = <strong>randi</strong>([IMIN,IMAX],...) returns an array containing integer
+    values drawn from the discrete uniform distribution on IMIN:IMAX.
+ 
+    Note: The size inputs M, N, P, ... should be nonnegative integers.
+    Negative integers are treated as 0.
+ 
+    R = <strong>randi</strong>(..., CLASSNAME) returns an array of integer values of class
+    CLASSNAME.
+ 
+    The arrays returned by <strong>randi</strong> may contain repeated integer values.  This
+    is sometimes referred to as sampling with replacement.  To get unique
+    integer values, sometimes referred to as sampling without replacement,
+    use RANDPERM.
+ 
+    The sequence of numbers produced by <strong>randi</strong> is determined by the settings of
+    the uniform random number generator that underlies RAND, RANDN, and <strong>randi</strong>.
+    <strong>randi</strong> uses one uniform random value to create each integer random value.
+    Control that shared random number generator using RNG.
+ 
+    Examples:
+ 
+       Example 1: Generate integer values from the uniform distribution on
+       the set 1:10.
+          r = randi(10,100,1);
+ 
+       Example 2: Generate an integer array of integer values drawn uniformly
+       from 1:10.
+          r = randi(10,100,1,'uint32');
+ 
+       Example 3: Generate integer values drawn uniformly from -10:10.
+          r = randi([-10 10],100,1);
+ 
+       Example 4: Reset the random number generator used by RAND, <strong>randi</strong>, and
+       RANDN to its default startup settings, so that <strong>randi</strong> produces the same
+       random numbers as if you restarted MATLAB.
+          rng('default');
+          randi(10,1,5)
+ 
+       Example 5: Save the settings for the random number generator used by
+       RAND, <strong>randi</strong>, and RANDN, generate 5 values from <strong>randi</strong>, restore the
+       settings, and repeat those values.
+          s = rng
+          i1 = randi(10,1,5)
+          rng(s);
+          i2 = randi(10,1,5) % i2 contains exactly the same values as i1
+ 
+       Example 6: Reinitialize the random number generator used by RAND,
+       <strong>randi</strong>, and RANDN with a seed based on the current time.  <strong>randi</strong> will
+       return different values each time you do this.  NOTE: It is usually
+       not necessary to do this more than once per MATLAB session.
+          rng('shuffle');
+          randi(10,1,5)
+ 
+    See also <a href="matlab:help rand">rand</a>, <a href="matlab:help randn">randn</a>, <a href="matlab:help randperm">randperm</a>, <a href="matlab:help rng">rng</a>, <a href="matlab:help RandStream">RandStream</a>
+
+    Overloaded methods:
+       <a href="matlab:help RandStream/randi">RandStream/randi</a>
+       <a href="matlab:help gpuArray/randi">gpuArray/randi</a>
+
+    Reference page in Help browser
+       <a href="matlab:doc randi">doc randi</a>
+
+help randperm
+ <strong>randperm</strong> Random permutation.
+    P = <strong>randperm</strong>(N) returns a vector containing a random permutation of the
+    integers 1:N.  For example, <strong>randperm</strong>(6) might be [2 4 5 6 1 3].
+ 
+    P = <strong>randperm</strong>(N,K) returns a row vector containing K unique integers
+    selected randomly from 1:N.  For example, <strong>randperm</strong>(6,3) might be [4 2 5].
+    
+    <strong>randperm</strong>(N,K) returns a vector of K unique values.  This is sometimes
+    referred to as a K-permutation of 1:N or as sampling without replacement.
+    To allow repeated values in the selection, sometimes referred to as
+    sampling with replacement, use RANDI(N,1,K).
+ 
+    <strong>randperm</strong> calls RAND and therefore changes the state of the random number
+    generator that underlies RAND, RANDI, and RANDN.  Control that shared
+    generator using RNG.
+ 
+    See also <a href="matlab:help nchoosek">nchoosek</a>, <a href="matlab:help perms">perms</a>, <a href="matlab:help rand">rand</a>, <a href="matlab:help randi">randi</a>, <a href="matlab:help rng">rng</a>.
+
+    Overloaded methods:
+       <a href="matlab:help RandStream/randperm">RandStream/randperm</a>
+
+    Reference page in Help browser
+       <a href="matlab:doc randperm">doc randperm</a>
+
+randperm(6)
+
+ans =
+
+     6     3     5     1     2     4
+
+randperm(6)
+
+ans =
+
+     5     1     2     3     4     6
+
+randperm(6)
+
+ans =
+
+     4     5     2     3     6     1
+
+randperm(6)
+
+ans =
+
+     4     3     1     5     6     2
+
+randperm(6)
+
+ans =
+
+     6     4     5     1     3     2
+
+randperm(6)
+
+ans =
+
+     2     4     5     3     1     6
+
+randperm(6, 7)
+{Error using <a href="matlab:helpUtils.errorDocCallback('randperm')" style="font-weight:bold">randperm</a>
+K must be less than or equal to N.
+} 
+seq
+{Undefined function or variable 'seq'.
+} 
+seq = [];
+
+for i = 1:rp
+    seq = [seq randperm(trial_num)];
+end
+seq
+
+seq =
+
+  Columns 1 through 17
+
+     4    19    32    33    18     9    24    36    26    34    15     2    22     6     5    11    10
+
+  Columns 18 through 34
+
+    20    27    31    23    12    17    16     1    28    13    25    14     7     8    35    29     3
+
+  Columns 35 through 51
+
+    30    21    27    20    19    24    29    33     5     2     6    35    14    31    28     4     9
+
+  Columns 52 through 68
+
+    17    26     8    32    21    12    18    25    11    34     7    36    16    15    22    30     1
+
+  Columns 69 through 72
+
+    10    13     3    23
+
+seq = [];
+
+for i = 1:rp
+    seq = [seq; randperm(trial_num)];
+end
+seq
+
+seq =
+
+  Columns 1 through 17
+
+    15    11     4    19    13    28    32    27     7    25     5    21    26    35    20    23    12
+    30    31     8    26     2    21    16     4    22    32     5    27     3     6    19    13    28
+
+  Columns 18 through 34
+
+     3    36     9    31    30    34     1     2    16    22    17     8    33    18    29    24     6
+    15    18     1    20     7    36    12    11    25    35    33    34    17    29    14     9    23
+
+  Columns 35 through 36
+
+    14    10
+    10    24
+
+stimulus = stimulus_temp(seq(1, :))
+
+stimulus = 
+
+1x36 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+
+    type
+    rgb
+    back_rgb
+    phase0
+    temporal_period
+    spatial_period
+    direction
+    repeats
+    frames
+    wait_trigger
+    wait_key
+
+stimulus(1)
+
+ans = 
+
+               type: 'MG'
+                rgb: [1 1 1]
+           back_rgb: [0 0 0]
+             phase0: 0
+    temporal_period: 1
+     spatial_period: 30
+          direction: 180
+            repeats: 2
+             frames: 300
+       wait_trigger: 0
+           wait_key: 0
+
+stimulus(3)
+
+ans = 
+
+               type: 'MG'
+                rgb: [1 1 1]
+           back_rgb: [0 0 0]
+             phase0: 0
+    temporal_period: 0.5000
+     spatial_period: 30
+          direction: 270
+            repeats: 2
+             frames: 300
+       wait_trigger: 0
+           wait_key: 0
+
+stimulus = [stimulus stimulus_temp(1)]
+
+stimulus = 
+
+1x37 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+
+    type
+    rgb
+    back_rgb
+    phase0
+    temporal_period
+    spatial_period
+    direction
+    repeats
+    frames
+    wait_trigger
+    wait_key
+
+stimulus(37)
+
+ans = 
+
+               type: 'MG'
+                rgb: [1 1 1]
+           back_rgb: [0 0 0]
+             phase0: 0
+    temporal_period: 0.5000
+     spatial_period: 30
+          direction: 0
+            repeats: 2
+             frames: 300
+       wait_trigger: 0
+           wait_key: 0
+
+edit rotateData.m
+stim_in
+
+stim_in = 
+
+               type: 'MG'
+                rgb: [1 1 1]
+           back_rgb: [0 0 0]
+             phase0: 0
+    temporal_period: [0.5000 1 2]
+     spatial_period: [30 60 120]
+          direction: [0 90 180 270]
+            repeats: 2
+             frames: 300
+       wait_trigger: 0
+           wait_key: 0
+
+tp = stim_in.temporal_period;
+sp = stim_in.spatial_period;
+dr = stim_in.direction;
+rp = stim_in.repeats;
+
+trial_num = length(tp)*length(sp)*length(dr);
+stimulus_temp(1:trial_num) = stim_in;
+for i = 1:length(sp)
+    for j = 1:length(tp)
+        for k = 1:length(dr)
+            idx = length(tp)*length(dr)*(i-1) + length(dr)*(j-1) + k;
+            stimulus_temp(idx).temporal_period = tp(i);
+            stimulus_temp(idx).spatial_period = sp(j);
+            stimulus_temp(idx).direction = dr(k);
+        end
+    end
+end
+stimulus_temp
+
+stimulus_temp = 
+
+1x36 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+
+    type
+    rgb
+    back_rgb
+    phase0
+    temporal_period
+    spatial_period
+    direction
+    repeats
+    frames
+    wait_trigger
+    wait_key
+
+stimulus_temp(1)
+
+ans = 
+
+               type: 'MG'
+                rgb: [1 1 1]
+           back_rgb: [0 0 0]
+             phase0: 0
+    temporal_period: 0.5000
+     spatial_period: 30
+          direction: 0
+            repeats: 2
+             frames: 300
+       wait_trigger: 0
+           wait_key: 0
+
+stimulus_temp(2)
+
+ans = 
+
+               type: 'MG'
+                rgb: [1 1 1]
+           back_rgb: [0 0 0]
+             phase0: 0
+    temporal_period: 0.5000
+     spatial_period: 30
+          direction: 90
+            repeats: 2
+             frames: 300
+       wait_trigger: 0
+           wait_key: 0
+
+seq = [];
+
+for i = 1:rp
+    seq = [seq; randperm(trial_num)];
+end
+seq
+
+seq =
+
+  Columns 1 through 17
+
+    10     6     4    36    31    34     2    32    16    25     7    22    14    15    33    13    17
+    28    25    12    20     2     8    19     1     3    33    13    16    26    21     5    22    14
+
+  Columns 18 through 34
+
+    18    24     1    28    30    29     8    21     5     3    12     9    20    23    19    35    27
+    23     7     4    11    34    31    24    36    32    15    17    18    30    27     9     6    29
+
+  Columns 35 through 36
+
+    11    26
+    35    10
+
+stimulus = stimulus_temp(seq(1, :));
+stimulus
+
+stimulus = 
+
+1x36 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+
+    type
+    rgb
+    back_rgb
+    phase0
+    temporal_period
+    spatial_period
+    direction
+    repeats
+    frames
+    wait_trigger
+    wait_key
+
+if rp > 1
+    for i = 2:rp
+        stim_1 = stimulus(1:trial_num);
+        stimulus = [stimulus stim_1(seq(i, :))];
+    end
+end
+stimulus
+
+stimulus = 
+
+1x72 <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> array with fields:
+
+    type
+    rgb
+    back_rgb
+    phase0
+    temporal_period
+    spatial_period
+    direction
+    repeats
+    frames
+    wait_trigger
+    wait_key
+
+seq(1, :) = 1:trial_num;
+seq
+
+seq =
+
+  Columns 1 through 17
+
+     1     2     3     4     5     6     7     8     9    10    11    12    13    14    15    16    17
+    28    25    12    20     2     8    19     1     3    33    13    16    26    21     5    22    14
+
+  Columns 18 through 34
+
+    18    19    20    21    22    23    24    25    26    27    28    29    30    31    32    33    34
+    23     7     4    11    34    31    24    36    32    15    17    18    30    27     9     6    29
+
+  Columns 35 through 36
+
+    35    36
+    35    10
+
+stimulus(1)
+
+ans = 
+
+               type: 'MG'
+                rgb: [1 1 1]
+           back_rgb: [0 0 0]
+             phase0: 0
+    temporal_period: 0.5000
+     spatial_period: 120
+          direction: 90
+            repeats: 2
+             frames: 300
+       wait_trigger: 0
+           wait_key: 0
+
+stimulus(144
+ stimulus(144
+             |
+{Error: Expression or statement is incorrect--possibly unbalanced (, {, or [.
+} 
+stimulus(44)
+
+ans = 
+
+               type: 'MG'
+                rgb: [1 1 1]
+           back_rgb: [0 0 0]
+             phase0: 0
+    temporal_period: 0.5000
+     spatial_period: 120
+          direction: 90
+            repeats: 2
+             frames: 300
+       wait_trigger: 0
+           wait_key: 0
+
+stimulus(2)
+
+ans = 
+
+               type: 'MG'
+                rgb: [1 1 1]
+           back_rgb: [0 0 0]
+             phase0: 0
+    temporal_period: 0.5000
+     spatial_period: 60
+          direction: 90
+            repeats: 2
+             frames: 300
+       wait_trigger: 0
+           wait_key: 0
+
+stimulus(41)
+
+ans = 
+
+               type: 'MG'
+                rgb: [1 1 1]
+           back_rgb: [0 0 0]
+             phase0: 0
+    temporal_period: 0.5000
+     spatial_period: 60
+          direction: 90
+            repeats: 2
+             frames: 300
+       wait_trigger: 0
+           wait_key: 0
+
+edit Start_RSM.m
+edit Experimental_Session.m
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 3  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 4  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 5  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 6  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 7  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 8  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 9  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 10  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 11  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 12  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 13  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 14  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 15  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 16  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 17  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 18  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 19  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 20  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 21  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 22  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 23  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 24  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 25  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 26  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 27  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 28  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 29  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 30  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 31  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 32  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 33  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 34  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 35  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+<a href="matlab: opentoline('/RSM/RSM_Utils/Stim_Engine.m',224,1)">224 </a>if ( num_pending > 0 )
+if system_dependent('IsDebugMode')==1, dbstep; end
+help strcmp
+ <strong>strcmp</strong> Compare strings.
+    TF = <strong>strcmp</strong>(S1,S2) compares the strings S1 and S2 and returns logical 1
+    (true) if they are identical, and returns logical 0 (false) otherwise.  
+ 
+    TF = <strong>strcmp</strong>(S,C), compares string S to each element of cell array C,
+    where S is a character vector (or a 1-by-1 cell array) and C is a cell 
+    array of strings. The function returns TF, a logical array that is the 
+    same size as C and contains logical 1 (true) for those elements of C 
+    that are a match, and logical 0 (false) for those elements that are not. 
+    The order of the two input arguments is not important.
+ 
+    TF = <strong>strcmp</strong>(C1,C2) compares each element of C1 to the same element in C2, 
+    where C1 and C2 are equal-size cell arrays of strings. Input C1 and/or C2 
+    can also be a character array having the number of rows as there are 
+    cells in the cell array. The function returns TF, a logical array that
+    is the same size as C1 or C2, and contains logical 1 (true) for those 
+    elements of C1 and C2 that are a match, and logical 0 (false) for those
+    elements that are not.
+ 
+    When one of the inputs is a cell array, scalar expansion occurs as 
+    needed.
+ 
+    <strong>strcmp</strong> supports international character sets.
+ 
+    See also <a href="matlab:help strncmp">strncmp</a>, <a href="matlab:help strcmpi">strcmpi</a>, <a href="matlab:help strfind">strfind</a>, <a href="matlab:help deblank">deblank</a>, <a href="matlab:help regexp">regexp</a>.
+
+    Overloaded methods:
+       <a href="matlab:help opaque/strcmp">opaque/strcmp</a>
+
+    Reference page in Help browser
+       <a href="matlab:doc strcmp">doc strcmp</a>
+
+strcmp(exp_obj.pending_stimuli{first_nonempty}.stim_name,'Moving_Grating')
+
+ans =
+
+     1
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 36  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+<a href="matlab: opentoline('/RSM/RSM_Utils/Stim_Engine.m',224,1)">224 </a>if ( num_pending > 0 )
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 37  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 38  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 39  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 40  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 41  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 42  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 43  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 44  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 45  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 46  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 47  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 48  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 49  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 50  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 51  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 52  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 53  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 54  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 55  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 56  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 57  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 58  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 59  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 60  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 61  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+{Operation terminated by user during <a href="matlab:helpUtils.errorDocCallback('Stim_Engine', '/RSM/RSM_Utils/Stim_Engine.m', 70)" style="font-weight:bold">Stim_Engine</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/Stim_Engine.m',70,0)">line 70</a>)
+
+
+In <a href="matlab:helpUtils.errorDocCallback('run_RSM', '/RSM/RSM_Utils/run_RSM.m', 28)" style="font-weight:bold">run_RSM</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/run_RSM.m',28,0)">line 28</a>)
+    [ exp_obj ] = Stim_Engine( exp_obj );
+
+In <a href="matlab:helpUtils.errorDocCallback('run_stimulus', '/RSM/RSM_Utils/run_stimulus.m', 28)" style="font-weight:bold">run_stimulus</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/run_stimulus.m',28,0)">line 28</a>)
+        RSM_GLOBAL = run_RSM(RSM_GLOBAL);
+} 
+help mglScreenCoordinates
+  <strong>mglScreenCoordinates</strong>.m
+ 
+         $Id: <strong>mglScreenCoordinates</strong>.m 384 2008-12-31 04:57:43Z justin $
+       usage: <strong>mglScreenCoordinates</strong>()
+          by: justin gardner
+        date: 05/27/06
+   copyright: (c) 2006 Justin Gardner, Jonas Larsson (GPL see mgl/COPYING)
+     purpose: Set coordinate frame so that it is in pixels
+              with 0,0 in the top left hand corrner
+ 
+
+help mglClearScreen
+  <strong>mglClearScreen</strong>.m
+ 
+         $Id: <strong>mglClearScreen</strong>.m 921 2011-05-12 18:44:23Z chrg $
+       usage: <strong>mglClearScreen</strong>([clearColor], [clearBits])
+          by: Jonas Larsson
+        date: 04/10/06
+   copyright: (c) 2006 Justin Gardner, Jonas Larsson (GPL see mgl/COPYING)
+     purpose: Sets the background color and clears the buffer.  'clearBits'
+              is an optional parameter that lets you specify which buffers
+              are cleared.  The buffers are specifed by a 1x4 array of 1's
+              and 0's which toggle the buffer bits, where the bits are
+              [color buffer, depth buffer, accum buffer, stencil buffer].
+              By default the color buffer is cleared if 'clearBits' isn't
+              specified.
+       usage: sets to whatever previous background color was set
+              <strong>mglClearScreen</strong>()     
+ 
+              set to the level of gray (0-1)
+              <strong>mglClearScreen</strong>(gray) 
+ 
+              set to the given [r g b]
+              <strong>mglClearScreen</strong>([r g b]) 
+   
+              set the clear color and clear the color and depth buffers.
+              <strong>mglClearScreen</strong>([r g b], [1 1 0 0]);
+        e.g.: 
+ 
+  mglOpen();
+  <strong>mglClearScreen</strong>([0.7 0.2 0.5]);
+  mglFlush();
+ 
+
+
+
+<strong> Moving Grating. </strong>
+{Attempted to access sp(2); index out of bounds because numel(sp)=1.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('rand_stim', '/RSM/RSM_Utils/rand_stim.m', 25)" style="font-weight:bold">rand_stim</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/rand_stim.m',25,0)">line 25</a>)
+            stimulus_temp(idx).spatial_period = sp(j);
+
+Error in <a href="matlab:helpUtils.errorDocCallback('q_RSM', '/RSM/RSM_Utils/q_RSM.m', 80)" style="font-weight:bold">q_RSM</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/q_RSM.m',80,0)">line 80</a>)
+        [stimulus, seq, trial_num_total] = rand_stim(stimulus);
+
+Error in <a href="matlab:helpUtils.errorDocCallback('run_stimulus', '/RSM/RSM_Utils/run_stimulus.m', 27)" style="font-weight:bold">run_stimulus</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/run_stimulus.m',27,0)">line 27</a>)
+        RSM_GLOBAL = q_RSM(RSM_GLOBAL, stim_in);
+} 
+
+
+<strong> Moving Grating. </strong>
+{Attempted to access sp(2); index out of bounds because numel(sp)=1.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('rand_stim', '/RSM/RSM_Utils/rand_stim.m', 25)" style="font-weight:bold">rand_stim</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/rand_stim.m',25,0)">line 25</a>)
+            stimulus_temp(idx).spatial_period = sp(j);
+
+Error in <a href="matlab:helpUtils.errorDocCallback('q_RSM', '/RSM/RSM_Utils/q_RSM.m', 80)" style="font-weight:bold">q_RSM</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/q_RSM.m',80,0)">line 80</a>)
+        [stimulus, seq, trial_num_total] = rand_stim(stimulus);
+
+Error in <a href="matlab:helpUtils.errorDocCallback('run_stimulus', '/RSM/RSM_Utils/run_stimulus.m', 27)" style="font-weight:bold">run_stimulus</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/run_stimulus.m',27,0)">line 27</a>)
+        RSM_GLOBAL = q_RSM(RSM_GLOBAL, stim_in);
+} 
+
+
+<strong> Moving Grating. </strong>
+<a href="matlab: opentoline('/RSM/RSM_Utils/rand_stim.m',8,1)">8   </a>tp = stim_in.temporal_period;
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+tp
+
+tp =
+
+     1     2
+
+sp
+
+sp =
+
+    30
+
+dr
+
+dr =
+
+     0
+
+rp
+
+rp =
+
+     2
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 61  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+{Undefined function or variable 'num_pending'.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('Stim_Engine', '/RSM/RSM_Utils/Stim_Engine.m', 224)" style="font-weight:bold">Stim_Engine</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/Stim_Engine.m',224,0)">line 224</a>)
+if ( num_pending > 0 )
+
+Error in <a href="matlab:helpUtils.errorDocCallback('run_RSM', '/RSM/RSM_Utils/run_RSM.m', 28)" style="font-weight:bold">run_RSM</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/run_RSM.m',28,0)">line 28</a>)
+    [ exp_obj ] = Stim_Engine( exp_obj );
+
+Error in <a href="matlab:helpUtils.errorDocCallback('run_stimulus', '/RSM/RSM_Utils/run_stimulus.m', 28)" style="font-weight:bold">run_stimulus</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/run_stimulus.m',28,0)">line 28</a>)
+        RSM_GLOBAL = run_RSM(RSM_GLOBAL);
+} 
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 62  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 63  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 64  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 65  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 66  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 67  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 68  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 69  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 70  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 71  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+{Operation terminated by user during <a href="matlab:helpUtils.errorDocCallback('Stim_Engine', '/RSM/RSM_Utils/Stim_Engine.m', 70)" style="font-weight:bold">Stim_Engine</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/Stim_Engine.m',70,0)">line 70</a>)
+
+
+In <a href="matlab:helpUtils.errorDocCallback('run_RSM', '/RSM/RSM_Utils/run_RSM.m', 28)" style="font-weight:bold">run_RSM</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/run_RSM.m',28,0)">line 28</a>)
+    [ exp_obj ] = Stim_Engine( exp_obj );
+
+In <a href="matlab:helpUtils.errorDocCallback('run_stimulus', '/RSM/RSM_Utils/run_stimulus.m', 28)" style="font-weight:bold">run_stimulus</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/run_stimulus.m',28,0)">line 28</a>)
+        RSM_GLOBAL = run_RSM(RSM_GLOBAL);
+} 
+
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 71  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+<a href="matlab: opentoline('/RSM/RSM_Utils/Stim_Engine.m',116,1)">116 </a>        if ( ~isempty( findprop(exp_obj.stimulus, 'frames_shown') ) )
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+FINISHED WITH: Moving_Grating 
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+***********************************************************************************************
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+num_pending
+
+num_pending =
+
+    17
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep out; end
+if system_dependent('IsDebugMode')==1, dbquit; end
+mglScreenCoordinates();
+     mglClearScreen( exp_obj.monitor.backgrndcolor );
+{Undefined variable "exp_obj" or function "exp_obj.monitor.backgrndcolor".
+} 
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 72  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+<a href="matlab: opentoline('/RSM/RSM_Utils/Stim_Engine.m',116,1)">116 </a>        if ( ~isempty( findprop(exp_obj.stimulus, 'frames_shown') ) )
+if system_dependent('IsDebugMode')==1, dbquit; end
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 72  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 73  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 74  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 75  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 76  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 77  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 78  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 79  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 80  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 81  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 82  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 83  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 84  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 85  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 86  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 87  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 88  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 89  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 90  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 91  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 92  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 93  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 94  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 95  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 96  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 97  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 98  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 99  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 100  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 101  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 102  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 103  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 104  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving Grating. </strong>
+{Undefined function 'run_stimulus_rand' for input arguments of type 'Monitor_Obj'.
+} 
+display
+
+display = 
+
+  <a href="matlab:helpPopup Monitor_Obj" style="font-weight:bold">Monitor_Obj</a> with properties:
+
+            monitor_name: 'RigA_CRT1'
+            num_lut_bits: 8
+             gamma_model: @BrainardModel
+      optometer_raw_data: [153x4 double]
+               red_table: [1x256 double]
+             green_table: [1x256 double]
+              blue_table: [1x256 double]
+              red_params: [2.5200 32 3.2181]
+            green_params: [2.5200 32 3.1320]
+             blue_params: [2.5200 32 3.1645]
+         gamma_test_date: '09-Jan-2014'
+                   width: 640
+          physical_width: 28.5000
+                  height: 480
+         physical_height: 21.5000
+     screen_refresh_freq: 60
+               cen_width: 320
+              cen_height: 240
+    default_mondesc_path: './RSM_Monitors/'
+                 mon_num: 0
+           backgrndcolor: [0.5000 0.5000 0.5000]
+
+stimulus = [];
+stimulus.type = 'MG';  
+stimulus.rgb = [1.0, 1.0, 1.0];
+stimulus.back_rgb = [0.0, 0.0, 0.0];
+stimulus.phase0 = 0; 
+stimulus.temporal_period = [1 2];  % sec
+stimulus.spatial_period = [30];  % frame
+stimulus.direction = [0]; % Convention 0 deg is 3 oclock
+stimulus.repeats = 2;
+stimulus.frames = 60;        
+stimulus.wait_trigger = 0;
+stimulus.wait_key = 0;
+
+
+run_stimulus_rand(display, stimulus);
+{SWITCH expression comma separated list must have exactly one item.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('q_RSM', '/RSM/RSM_Utils/q_RSM.m', 57)" style="font-weight:bold">q_RSM</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/q_RSM.m',57,0)">line 57</a>)
+switch stimulus.type
+
+Error in <a href="matlab:helpUtils.errorDocCallback('run_stimulus', '/RSM/RSM_Utils/run_stimulus.m', 27)" style="font-weight:bold">run_stimulus</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/run_stimulus.m',27,0)">line 27</a>)
+        RSM_GLOBAL = q_RSM(RSM_GLOBAL, stim_in);
+
+Error in <a href="matlab:helpUtils.errorDocCallback('run_stimulus_rand', '/RSM/RSM_Utils/run_stimulus_rand.m', 5)" style="font-weight:bold">run_stimulus_rand</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/run_stimulus_rand.m',5,0)">line 5</a>)
+    run_stimulus( monitor_description, stimulus )
+} 
+
+
+<strong> Moving Grating. </strong>
+<a href="matlab: opentoline('/RSM/RSM_Utils/q_RSM.m',57,1)">57  </a>switch stimulus.type
+stimulus.type
+
+ans =
+
+MG
+
+
+ans =
+
+MG
+
+
+ans =
+
+MG
+
+
+ans =
+
+MG
+
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 105  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 106  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 107  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 108  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 109  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 110  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 111  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 112  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 113  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 114  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+{Operation terminated by user during <a href="matlab:helpUtils.errorDocCallback('Stim_Engine', '/RSM/RSM_Utils/Stim_Engine.m', 70)" style="font-weight:bold">Stim_Engine</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/Stim_Engine.m',70,0)">line 70</a>)
+
+
+In <a href="matlab:helpUtils.errorDocCallback('run_RSM', '/RSM/RSM_Utils/run_RSM.m', 28)" style="font-weight:bold">run_RSM</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/run_RSM.m',28,0)">line 28</a>)
+    [ exp_obj ] = Stim_Engine( exp_obj );
+
+In <a href="matlab:helpUtils.errorDocCallback('run_stimulus', '/RSM/RSM_Utils/run_stimulus.m', 28)" style="font-weight:bold">run_stimulus</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/run_stimulus.m',28,0)">line 28</a>)
+        RSM_GLOBAL = run_RSM(RSM_GLOBAL);
+
+In <a href="matlab:helpUtils.errorDocCallback('run_stimulus_rand', '/RSM/RSM_Utils/run_stimulus_rand.m', 5)" style="font-weight:bold">run_stimulus_rand</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/run_stimulus_rand.m',5,0)">line 5</a>)
+    run_stimulus( monitor_description, stimulus(i) )
+} 
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 114  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 115  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 116  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 117  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 118  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 119  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 120  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 121  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 122  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 123  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 124  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 125  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+RSM_GLOBAL
+
+RSM_GLOBAL = 
+
+  <a href="matlab:helpPopup Experimental_Session" style="font-weight:bold">Experimental_Session</a> with properties:
+
+          debug_flag: 0
+          dio_config: [1x1 struct]
+       home_dir_name: '/RSM'
+    monitor_dir_name: '/RSM/RSM_Monitors'
+          movie_path: '/RSM/RSM_Movie_Vault'
+            map_path: '/RSM/RSM_Map_Vault'
+           host_name: 'alligator'
+        log_file_dir: '/RSM/RSM_Log_Files'
+        mex_rng_flag: []
+             monitor: [1x1 Monitor_Obj]
+        num_stim_ran: 125
+        past_stimuli: {1x125 cell}
+     pending_stimuli: {1x45 cell}
+              rig_ID: 'A'
+            rig_geom: [1x1 struct]
+             RSM_ver: 1
+          session_fn: 'Foobar'
+        session_name: '20-May-2014_RigA'
+        stealth_flag: 0
+            stimulus: []
+         prerun_path: '/RSM/RSM_Utils/RAWMOV_UTILS'
+
+RSM_GLOBAL.past_stimuli
+
+ans = 
+
+  Columns 1 through 4
+
+    'Moving_Grating'    'Random Noise'    'Moving_Grating'    'Moving_Grating'
+
+  Columns 5 through 8
+
+    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'
+
+  Columns 9 through 12
+
+    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'
+
+  Columns 13 through 16
+
+    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'
+
+  Columns 17 through 20
+
+    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'
+
+  Columns 21 through 24
+
+    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'
+
+  Columns 25 through 28
+
+    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'
+
+  Columns 29 through 32
+
+    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'
+
+  Columns 33 through 36
+
+    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'
+
+  Columns 37 through 40
+
+    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'
+
+  Columns 41 through 44
+
+    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'
+
+  Columns 45 through 48
+
+    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'
+
+  Columns 49 through 52
+
+    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'
+
+  Columns 53 through 56
+
+    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'
+
+  Columns 57 through 60
+
+    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'
+
+  Columns 61 through 64
+
+    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'
+
+  Columns 65 through 68
+
+    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'
+
+  Columns 69 through 72
+
+    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'
+
+  Columns 73 through 76
+
+    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'
+
+  Columns 77 through 80
+
+    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'
+
+  Columns 81 through 84
+
+    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'
+
+  Columns 85 through 88
+
+    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'
+
+  Columns 89 through 92
+
+    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'
+
+  Columns 93 through 96
+
+    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'
+
+  Columns 97 through 100
+
+    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'
+
+  Columns 101 through 104
+
+    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'
+
+  Columns 105 through 108
+
+    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'
+
+  Columns 109 through 112
+
+    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'
+
+  Columns 113 through 116
+
+    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'
+
+  Columns 117 through 120
+
+    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'
+
+  Columns 121 through 124
+
+    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'    'Moving_Grating'
+
+  Column 125
+
+    'Moving_Grating'
+
+RSM_GLOBAL.pending_stimuli
+
+ans = 
+
+  Columns 1 through 15
+
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+
+  Columns 16 through 30
+
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+
+  Columns 31 through 45
+
+    []    []    []    []    []    []    []    []    []    []    []    []    []    []    []
+
+prompt = 'Do you want to save the stimulus? Y/N [Y]: ';
+str = input(prompt, 's');
+Do you want to save the stimulus? Y/N [Y]: Y
+str
+
+str =
+
+Y
+
+help upper
+ <strong>upper</strong>  Convert string to uppercase.
+    B = <strong>upper</strong>(A) converts any lower case characters in A to
+    the corresponding upper case character and leaves all
+    other characters unchanged.
+ 
+    B = <strong>upper</strong>(A), when A is a cell array of strings, returns a cell array
+    the same size as A containing the result of applying <strong>upper</strong> to each
+    string in A.
+ 
+    Character sets supported:
+      PC   : Windows Latin-1
+      Other: ISO Latin-1 (ISO 8859-1)
+           : Also supports 16-bit character sets.
+ 
+    See also <a href="matlab:help lower">lower</a>.
+
+    Reference page in Help browser
+       <a href="matlab:doc upper">doc upper</a>
+
+uisave
+uisave('RSM_GLOBAL')
+
+
+<strong> Moving Grating. </strong>
+{Error using <a href="matlab:helpUtils.errorDocCallback('cellstr', '/Applications/MATLAB_R2013a.app/toolbox/matlab/strfun/cellstr.m', 34)" style="font-weight:bold">cellstr</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2013a.app/toolbox/matlab/strfun/cellstr.m',34,0)">line 34</a>)
+Input must be a string.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('uisave', '/Applications/MATLAB_R2013a.app/toolbox/matlab/uitools/uisave.m', 39)" style="font-weight:bold">uisave</a> (<a href="matlab: opentoline('/Applications/MATLAB_R2013a.app/toolbox/matlab/uitools/uisave.m',39,0)">line 39</a>)
+        variables = cellstr(variables);
+
+Error in <a href="matlab:helpUtils.errorDocCallback('run_stimulus_rand', '/RSM/RSM_Utils/run_stimulus_rand.m', 6)" style="font-weight:bold">run_stimulus_rand</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/run_stimulus_rand.m',6,0)">line 6</a>)
+uisave(stim_out)
+} 
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 126  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 127  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 128  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 129  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 130  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 131  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 132  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 133  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+load('/Users/xyao/Desktop/save_test/data000.mat')
+stim_out
+
+stim_out = 
+
+               type: 'MG'
+                rgb: [1 1 1]
+           back_rgb: [0 0 0]
+             phase0: 0
+    temporal_period: 1
+     spatial_period: [30 90]
+          direction: [0 90]
+            repeats: 2
+             frames: 60
+       wait_trigger: 0
+           wait_key: 1
+         trial_list: [2x4 double]
+
+stim_out.trial_list
+
+ans =
+
+     1     2     3     4
+     1     2     3     4
+
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 134  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 135  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 136  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 137  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 138  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 139  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 140  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 141  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+load('/Users/xyao/Desktop/save_test/data001.mat')
+stim_out.trial_list
+
+ans =
+
+     1     2     3     4
+     3     2     1     4
+
+edit Moving_Grating.m
+edit Moving_Bar.m
+edit RSM_Batch.m
+stimulus = [];
+stimulus.type = 'MG';  
+stimulus.rgb = [1.0, 1.0, 1.0];
+stimulus.back_rgb = [0.0, 0.0, 0.0];
+stimulus.phase0 = 0; 
+stimulus.temporal_period = 3;  
+stimulus.spatial_period = 60;
+stimulus.direction = 0;
+stimulus.frames = 640;        
+stimulus.wait_trigger = 0;
+stimulus.wait_key = 1;
+
+
+run_stimulus(display, stimulus);
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 142  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+clear stimulus;
+stimulus = [];
+stimulus.type = 'MG';  
+stimulus.rgb = [1.0, 1.0, 1.0];
+stimulus.back_rgb = [0.0, 0.0, 0.0];
+stimulus.phase0 = 0; 
+stimulus.temporal_period = 3;  
+stimulus.spatial_period = 60;
+stimulus.direction = 90;
+stimulus.frames = 640;        
+stimulus.wait_trigger = 0;
+stimulus.wait_key = 1;
+
+
+run_stimulus(display, stimulus);
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 143  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+WAITING FOR KEY: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+clear stimulus;
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 144  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 145  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+help mglMakeGrating
+  <strong>mglMakeGrating</strong>.m
+ 
+       usage: <strong>mglMakeGrating</strong>(width,height,sf,angle,phase,<xDeg2pix>,<yDeg2pix>)
+          by: justin gardner
+        date: 09/14/06
+     purpose: create a 2D grating. You should start mgl
+              and use mglVisualAngleCoordinates before using.
+ 
+              width and height are in degrees of visual angle
+              sf is in cycles/degrees
+              angle and phase are in degrees
+ 
+              xDeg2pix and yDeg2pix are optional arguments that specify the
+              number of pixels per visual angle in the x and y dimension, respectively.
+              If not specified, these values are derived from the open mgl screen (make
+              sure you set mglVisualAngleCoordinates).
+        e.g.:
+ 
+  mglOpen;
+  mglVisualAngleCoordinates(57,[16 12]);
+  g = <strong>mglMakeGrating</strong>(16,12,1.5,45,0);
+  g = 255*(g+1)/2;
+  tex = mglCreateTexture(g);
+  mglBltTexture(tex,[0 0]);
+  mglFlush;
+
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 146  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 147  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 20-May-2014_RigA  Stimulus #: 148  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving Grating. </strong>
+{Error using <a href="matlab:helpUtils.errorDocCallback('Moving_Grating')" style="font-weight:bold">Moving_Grating</a>
+The class 'Moving_Grating' contains a parse error or cannot be found on MATLAB's search path, possibly
+shadowed by another file with the same name.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('q_RSM', '/RSM/RSM_Utils/q_RSM.m', 80)" style="font-weight:bold">q_RSM</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/q_RSM.m',80,0)">line 80</a>)
+        exp_obj.pending_stimuli{num_pending + 1} = Moving_Grating(stimulus, exp_obj);
+
+Error in <a href="matlab:helpUtils.errorDocCallback('run_stimulus', '/RSM/RSM_Utils/run_stimulus.m', 27)" style="font-weight:bold">run_stimulus</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/run_stimulus.m',27,0)">line 27</a>)
+        RSM_GLOBAL = q_RSM(RSM_GLOBAL, stim_in);
+
+Error in <a href="matlab:helpUtils.errorDocCallback('run_stimulus_rand', '/RSM/RSM_Utils/run_stimulus_rand.m', 9)" style="font-weight:bold">run_stimulus_rand</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/run_stimulus_rand.m',9,0)">line 9</a>)
+    run_stimulus( monitor_description, stimulus(i) )
+} 
+
+
+<strong> Moving Grating. </strong>
+{Error using <a href="matlab:helpUtils.errorDocCallback('Moving_Grating')" style="font-weight:bold">Moving_Grating</a>
+The class 'Moving_Grating' contains a parse error or cannot be found on MATLAB's search path, possibly
+shadowed by another file with the same name.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('q_RSM', '/RSM/RSM_Utils/q_RSM.m', 80)" style="font-weight:bold">q_RSM</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/q_RSM.m',80,0)">line 80</a>)
+        exp_obj.pending_stimuli{num_pending + 1} = Moving_Grating(stimulus, exp_obj);
+
+Error in <a href="matlab:helpUtils.errorDocCallback('run_stimulus', '/RSM/RSM_Utils/run_stimulus.m', 27)" style="font-weight:bold">run_stimulus</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/run_stimulus.m',27,0)">line 27</a>)
+        RSM_GLOBAL = q_RSM(RSM_GLOBAL, stim_in);
+
+Error in <a href="matlab:helpUtils.errorDocCallback('run_stimulus_rand', '/RSM/RSM_Utils/run_stimulus_rand.m', 9)" style="font-weight:bold">run_stimulus_rand</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/run_stimulus_rand.m',9,0)">line 9</a>)
+    run_stimulus( monitor_description, stimulus(i) )
+} 
+clear all
+Start_RSM;
+EJC: key globals being assigned in Setup_Rig.m
+EJC: hardcoded host and rig in Setup_Rig.m
+EJC: hardcoded monitor path in Setup_Rig.m
+
+Configured for host: alligator // Rig ID: A 
+RSM Configuring display for 60.000 [Hz] 
+"display" object set for monitor: RigA_CRT1.
+RSM initialization complete.
+Cut and paste desired params. Enter: "RSM" to present stimuli; "Stop_RSM" to quit. 
+
+mglSetGammaTable( RSM_GLOBAL.monitor.red_table, RSM_GLOBAL.monitor.green_table, RSM_GLOBAL.monitor.blue_table );
+
+mglMoveWindow(5, 1055);
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 21-May-2014_RigA  Stimulus #: 1  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 21-May-2014_RigA  Stimulus #: 2  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 21-May-2014_RigA  Stimulus #: 3  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 21-May-2014_RigA  Stimulus #: 4  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 21-May-2014_RigA  Stimulus #: 5  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 21-May-2014_RigA  Stimulus #: 6  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 21-May-2014_RigA  Stimulus #: 7  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+help mglMakeGrating
+  <strong>mglMakeGrating</strong>.m
+ 
+       usage: <strong>mglMakeGrating</strong>(width,height,sf,angle,phase,<xDeg2pix>,<yDeg2pix>)
+          by: justin gardner
+        date: 09/14/06
+     purpose: create a 2D grating. You should start mgl
+              and use mglVisualAngleCoordinates before using.
+ 
+              width and height are in degrees of visual angle
+              sf is in cycles/degrees
+              angle and phase are in degrees
+ 
+              xDeg2pix and yDeg2pix are optional arguments that specify the
+              number of pixels per visual angle in the x and y dimension, respectively.
+              If not specified, these values are derived from the open mgl screen (make
+              sure you set mglVisualAngleCoordinates).
+        e.g.:
+ 
+  mglOpen;
+  mglVisualAngleCoordinates(57,[16 12]);
+  g = <strong>mglMakeGrating</strong>(16,12,1.5,45,0);
+  g = 255*(g+1)/2;
+  tex = mglCreateTexture(g);
+  mglBltTexture(tex,[0 0]);
+  mglFlush;
+
+help Convert_SF2DVA
+  Note: assumes square pixels
+  From  help mglVisualAngleCoordinates
+  mglSetParam('visualAngleSquarePixels',1)
+  
+   What this does is set the transformation to have the same pix2deg in
+   the x and y dimension. This is useful for things like rotating a texture with
+   mglBltTexture which basically has to assume that pixels are square (i.e. it
+   does not scale the texture differently when it is oriented horizontally vs
+   vertically, for instance). If you wanted to compensate for non-square pixels
+   it would be a bit messy. So visualAngleSquarePixels defaults to 1.
+
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 21-May-2014_RigA  Stimulus #: 8  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 21-May-2014_RigA  Stimulus #: 9  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+<a href="matlab: opentoline('/RSM/RSM_Classes/Moving_Grating.m',349,1)">349 </a>                te_last = te;
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+Moving_Grating
+{Error using <a href="matlab:helpUtils.errorDocCallback('Moving_Grating', '/RSM/RSM_Classes/Moving_Grating.m', 65)" style="font-weight:bold">Moving_Grating</a> (<a href="matlab: opentoline('/RSM/RSM_Classes/Moving_Grating.m',65,0)">line 65</a>)
+Not enough input arguments.
+} 
+Moving_Grating
+{Error using <a href="matlab:helpUtils.errorDocCallback('Moving_Grating', '/RSM/RSM_Classes/Moving_Grating.m', 65)" style="font-weight:bold">Moving_Grating</a> (<a href="matlab: opentoline('/RSM/RSM_Classes/Moving_Grating.m',65,0)">line 65</a>)
+Not enough input arguments.
+} 
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 21-May-2014_RigA  Stimulus #: 10  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+<a href="matlab: opentoline('/RSM/RSM_Classes/Moving_Grating.m',349,1)">349 </a>                te_last = te;
+if system_dependent('IsDebugMode')==1, dbcont; end
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 21-May-2014_RigA  Stimulus #: 11  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 21-May-2014_RigA  Stimulus #: 12  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 21-May-2014_RigA  Stimulus #: 13  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+help load
+ <strong>load</strong> Load data from MAT-file into workspace.
+    S = <strong>load</strong>(FILENAME) loads the variables from a MAT-file into a structure
+    array, or data from an ASCII file into a double-precision array.
+ 
+    S = <strong>load</strong>(FILENAME, VARIABLES) loads only the specified variables from a
+    MAT-file.  VARIABLES use one of the following forms:
+ 
+        VAR1, VAR2, ...          Load the listed variables.  Use the '*'
+                                 wildcard to match patterns.  For
+                                 example, load('A*') loads all variables
+                                 that start with A.
+        '-regexp', EXPRESSIONS   Load only the variables that match the
+                                 specified regular expressions.  For more
+                                 information on regular expressions, type
+                                 "doc regexp" at the command prompt.
+ 
+    S = <strong>load</strong>(FILENAME, '-mat', VARIABLES) forces <strong>load</strong> to treat the file as
+    a MAT-file, regardless of the extension.  Specifying VARIABLES is
+    optional.
+ 
+    S = <strong>load</strong>(FILENAME, '-ascii') forces <strong>load</strong> to treat the file as an ASCII
+    file, regardless of the extension.
+ 
+    <strong>load</strong>(...) loads without combining MAT-file variables into a structure
+    array.
+ 
+    <strong>load</strong> ... is the command form of the syntax, for convenient loading from
+    the command line. With command syntax, you do not need to enclose input
+    strings in single quotation marks. Separate inputs with spaces instead 
+    of commas. Do not use command syntax if FILENAME is a variable.
+    
+    Notes:
+ 
+    If you do not specify FILENAME, the <strong>load</strong> function searches for a file
+    named matlab.mat.
+ 
+    ASCII files must contain a rectangular table of numbers, with an equal
+    number of elements in each row.  The file delimiter (character between
+    each element in a row) can be a blank, comma, semicolon, or tab.  The
+    file can contain MATLAB comments.
+ 
+    Examples:
+ 
+        gongStruct = load('gong.mat')      % All variables
+        load('handel.mat', 'y')            % Only variable y
+        load('accidents.mat', 'hwy*')      % Variables starting with "hwy"
+        load('topo.mat', '-regexp', '\d')  % Variables containing digits
+ 
+        % Using command form
+        load gong.mat
+        load topo.mat -regexp \d
+        load 'hypothetical file.mat'       % Filename with spaces
+ 
+    See also <a href="matlab:help save">save</a>, <a href="matlab:help matfile">matfile</a>, <a href="matlab:help whos">whos</a>, <a href="matlab:help clear">clear</a>, <a href="matlab:help regexp">regexp</a>, <a href="matlab:help importdata">importdata</a>, <a href="matlab:help uiimport">uiimport</a>.
+
+    Overloaded methods:
+       <a href="matlab:help fxptds.load">fxptds.load</a>
+
+    Reference page in Help browser
+       <a href="matlab:doc load">doc load</a>
+
+
+
+<strong> Counterphase Grating. </strong>
+
+******************************  Session: 21-May-2014_RigA  Stimulus #: 14  ******************************* 
+
+SAVING SETUP INFO: Counterphase_Grating 
+WAITING FOR KEY: Counterphase_Grating 
+RUNNING STIMULUS: Counterphase_Grating 
+FINISHED WITH: Counterphase_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Counterphase Grating. </strong>
+
+******************************  Session: 21-May-2014_RigA  Stimulus #: 15  ******************************* 
+
+SAVING SETUP INFO: Counterphase_Grating 
+WAITING FOR KEY: Counterphase_Grating 
+RUNNING STIMULUS: Counterphase_Grating 
+FINISHED WITH: Counterphase_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+******************************  Session: 21-May-2014_RigA  Stimulus #: 16  ******************************* 
+
+SAVING SETUP INFO: Counterphase_Grating 
+WAITING FOR KEY: Counterphase_Grating 
+RUNNING STIMULUS: Counterphase_Grating 
+FINISHED WITH: Counterphase_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+******************************  Session: 21-May-2014_RigA  Stimulus #: 17  ******************************* 
+
+SAVING SETUP INFO: Counterphase_Grating 
+WAITING FOR KEY: Counterphase_Grating 
+RUNNING STIMULUS: Counterphase_Grating 
+FINISHED WITH: Counterphase_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+******************************  Session: 21-May-2014_RigA  Stimulus #: 18  ******************************* 
+
+SAVING SETUP INFO: Counterphase_Grating 
+WAITING FOR KEY: Counterphase_Grating 
+RUNNING STIMULUS: Counterphase_Grating 
+FINISHED WITH: Counterphase_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+stim_in.type = 'MG'
+
+stim_in = 
+
+    type: 'MG'
+
+switch stim_in.type
+case 'MG' | 'CG'
+switch stim_in.type
+    case 'MG' | 'CG'
+        1
+    case 'MB'
+        2
+end
+
+switch stim_in.type
+    case 'MG'
+        1
+    case 'MB'
+        2
+end
+
+ans =
+
+     1
+
+
+
+<strong> Flashing full-screen color. </strong>
+	 RSM ERROR: For stimulus other than Moving_Bar, Moving_Grating, Counterphase_Grating, please use run_stimulus instead of run_stimulus_rand  
+edit Moving_Bar.m
+
+
+<strong> Moving bar. </strong>
+{Operands to the || and && operators must be convertible to logical scalar values.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('Moving_Bar', '/RSM/RSM_Classes/Moving_Bar.m', 101)" style="font-weight:bold">Moving_Bar</a> (<a href="matlab: opentoline('/RSM/RSM_Classes/Moving_Bar.m',101,0)">line 101</a>)
+                if stimuli.direction >= 0 && stimuli.direction < 90
+
+Error in <a href="matlab:helpUtils.errorDocCallback('q_RSM', '/RSM/RSM_Utils/q_RSM.m', 76)" style="font-weight:bold">q_RSM</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/q_RSM.m',76,0)">line 76</a>)
+        exp_obj.pending_stimuli{num_pending + 1} = Moving_Bar(stimulus);
+
+Error in <a href="matlab:helpUtils.errorDocCallback('run_stimulus', '/RSM/RSM_Utils/run_stimulus.m', 27)" style="font-weight:bold">run_stimulus</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/run_stimulus.m',27,0)">line 27</a>)
+        RSM_GLOBAL = q_RSM(RSM_GLOBAL, stim_in);
+} 
+
+
+<strong> Moving bar. </strong>
+	 RSM ERROR: temporal period not recognized. Please define temporal period and try again. 
+Error in <a href="matlab:helpUtils.errorDocCallback('rand_stim', '/RSM/RSM_Utils/rand_stim.m', 7)" style="font-weight:bold">rand_stim</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/rand_stim.m',7,0)">line 7</a>)
+if (strcmp(stim_in.type, 'MG') || strcmp(stim_in.type, 'CG'))
+
+{Output argument "stimulus" (and maybe others) not assigned during call to
+"/RSM/RSM_Utils/rand_stim.m>rand_stim".
+
+Error in <a href="matlab:helpUtils.errorDocCallback('run_stimulus_rand', '/RSM/RSM_Utils/run_stimulus_rand.m', 4)" style="font-weight:bold">run_stimulus_rand</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/run_stimulus_rand.m',4,0)">line 4</a>)
+    [stimulus, seq, trial_num_total] = rand_stim(stim_in);
+} 
+
+
+<strong> Moving bar. </strong>
+	 RSM ERROR: temporal period not recognized. Please define temporal period and try again. 
+Error in <a href="matlab:helpUtils.errorDocCallback('rand_stim', '/RSM/RSM_Utils/rand_stim.m', 7)" style="font-weight:bold">rand_stim</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/rand_stim.m',7,0)">line 7</a>)
+if (strcmp(stim_in.type, 'MG') || strcmp(stim_in.type, 'CG'))
+
+{Output argument "stimulus" (and maybe others) not assigned during call to
+"/RSM/RSM_Utils/rand_stim.m>rand_stim".
+
+Error in <a href="matlab:helpUtils.errorDocCallback('run_stimulus_rand', '/RSM/RSM_Utils/run_stimulus_rand.m', 4)" style="font-weight:bold">run_stimulus_rand</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/run_stimulus_rand.m',4,0)">line 4</a>)
+    [stimulus, seq, trial_num_total] = rand_stim(stim_in);
+} 
+
+
+<strong> Moving bar. </strong>
+<a href="matlab: opentoline('/RSM/RSM_Utils/rand_stim.m',7,1)">7   </a>if (strcmp(stim_in.type, 'MG') || strcmp(stim_in.type, 'CG'))
+stim_in.type
+
+ans =
+
+MB
+
+strcmp(stim_in.type, 'MG')
+
+ans =
+
+     0
+
+strcmp(stim_in.type, 'CG')
+
+ans =
+
+     0
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+strcmp(stim_in.type, 'MB')
+
+ans =
+
+     1
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbquit; end
+
+
+<strong> Moving bar. </strong>
+
+******************************  Session: 21-May-2014_RigA  Stimulus #: 19  ******************************* 
+
+SAVING SETUP INFO: Moving_Bar 
+WAITING FOR KEY: Moving_Bar 
+RUNNING STIMULUS: Moving_Bar 
+FINISHED WITH: Moving_Bar 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+******************************  Session: 21-May-2014_RigA  Stimulus #: 20  *********************
