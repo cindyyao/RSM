@@ -32,7 +32,7 @@ exp_session.map_path = fullfile(home_dir_base, 'RSM_Map_Vault');
 
 %exp_session.home_dir_name = '/Users/wvinje/documents/RSM';
 
-exp_session.monitor_filename = 'monitor_description_RigA_CRT1_29-Sep-2013.mat';
+exp_session.monitor_filename = 'monitor_test.mat';
 %exp_session.monitor_filename = 'Sony_Multiscan200ES_4148279.mat';  % 800 x 600 @100 Hz
 %exp_session.monitor_filename = 'Sony_Multiscan200ES_4148279_60_640_480.mat';
 

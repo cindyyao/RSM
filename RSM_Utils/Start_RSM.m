@@ -28,9 +28,6 @@ prerun_obj = Experimental_Session(exp_setup);
 clear exp_setup;
 
 RSM_GLOBAL.RSM_ver = 1.0;
-RSM_GLOBAL.monitor.mon_num = 0;
-RSM_GLOBAL.monitor.screen_refresh_freq = 60;
-
 
 % Before we begin in earnest we change directories to the home directory
 cd( RSM_GLOBAL.home_dir_name );

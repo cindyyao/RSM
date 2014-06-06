@@ -3,7 +3,7 @@
 Start_RSM;
 mglSetGammaTable( RSM_GLOBAL.monitor.red_table, RSM_GLOBAL.monitor.green_table, RSM_GLOBAL.monitor.blue_table );
 
-mglMoveWindow(5, 1055);
+% mglMoveWindow(5, 1055);
 
 %% Stimulus
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -17,8 +17,8 @@ fprintf('\n\n<strong> Focus squares. </strong>\n');
 
 stimulus = [];
 stimulus.type = 'FS';
-stimulus.stim_width = 200;
-stimulus.stim_height = 200;
+stimulus.stim_width = 300;
+stimulus.stim_height = 300;
 stimulus.back_rgb = [0.5, 0.5, 0.5];
 
 run_stimulus(display, stimulus);
@@ -74,7 +74,7 @@ stimulus.rgb = 0.48 * [1.0, 1.0, 1.0];
 stimulus.back_rgb = [0.5, 0.5, 0.5];
 stimulus.bar_width = 100;
 stimulus.direction = 315;
-stimulus.delta = 0.1;      
+stimulus.delta = 2;      
 stimulus.interval = 60; %frame
 stimulus.num_reps = 2;
 stimulus.wait_trigger = 0;
@@ -92,19 +92,21 @@ fprintf('\n\n<strong> Moving Grating. </strong>\n');
 %------------------------------------------------------------------------------
 
 stimulus = [];
-stimulus.type = 'MG';  
+stimulus.type = 'MG';
+stimulus.subtype = 'sine';
 stimulus.rgb = [1.0, 1.0, 1.0];
 stimulus.back_rgb = [0.0, 0.0, 0.0];
 stimulus.phase0 = 0; 
 stimulus.temporal_period = 1;  % sec
 stimulus.spatial_period = 60;  % frame
-stimulus.direction = 90;       % Convention 0 deg is 3 oclock
-stimulus.frames = 640;        
+stimulus.direction = [0 90];       % Convention 0 deg is 3 oclock
+stimulus.frames = 300;        
 stimulus.wait_trigger = 0;
 stimulus.wait_key = 0;
+stimulus.repeats = 2;
 
 
-run_stimulus(display, stimulus);
+run_stimulus_rand(display, stimulus);
 clear stimulus;
 
 
@@ -124,11 +126,12 @@ stimulus.temporal_period = 1;
 stimulus.spatial_period = 60;
 stimulus.direction = 30;
 
-stimulus.frames = 640;        
+stimulus.frames = 300;        
 stimulus.wait_trigger = 0;
-stimulus.wait_key = 1;
+stimulus.wait_key = 0;
+stimulus.repeats = 2;
 
-run_stimulus(display, stimulus);
+run_stimulus_rand(display, stimulus);
 clear stimulus;
 
 

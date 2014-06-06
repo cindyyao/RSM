@@ -97,7 +97,7 @@ classdef	Moving_Bar < handle
             
             if (isfield(stimuli,'direction'))
                 obj.direction = stimuli.direction;
-                L = 2000;
+                L = 3000;
                 if stimuli.direction >= 0 && stimuli.direction < 90
                     r0 = [0, display.height];
                     obj.x_start = [0; 0; stimuli.bar_width; stimuli.bar_width];

@@ -11,6 +11,7 @@ classdef	Moving_Grating < handle
         
         % Required props for all stim classes        
         stim_name
+        subtype
 
         run_date_time
         run_time_total
@@ -72,6 +73,14 @@ classdef	Moving_Grating < handle
                 obj.color = Color_Test( obj.color );        
             else
                 fprintf('\t RSM ERROR: red gun level ("rg") not recognized. Please define rg value and try again. \n');
+                return
+            end
+            
+            if (isfield(stimuli,'subtype'))
+                
+                obj.subtype = stimuli.subtype;          %
+            else
+                fprintf('\t RSM ERROR: stimulus subtype not recognized. Please specify "sine" or "square" and try again. \n');
                 return
             end
 
@@ -326,12 +335,23 @@ classdef	Moving_Grating < handle
                 % The phase switch in the phase (phi) is because
                 % mglMakeGrating adds the phase offset; whereas we want a
                 % subtracted phase offset.
-                grating = mglMakeGrating(obj.physical_width/4, obj.physical_height/4, 4 * obj.grating_sf_dva, obj.grating_angle, (phi));
+                switch obj.subtype
+                    case 'sine'
+                        
+                        grating = mglMakeGrating(obj.physical_width/4, obj.physical_height/4, 4 * obj.grating_sf_dva, obj.grating_angle, (phi));
 
-                grating = 255*(grating+1)/2; 
-                
+                        grating = 255*(grating+1)/2; 
+                    case 'square'
+                        grating = mglMakeGrating(obj.physical_width, obj.physical_height, obj.grating_sf_dva, obj.grating_angle, (phi));
+
+                        grating = 255*(sign(grating)+1)/2;
+                    otherwise
+                        fprintf('\t RSM ERROR: Invalid stimulus subtype. Please specify "sine" or "square" and try again. \n');
+                        return
+                end
+
                
-               colored_grating = cat(3, ( (grating .* obj.color(1)) + round(255 .* obj.backgrndcolor(1)) ), ( (grating .* obj.color(2)) + round(255 .* obj.backgrndcolor(2)) ), ( (grating .* obj.color(3)) + round(255 .* obj.backgrndcolor(3)) ));
+                colored_grating = cat(3, ( (grating .* obj.color(1)) + round(255 .* obj.backgrndcolor(1)) ), ( (grating .* obj.color(2)) + round(255 .* obj.backgrndcolor(2)) ), ( (grating .* obj.color(3)) + round(255 .* obj.backgrndcolor(3)) ));
                 
                 tex = mglCreateTexture(colored_grating, [], 0, {'GL_TEXTURE_MAG_FILTER','GL_LINEAR'});
     
