@@ -1,6 +1,6 @@
 % mglOpen: Open an mgl window
 %
-%        $Id: mglOpen.m 1063 2013-02-01 04:23:50Z justin $
+%        $Id: mglOpen.m 1090 2013-07-11 07:56:51Z justin $
 %      usage: mglOpen(whichScreen, screenWidth,screenHeight,frameRate,bitDepth)
 %         by: justin gardner
 %       date: 04/10/06
@@ -99,6 +99,14 @@ if mglGetParam('movieMode')
   whichScreen = 0;
 end
 
+% set version of matlab, for mglPrivateOpen.c to check - this is to handle
+% deprecated functions which cause the screen not to work in version 8.1
+vInfo = ver('MATLAB');
+[majorVersion theRest] = strtok(vInfo.Version,'.');
+[minorVersion theRest] = strtok(theRest,'.');
+mglSetParam('matlabMajorVersion',str2num(majorVersion));
+mglSetParam('matlabMinorVersion',str2num(minorVersion));
+
 
 %mglSetParam('verbose',1);
 if ~openDisplay
@@ -144,7 +152,7 @@ if ~openDisplay
       end
       % and call mglPrivateOpen with the correct screen number
       mglPrivateOpen(whichScreen);
-    elseif ~isempty(mglGetParam('spoofFullScreen'));
+    elseif ~isempty(mglGetParam('spoofFullScreen')) && (mglGetParam('spoofFullScreen') > 0);
       % get the current resolution, so we can return to it on close
       mglSetParam('originalResolution',mglResolution(whichScreen));
       % set the display resolution
@@ -174,7 +182,6 @@ if ~openDisplay
   mglClearScreen(0);
   mglFlush;
 end
-mglSetParam('verbose',0);
 
 % round down to remove any decimal alpha request
 whichScreen = floor(whichScreen);

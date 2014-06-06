@@ -7,7 +7,7 @@
    copyright: (c) 2006 Justin Gardner, Jonas Larsson (GPL see mgl/COPYING)
      purpose: close OpenGL screen
 
-$Id: mglPrivateClose.c 967 2011-09-14 05:00:11Z chrg $
+$Id: mglPrivateClose.c 1087 2013-06-18 13:02:23Z justin $
 =========================================================================
 #endif
 
@@ -105,6 +105,7 @@ void cocoaClose(displayNumber,verbose)
   if (displayNumber >= 1) {
     if (verbose) mexPrintf("(mglPrivateClose) Closing full screen mode\n");
     [[myWindow contentView] exitFullScreenModeWithOptions:nil];
+    usleep(1000000);
   }
 
   // display retain counts
