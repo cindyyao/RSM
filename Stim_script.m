@@ -17,8 +17,8 @@ fprintf('\n\n<strong> Focus squares. </strong>\n');
 
 stimulus = [];
 stimulus.type = 'FS';
-stimulus.stim_width = 300;
-stimulus.stim_height = 300;
+stimulus.stim_width = 900;
+stimulus.stim_height = 900;
 stimulus.back_rgb = [0.5, 0.5, 0.5];
 
 run_stimulus(display, stimulus);
@@ -32,12 +32,13 @@ fprintf('?\n\n<strong> Solid full-screen color. </strong>\n');
 %
 %------------------------------------------------------------------------------
 stimulus.type = 'SC';
-stimulus.rgb = [1.0, 0.0, 0.0];    
 stimulus.back_rgb = [0.5, 0.5, 0.5];
+stimulus.rgb = [1, 0, 0];
+stimulus.rgb = stimulus.rgb - stimulus.back_rgb;   
 stimulus.wait_trigger = 0;
-stimulus.wait_key = 1;
-stimulus.x_start = 160;  stimulus.x_end = 480;
-stimulus.y_start = 80;   stimulus.y_end = 400;
+stimulus.wait_key = 0;
+stimulus.x_start = 320;  stimulus.x_end = 1120;
+stimulus.y_start = 50;   stimulus.y_end = 850;
 
 run_stimulus(display, stimulus);
 clear stimulus;
@@ -55,7 +56,7 @@ stimulus.back_rgb = [0.5, 0.5, 0.5];
 stimulus.frames = 60;
 stimulus.num_reps = 3;
 stimulus.wait_trigger = 0;
-stimulus.wait_key = 1;
+stimulus.wait_key = 0;
 
 run_stimulus(display, stimulus);
 clear stimulus;
@@ -68,18 +69,20 @@ clear stimulus;
 fprintf('\n\n<strong> Moving bar. </strong>\n');
 %
 %------------------------------------------------------------------------------
+clear_pending_stim
 stimulus = [];
 stimulus.type = 'MB';
-stimulus.rgb = 0.48 * [1.0, 1.0, 1.0];
-stimulus.back_rgb = [0.5, 0.5, 0.5];
+stimulus.back_rgb = [0, 0, 0];
+stimulus.rgb = [1.0, 0, 0];
+stimulus.rgb = stimulus.rgb - stimulus.back_rgb;
 stimulus.bar_width = 100;
-stimulus.direction = 315;
-stimulus.delta = 2;      
+stimulus.direction = [315 45];
+stimulus.delta = 10;      
 stimulus.interval = 60; %frame
-stimulus.num_reps = 2;
+stimulus.num_reps = 1;
 stimulus.wait_trigger = 0;
 stimulus.wait_key = 0;
-
+stimulus.repeats = 2;
 
 run_stimulus(display, stimulus);
 clear stimulus;
@@ -93,20 +96,21 @@ fprintf('\n\n<strong> Moving Grating. </strong>\n');
 
 stimulus = [];
 stimulus.type = 'MG';
-stimulus.subtype = 'sine';
-stimulus.rgb = [1.0, 1.0, 1.0];
+stimulus.subtype = 'square';
 stimulus.back_rgb = [0.0, 0.0, 0.0];
+stimulus.rgb = [1.0, 1.0, 1.0];
+stimulus.rgb = stimulus.rgb - stimulus.back_rgb;
 stimulus.phase0 = 0; 
 stimulus.temporal_period = 1;  % sec
-stimulus.spatial_period = 60;  % frame
+stimulus.spatial_period = 240;  % frame
 stimulus.direction = [0 90];       % Convention 0 deg is 3 oclock
 stimulus.frames = 300;        
 stimulus.wait_trigger = 0;
-stimulus.wait_key = 0;
-stimulus.repeats = 2;
+stimulus.wait_key = 1;
+stimulus.repeats = 1;
 
 
-run_stimulus_rand(display, stimulus);
+run_stimulus(display, stimulus);
 clear stimulus;
 
 
@@ -119,17 +123,18 @@ fprintf('\n\n<strong> Counterphase Grating. </strong>\n');
 
 stimulus = [];
 stimulus.type = 'CG';  
-stimulus.rgb = [1.0, 1.0, 1.0];
 stimulus.back_rgb = [0.0, 0.0, 0.0];
+stimulus.rgb = [1.0, 1.0, 1.0];
+stimulus.rgb = stimulus.rgb - stimulus.back_rgb;
 stimulus.phase0 = 0; 
 stimulus.temporal_period = 1;  
 stimulus.spatial_period = 60;
-stimulus.direction = 30;
+stimulus.direction = [0 45];
 
 stimulus.frames = 300;        
 stimulus.wait_trigger = 0;
 stimulus.wait_key = 0;
-stimulus.repeats = 2;
+stimulus.repeats = 1;
 
 run_stimulus_rand(display, stimulus);
 clear stimulus;
@@ -145,14 +150,15 @@ fprintf('\n\n<strong> Random Noise : Binary. </strong>\n');
 stimulus = [];
 stimulus.type = 'RN';
 
-stimulus.rgb = 0.48 * [1.0, 1.0, 1.0];
 stimulus.back_rgb = [0.5, 0.5, 0.5];
+stimulus.rgb = [1.0, 1.0, 1.0];
+stimulus.rgb = stimulus.rgb - stimulus.back_rgb;
 stimulus.independent = 1;
-stimulus.interval = 1; % frame
+stimulus.interval = 2; % frame
 stimulus.seed = 11111;
-stimulus.x_start = 160;  stimulus.x_end = 480;
-stimulus.y_start = 80;   stimulus.y_end = 400;
-stimulus.stixel_width = 10;      stimulus.stixel_height = 10;       stimulus.field_width = 32;        stimulus.field_height = 32;        
+stimulus.x_start = 420;  stimulus.x_end = 1020;
+stimulus.y_start = 150;   stimulus.y_end = 750;
+stimulus.stixel_width = 15;      stimulus.stixel_height = 15;       stimulus.field_width = 40;        stimulus.field_height = 40;        
 stimulus.duration = 5;  % sec    
 stimulus.wait_trigger = 0;
 stimulus.wait_key = 0;
@@ -172,14 +178,15 @@ fprintf('\n\n<strong> Random Noise : Binary. Demo 2- sync pulse. </strong>\n');
 
 stimulus = [];
 stimulus.type = 'RN';
-stimulus.rgb = 0.48 * [1.0, 1.0, 1.0];
 stimulus.back_rgb = [0.5, 0.5, 0.5];
+stimulus.rgb = [1.0, 1.0, 1.0];
+stimulus.rgb = stimulus.rgb - stimulus.back_rgb;
 stimulus.independent = 1;
-stimulus.interval = 1;
+stimulus.interval = 2;
 stimulus.seed = 11111;
-stimulus.x_start = 160;  stimulus.x_end = 480;
-stimulus.y_start = 80;   stimulus.y_end = 400;
-stimulus.stixel_width = 10;      stimulus.stixel_height = 10;       stimulus.field_width = 32;        stimulus.field_height = 32;        
+stimulus.x_start = 420;  stimulus.x_end = 1020;
+stimulus.y_start = 150;   stimulus.y_end = 750;
+stimulus.stixel_width = 15;      stimulus.stixel_height = 15;       stimulus.field_width = 40;        stimulus.field_height = 40;        
 stimulus.duration = 12;     
 stimulus.wait_trigger = 0;
 stimulus.wait_key = 0;
@@ -206,15 +213,15 @@ fprintf('\n\n<strong> Random Noise: Gaussian. </strong>\n');
 stimulus = [];
 stimulus.type = 'RG';
 
-stimulus.rgb = 0.48 * [1.0, 1.0, 1.0];
 stimulus.back_rgb = [0.5, 0.5, 0.5];
+stimulus.rgb = [1.0, 1.0, 1.0];
+stimulus.rgb = stimulus.rgb - stimulus.back_rgb;
 stimulus.interval = 3;
 stimulus.seed = 11111;
 
-stimulus.x_start = 160;  stimulus.x_end = 480;
-stimulus.y_start = 80;   stimulus.y_end = 400;
-
-stimulus.stixel_width = 10;      stimulus.stixel_height = 10;       stimulus.field_width = 32;        stimulus.field_height = 32;        
+stimulus.x_start = 420;  stimulus.x_end = 1020;
+stimulus.y_start = 150;   stimulus.y_end = 750;
+stimulus.stixel_width = 15;      stimulus.stixel_height = 15;       stimulus.field_width = 40;        stimulus.field_height = 40;        
 stimulus.duration = 5;     
 stimulus.wait_trigger = 0;
 stimulus.wait_key = 0;

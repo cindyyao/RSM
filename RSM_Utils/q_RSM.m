@@ -73,18 +73,40 @@ switch stimulus.type
         
     case 'MB',
         
-        exp_obj.pending_stimuli{num_pending + 1} = Moving_Bar(stimulus);
+        [stim, seq, trial_num_total] = rand_stim(stimulus);
+        stim_out = stimulus;
+        stim_out.trial_list = seq;
+        uisave('stim_out')
+
+        for i = 1:trial_num_total
+            exp_obj.pending_stimuli{num_pending + i} = Moving_Bar(stim(i));
+        end
+        
  
 
     case 'MG',
-        exp_obj.pending_stimuli{num_pending + 1} = Moving_Grating(stimulus, exp_obj);
+        [stim, seq, trial_num_total] = rand_stim(stimulus);
+        stim_out = stimulus;
+        stim_out.trial_list = seq;
+        uisave('stim_out')
+
+        for i = 1:trial_num_total
+            exp_obj.pending_stimuli{num_pending + i} = Moving_Grating(stim(i), exp_obj);
+        end
         
         mglSetParam('visualAngleSquarePixels',0,1);
         mglVisualAngleCoordinates(exp_obj.rig_geom.optical_path_length,[exp_obj.monitor.physical_width, exp_obj.monitor.physical_height]);
        
         
     case 'CG',
-        exp_obj.pending_stimuli{num_pending + 1} = Counterphase_Grating(stimulus, exp_obj);
+        [stim, seq, trial_num_total] = rand_stim(stimulus);
+        stim_out = stimulus;
+        stim_out.trial_list = seq;
+        uisave('stim_out')
+
+        for i = 1:trial_num_total
+            exp_obj.pending_stimuli{num_pending + i} = Counterphase_Grating(stim(i), exp_obj);
+        end
         
         mglSetParam('visualAngleSquarePixels',0,1);
         mglVisualAngleCoordinates(exp_obj.rig_geom.optical_path_length,[exp_obj.monitor.physical_width, exp_obj.monitor.physical_height]);
