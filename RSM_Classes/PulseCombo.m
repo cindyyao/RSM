@@ -4,6 +4,8 @@ classdef	PulseCombo < handle
         
                 % Required props for all stim classes 
         color
+        color_white
+        color_black
         backgrndcolor
 
         main_trigger
@@ -405,6 +407,77 @@ classdef	PulseCombo < handle
             obj.repeat_num = 0;
 
             obj.run_duration = [];
+            
+            
+        elseif (  stimuli.control_flag == 4 )
+          %-------------------------------------------------------------------------------------------------------------------    
+           
+            if (isfield(stimuli,'rgb_black'))
+                obj.color_black = [stimuli.rgb_black(1); stimuli.rgb_black(2); stimuli.rgb_black(3)];   
+                obj.color_black = Color_Test( obj.color_black );
+            else
+                fprintf('\t RSM ERROR: rgb black not recognized. Please define rgb black value and try again. \n');
+                return
+            end
+            
+            if (isfield(stimuli,'rgb_white'))
+                obj.color_white = [stimuli.rgb_white(1); stimuli.rgb_white(2); stimuli.rgb_white(3)];   
+                obj.color_white = Color_Test( obj.color_white );
+            else
+                fprintf('\t RSM ERROR: rgb white not recognized. Please define rgb white value and try again. \n');
+                return
+            end
+        
+            if (isfield(stimuli,'back_rgb'))
+                obj.backgrndcolor = [stimuli.back_rgb(1); stimuli.back_rgb(2); stimuli.back_rgb(3)];     
+                obj.backgrndcolor = Color_Test( obj.backgrndcolor );
+            else
+                fprintf('\t RSM ERROR: background rgb not recognized. Please define backgrndcolor value and try again. \n');
+                return
+            end
+        
+        
+            if (isfield(stimuli,'num_reps'))
+                if (isfield(stimuli,'frames'))
+                
+                    obj.num_reps = stimuli.num_reps;
+                    obj.frames_per_halfcycle = stimuli.frames;
+                   
+                else
+                   fprintf('\t RSM ERROR: Frames per half-cycle not recognized. Please define value and try again. \n');
+                   return
+                end 
+            else
+                fprintf('\t RSM ERROR: num_rep not recognized. Please define num_reps value and try again. \n');
+                return
+            end  
+
+            
+		    obj.wait_trigger = stimuli.wait_trigger;
+            obj.wait_key = stimuli.wait_key;
+           
+            % The following setup values are not under direct user control
+            % via the setup script
+            obj.stim_name =  'Pulse'; % formerly 'Flashing_Color';
+
+            obj.run_date_time = [];
+            obj.run_time_total = [];
+            
+            obj.main_trigger = 0;       
+            obj.tmain0 = [];
+            
+            obj.rep_trigger = 0;
+            obj.trep0 = [];
+            
+            obj.reps_run = 0;
+            
+            obj.run_script = 'Run_Pulses( exp_obj.stimulus );';
+            
+            obj.w = exp_obj.monitor.width;
+            obj.h = exp_obj.monitor.height;
+            obj.repeat_num = 0;
+
+            obj.run_duration = [];
     
 
             
@@ -611,6 +684,68 @@ classdef	PulseCombo < handle
  
             
             % Now the second phase of the cycle, return to background
+            mglQuad(x_vertices, y_vertices, obj.backgrndcolor, 0); 
+            
+            mglFlush();
+            Pulse_DigOut_Channel;
+            
+            % Now make sure the second buffer is loaded with the
+            % background
+            mglQuad(x_vertices, y_vertices, obj.backgrndcolor, 0);  
+            mglFlush();
+
+            RSM_Pause(obj.frames_per_halfcycle-1);
+  
+        end     % run single flash on or off 
+        
+        function Run_Pulses( obj )
+            
+                        
+            x_vertices = [0; obj.w; obj.w; 0];
+            y_vertices = [0; 0; obj.h; obj.h];
+        
+            % First phase: turn on white flash.
+            mglQuad(x_vertices, y_vertices, obj.color_white, 0); 
+                
+            mglFlush();
+            Pulse_DigOut_Channel;
+            
+            % Now make sure the second buffer is loaded with the
+            % fore-ground
+            mglQuad(x_vertices, y_vertices, obj.color_white, 0);  
+            mglFlush();
+            
+            RSM_Pause(obj.frames_per_halfcycle-1); 
+ 
+            
+            % Now the second phase of the cycle, return to background
+            mglQuad(x_vertices, y_vertices, obj.backgrndcolor, 0); 
+            
+            mglFlush();
+            Pulse_DigOut_Channel;
+            
+            % Now make sure the second buffer is loaded with the
+            % background
+            mglQuad(x_vertices, y_vertices, obj.backgrndcolor, 0);  
+            mglFlush();
+
+            RSM_Pause(obj.frames_per_halfcycle-1);
+            
+            % third phase: turn on black flash.
+            mglQuad(x_vertices, y_vertices, obj.color_black, 0); 
+                
+            mglFlush();
+            Pulse_DigOut_Channel;
+            
+            % Now make sure the second buffer is loaded with the
+            % fore-ground
+            mglQuad(x_vertices, y_vertices, obj.color_black, 0);  
+            mglFlush();
+            
+            RSM_Pause(obj.frames_per_halfcycle-1); 
+ 
+            
+            % Now the fourth phase of the cycle, return to background
             mglQuad(x_vertices, y_vertices, obj.backgrndcolor, 0); 
             
             mglFlush();

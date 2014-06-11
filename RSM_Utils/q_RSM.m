@@ -70,6 +70,10 @@ switch stimulus.type
         stimulus.control_flag = 3;
         exp_obj.pending_stimuli{num_pending + 1} = PulseCombo(stimulus, exp_obj);
         
+    case 'FP',  % full-field pulses
+        stimulus.control_flag = 4;
+        exp_obj.pending_stimuli{num_pending + 1} = PulseCombo(stimulus, exp_obj);
+        
         
     case 'MB',
         

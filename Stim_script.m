@@ -14,6 +14,7 @@ mglSetGammaTable( RSM_GLOBAL.monitor.red_table, RSM_GLOBAL.monitor.green_table, 
 fprintf('\n\n<strong> Focus squares. </strong>\n');
 %
 %-----------------------------------------------------------------------------
+clear_pending_stim
 
 stimulus = [];
 stimulus.type = 'FS';
@@ -31,6 +32,8 @@ clear stimulus;
 fprintf('?\n\n<strong> Solid full-screen color. </strong>\n');
 %
 %------------------------------------------------------------------------------
+clear_pending_stim
+
 stimulus.type = 'SC';
 stimulus.back_rgb = [0.5, 0.5, 0.5];
 stimulus.rgb = [1, 0, 0];
@@ -49,6 +52,8 @@ clear stimulus;
 fprintf('\n\n<strong> Flashing full-screen color. </strong>\n');
 %
 %------------------------------------------------------------------------------
+clear_pending_stim
+
 stimulus = [];
 stimulus.type = 'FC';  
 stimulus.rgb = [1, 0, 0];
@@ -61,6 +66,28 @@ stimulus.wait_key = 0;
 run_stimulus(display, stimulus);
 clear stimulus;
 
+%% Full Field Pulses (w-g-b-g)
+%------------------------------------------------------------------------------
+%
+fprintf('\n\n<strong> Full Field Pulses. </strong>\n');
+%
+%------------------------------------------------------------------------------
+clear_pending_stim
+
+stimulus = [];
+stimulus.type = 'FP';  
+stimulus.rgb_white = [1, 1, 1];
+stimulus.rgb_black = [0, 0, 0];
+stimulus.back_rgb = [0.5, 0.5, 0.5];
+stimulus.frames = 180;
+stimulus.num_reps = 3;
+stimulus.wait_trigger = 0;
+stimulus.wait_key = 0;
+
+run_stimulus(display, stimulus);
+clear stimulus;
+
+
 
 
 %% Moving bar
@@ -70,19 +97,20 @@ fprintf('\n\n<strong> Moving bar. </strong>\n');
 %
 %------------------------------------------------------------------------------
 clear_pending_stim
+
 stimulus = [];
 stimulus.type = 'MB';
 stimulus.back_rgb = [0, 0, 0];
 stimulus.rgb = [1.0, 0, 0];
 stimulus.rgb = stimulus.rgb - stimulus.back_rgb;
-stimulus.bar_width = 100;
-stimulus.direction = [315 45];
-stimulus.delta = 10;      
+stimulus.bar_width = 60;
+stimulus.direction = [90];
+stimulus.delta = 1;      
 stimulus.interval = 60; %frame
 stimulus.num_reps = 1;
 stimulus.wait_trigger = 0;
 stimulus.wait_key = 0;
-stimulus.repeats = 2;
+stimulus.repeats = 1;
 
 run_stimulus(display, stimulus);
 clear stimulus;
@@ -93,20 +121,21 @@ clear stimulus;
 fprintf('\n\n<strong> Moving Grating. </strong>\n');
 %
 %------------------------------------------------------------------------------
+clear_pending_stim
 
 stimulus = [];
 stimulus.type = 'MG';
-stimulus.subtype = 'square';
+stimulus.subtype = 'sine';
 stimulus.back_rgb = [0.0, 0.0, 0.0];
 stimulus.rgb = [1.0, 1.0, 1.0];
 stimulus.rgb = stimulus.rgb - stimulus.back_rgb;
 stimulus.phase0 = 0; 
 stimulus.temporal_period = 1;  % sec
-stimulus.spatial_period = 240;  % frame
-stimulus.direction = [0 90];       % Convention 0 deg is 3 oclock
+stimulus.spatial_period = 120;  % frame
+stimulus.direction = [30];       % Convention 0 deg is 3 oclock
 stimulus.frames = 300;        
 stimulus.wait_trigger = 0;
-stimulus.wait_key = 1;
+stimulus.wait_key = 0;
 stimulus.repeats = 1;
 
 
@@ -120,6 +149,7 @@ clear stimulus;
 fprintf('\n\n<strong> Counterphase Grating. </strong>\n');
 %
 %------------------------------------------------------------------------------
+clear_pending_stim
 
 stimulus = [];
 stimulus.type = 'CG';  
@@ -146,6 +176,7 @@ clear stimulus;
 fprintf('\n\n<strong> Random Noise : Binary. </strong>\n');
 %
 %------------------------------------------------------------------------------
+clear_pending_stim
 
 stimulus = [];
 stimulus.type = 'RN';
@@ -175,6 +206,7 @@ clear stimulus;
 fprintf('\n\n<strong> Random Noise : Binary. Demo 2- sync pulse. </strong>\n');
 %
 %------------------------------------------------------------------------------
+clear_pending_stim
 
 stimulus = [];
 stimulus.type = 'RN';
@@ -209,6 +241,7 @@ clear stimulus;
 fprintf('\n\n<strong> Random Noise: Gaussian. </strong>\n');
 %
 %------------------------------------------------------------------------------
+clear_pending_stim
 
 stimulus = [];
 stimulus.type = 'RG';
@@ -239,7 +272,8 @@ clear stimulus;
 fprintf('\n\n<strong> Raw Movie, Demo 1- forward. </strong>\n');
 %
 %------------------------------------------------------------------------------
-%
+clear_pending_stim
+
 stimulus = [];
 stimulus.type = 'RM';
 stimulus.fn = 'catcam_forest.rawMovie';
@@ -265,7 +299,7 @@ clear stimulus;
 fprintf('\n\n<strong> Raw Movie, Demo 2- reverse. </strong>\n');
 %
 %------------------------------------------------------------------------------
-
+clear_pending_stim
 
 stimulus = [];
 stimulus.type = 'RM';
@@ -292,7 +326,7 @@ clear stimulus;
 fprintf('\n\n<strong> Raw Movie, Demo 3- reverse & upside down; frames 2000 down to 1000. </strong>\n');
 %
 %------------------------------------------------------------------------------
-
+clear_pending_stim
 
 stimulus = [];
 stimulus.type = 'RM';
@@ -319,6 +353,8 @@ clear stimulus;
 fprintf('\n\n<strong> Cone-Isolating Pulse </strong>\n');
 %
 %------------------------------------------------------------------------------
+clear_pending_stim
+
 stimulus = [];
 stimulus.type = 'PL'; 
 stimulus.control_flag = 1;
@@ -339,6 +375,8 @@ clear stimulus;
 fprintf('\n\n<strong> Cone-Isolating Pulse; As setup by S-file. </strong>\n');
 %
 %-----------------------------------------------------------------------------
+clear_pending_stim
+
 fprintf('Test takes a long time to complete.\n');
 
 run_test = Tested_Input_Logical('Enter [1] to run demo, or [0] to skip.');
