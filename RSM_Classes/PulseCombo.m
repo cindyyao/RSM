@@ -409,7 +409,7 @@ classdef	PulseCombo < handle
             obj.run_duration = [];
             
             
-        elseif (  stimuli.control_flag == 4 )
+        elseif (  stimuli.control_flag == 5 )
           %-------------------------------------------------------------------------------------------------------------------    
            
             if (isfield(stimuli,'rgb_black'))
@@ -703,60 +703,64 @@ classdef	PulseCombo < handle
                         
             x_vertices = [0; obj.w; obj.w; 0];
             y_vertices = [0; 0; obj.h; obj.h];
-        
+            
+            Pulse_DigOut_Channel;
             % First phase: turn on white flash.
             mglQuad(x_vertices, y_vertices, obj.color_white, 0); 
                 
             mglFlush();
-            Pulse_DigOut_Channel;
+            
             
             % Now make sure the second buffer is loaded with the
             % fore-ground
             mglQuad(x_vertices, y_vertices, obj.color_white, 0);  
             mglFlush();
             
-            RSM_Pause(obj.frames_per_halfcycle-1); 
+            RSM_Pause(obj.frames_per_halfcycle-2); 
  
             
             % Now the second phase of the cycle, return to background
+            Pulse_DigOut_Channel;
             mglQuad(x_vertices, y_vertices, obj.backgrndcolor, 0); 
             
             mglFlush();
-            Pulse_DigOut_Channel;
+            
             
             % Now make sure the second buffer is loaded with the
             % background
             mglQuad(x_vertices, y_vertices, obj.backgrndcolor, 0);  
             mglFlush();
 
-            RSM_Pause(obj.frames_per_halfcycle-1);
+            RSM_Pause(obj.frames_per_halfcycle-2);
             
             % third phase: turn on black flash.
+            Pulse_DigOut_Channel;
             mglQuad(x_vertices, y_vertices, obj.color_black, 0); 
                 
             mglFlush();
-            Pulse_DigOut_Channel;
+            
             
             % Now make sure the second buffer is loaded with the
             % fore-ground
             mglQuad(x_vertices, y_vertices, obj.color_black, 0);  
             mglFlush();
             
-            RSM_Pause(obj.frames_per_halfcycle-1); 
+            RSM_Pause(obj.frames_per_halfcycle-2); 
  
             
             % Now the fourth phase of the cycle, return to background
+            Pulse_DigOut_Channel;
             mglQuad(x_vertices, y_vertices, obj.backgrndcolor, 0); 
             
             mglFlush();
-            Pulse_DigOut_Channel;
+            
             
             % Now make sure the second buffer is loaded with the
             % background
             mglQuad(x_vertices, y_vertices, obj.backgrndcolor, 0);  
             mglFlush();
 
-            RSM_Pause(obj.frames_per_halfcycle-1);
+            RSM_Pause(obj.frames_per_halfcycle-2);
   
         end     % run single flash on or off 
 		

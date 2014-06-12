@@ -79,10 +79,10 @@ stimulus.type = 'FP';
 stimulus.rgb_white = [1, 1, 1];
 stimulus.rgb_black = [0, 0, 0];
 stimulus.back_rgb = [0.5, 0.5, 0.5];
-stimulus.frames = 180;
+stimulus.frames = 60;
 stimulus.num_reps = 3;
 stimulus.wait_trigger = 0;
-stimulus.wait_key = 0;
+stimulus.wait_key = 1;
 
 run_stimulus(display, stimulus);
 clear stimulus;
@@ -104,7 +104,7 @@ stimulus.back_rgb = [0, 0, 0];
 stimulus.rgb = [1.0, 0, 0];
 stimulus.rgb = stimulus.rgb - stimulus.back_rgb;
 stimulus.bar_width = 60;
-stimulus.direction = [90];
+stimulus.direction = [100];
 stimulus.delta = 1;      
 stimulus.interval = 60; %frame
 stimulus.num_reps = 1;
@@ -125,17 +125,17 @@ clear_pending_stim
 
 stimulus = [];
 stimulus.type = 'MG';
-stimulus.subtype = 'sine';
+stimulus.subtype = 'square';
 stimulus.back_rgb = [0.0, 0.0, 0.0];
 stimulus.rgb = [1.0, 1.0, 1.0];
 stimulus.rgb = stimulus.rgb - stimulus.back_rgb;
 stimulus.phase0 = 0; 
 stimulus.temporal_period = 1;  % sec
 stimulus.spatial_period = 120;  % frame
-stimulus.direction = [30];       % Convention 0 deg is 3 oclock
+stimulus.direction = [45];       % Convention 0 deg is 3 oclock
 stimulus.frames = 300;        
 stimulus.wait_trigger = 0;
-stimulus.wait_key = 0;
+stimulus.wait_key = 1;
 stimulus.repeats = 1;
 
 
@@ -166,7 +166,7 @@ stimulus.wait_trigger = 0;
 stimulus.wait_key = 0;
 stimulus.repeats = 1;
 
-run_stimulus_rand(display, stimulus);
+run_stimulus(display, stimulus);
 clear stimulus;
 
 
@@ -184,7 +184,7 @@ stimulus.type = 'RN';
 stimulus.back_rgb = [0.5, 0.5, 0.5];
 stimulus.rgb = [1.0, 1.0, 1.0];
 stimulus.rgb = stimulus.rgb - stimulus.back_rgb;
-stimulus.independent = 1;
+stimulus.independent = 0;
 stimulus.interval = 2; % frame
 stimulus.seed = 11111;
 stimulus.x_start = 420;  stimulus.x_end = 1020;

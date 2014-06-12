@@ -70,6 +70,7 @@ end
     monitor_load_fn = cat(2, exp_session.monitor_dir_name, '/', exp_session.monitor_filename);
     
     monitor_obj = load( monitor_load_fn, 'obj' );
+    
 
     if (isempty( monitor_obj ))
         disp('ERROR: No valid monitor_description loaded');
