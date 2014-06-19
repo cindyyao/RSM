@@ -3,7 +3,7 @@
 Start_RSM;
 mglSetGammaTable( RSM_GLOBAL.monitor.red_table, RSM_GLOBAL.monitor.green_table, RSM_GLOBAL.monitor.blue_table );
 
-% mglMoveWindow(5, 1055);
+mglMoveWindow(5, 1055);
 
 %% Stimulus
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -104,7 +104,7 @@ stimulus.back_rgb = [0, 0, 0];
 stimulus.rgb = [1.0, 0, 0];
 stimulus.rgb = stimulus.rgb - stimulus.back_rgb;
 stimulus.bar_width = 60;
-stimulus.direction = [100];
+stimulus.direction = [50];
 stimulus.delta = 1;      
 stimulus.interval = 60; %frame
 stimulus.num_reps = 1;
@@ -122,20 +122,19 @@ fprintf('\n\n<strong> Moving Grating. </strong>\n');
 %
 %------------------------------------------------------------------------------
 clear_pending_stim
-
 stimulus = [];
 stimulus.type = 'MG';
-stimulus.subtype = 'square';
+stimulus.subtype = 'sine';
 stimulus.back_rgb = [0.0, 0.0, 0.0];
 stimulus.rgb = [1.0, 1.0, 1.0];
 stimulus.rgb = stimulus.rgb - stimulus.back_rgb;
-stimulus.phase0 = 0; 
+stimulus.phase0 = 45; 
 stimulus.temporal_period = 1;  % sec
 stimulus.spatial_period = 120;  % frame
-stimulus.direction = [45];       % Convention 0 deg is 3 oclock
+stimulus.direction = [315];       % Convention 0 deg is 3 oclock
 stimulus.frames = 300;        
 stimulus.wait_trigger = 0;
-stimulus.wait_key = 1;
+stimulus.wait_key = 0;
 stimulus.repeats = 1;
 
 
@@ -190,7 +189,7 @@ stimulus.seed = 11111;
 stimulus.x_start = 420;  stimulus.x_end = 1020;
 stimulus.y_start = 150;   stimulus.y_end = 750;
 stimulus.stixel_width = 15;      stimulus.stixel_height = 15;       stimulus.field_width = 40;        stimulus.field_height = 40;        
-stimulus.duration = 5;  % sec    
+stimulus.duration = 20;  % sec    
 stimulus.wait_trigger = 0;
 stimulus.wait_key = 0;
 stimulus.interval_sync = 0;

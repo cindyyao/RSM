@@ -47,6 +47,7 @@ classdef	Moving_Grating < handle
         
         phase_t0
         phase_velocity
+        moving_params 
         
         grating_sf_pix      % pixels per cycle 
         grating_sf_dva      % cyc per DVA (one DVA is 1 cm on screen)
@@ -101,28 +102,31 @@ classdef	Moving_Grating < handle
                            
                          
                             % Convention 0 deg is 3 oclock
-                            if  (stimuli.direction >= 0) || (stimuli.direction < 90)
-                               polarity_sign = 1;
+                            if  (stimuli.direction >= 0) && (stimuli.direction < 45)
+                                obj.moving_params = [1/cos(stimuli.direction/180*pi), 0, 1, 1];
+                               
+                            elseif (stimuli.direction >= 315) && (stimuli.direction < 360)
+                                obj.moving_params = [1/cos(stimuli.direction/180*pi), 0, 1, 1];
                                 
-                            elseif (stimuli.direction >= 90) || (stimuli.direction < 180)
-                                polarity_sign = -1;
+                            elseif (stimuli.direction >= 45) && (stimuli.direction < 135)
+                                obj.moving_params = [0, 1/sin(stimuli.direction/180*pi), 1, 1];
                                 
-                            elseif (stimuli.direction >= 180) || (stimuli.direction < 270)
-                                polarity_sign = 1;
+                            elseif (stimuli.direction >= 135) && (stimuli.direction < 225)
+                                obj.moving_params = [1/cos(stimuli.direction/180*pi), 0, 1, 1];
                                 
-                            elseif (stimuli.direction >= 270) || (stimuli.direction < 360)
-                                polarity_sign = -1;
+                            elseif (stimuli.direction >= 225) && (stimuli.direction < 360)
+                                obj.moving_params = [0, 1/sin(stimuli.direction/180*pi), 1, 1];
 
                             end
                             
-                            phase_velocity = polarity_sign * (360 / stimuli.temporal_period);
+                            velocity = 1/Convert_SF2DVA(stimuli.spatial_period / stimuli.temporal_period, exp_obj); % DVA/sec
                            
-                            obj.phase_t0 = stimuli.phase0;            
-                            obj.phase_velocity = phase_velocity;            
+                            obj.phase_velocity = velocity;            
                             obj.grating_sf_pix = stimuli.spatial_period;
                             obj.grating_sf_dva = Convert_SF2DVA( obj.grating_sf_pix, exp_obj );
-                            obj.grating_angle = stimuli.direction -90;
-                       
+                            obj.grating_angle = stimuli.direction;
+                            obj.phase_t0 = (stimuli.phase0/360)/obj.grating_sf_dva;            
+
                        else
                            fprintf('\t RSM ERROR: height grating direction not recognized. Please define direction and try again. \n');
                            return
@@ -161,6 +165,7 @@ classdef	Moving_Grating < handle
 
             obj.run_date_time = [];
             obj.run_time_total = [];
+            obj.run_duration = obj.n_frames/exp_obj.monitor.screen_refresh_freq;
             
             obj.stim_update_freq = []; % By setting this to empty we remove artificial delay in main execution while loop
             
@@ -304,66 +309,53 @@ classdef	Moving_Grating < handle
             not_done = 1;
             te = 0; 
             delta_t = 0;
-            local_t0 = mglGetSecs;
             te_last = 0;
-            phi = obj.phase_t0;
-           
+            phi = 0;
+            sf = obj.grating_sf_dva;
+            sp = 1/sf;
+            texWidth = 2 * obj.phase_velocity * obj.run_duration + obj.physical_width + obj.physical_height;
+            texHeight = texWidth;
+ 
+            % convert to pixels
+            texWidthPixels = round(mglGetParam('xDeviceToPixels')*texWidth);
+            texHeightPixels = round(mglGetParam('yDeviceToPixels')*texHeight);
+            
+            direction = obj.grating_angle;
+
+            numCycles = sf*texWidth;
+            switch obj.subtype
+                case 'square'
+                    grating = 255*(sign(sin((0:numCycles*2*pi/(texWidthPixels-1):numCycles*2*pi) + obj.phase_t0))+1)/2;
+                case 'sine'
+                    grating = 255*(sin((0:numCycles*2*pi/(texWidthPixels-1):numCycles*2*pi) + obj.phase_t0)+1)/2;
+                otherwise
+                    fprintf('\t RSM ERROR: Invalid stimulus subtype. Please specify "sine" or "square" and try again. \n');
+                    return
+            end
+            colored_grating = cat(3, ( (grating .* obj.color(1)) + round(255 .* obj.backgrndcolor(1)) ), ( (grating .* obj.color(2)) + round(255 .* obj.backgrndcolor(2)) ), ( (grating .* obj.color(3)) + round(255 .* obj.backgrndcolor(3)) ));
+            tex1dsquare = mglCreateTexture(colored_grating);
+
+            startTime = mglGetSecs;
             while( not_done )
-    
+                
                 % update phase
                 phi = phi + (obj.phase_velocity * delta_t);
-                
-                
-                % test for pulse
-                if (obj.phase_velocity > 0) 
-                    if ( phi >= (obj.phase_t0 + 360) )
-                        phi = phi - 360;
-                        Pulse_DigOut_Channel;
-                    end
-                else 
-                    % Then phase_velocity is negative
-                    if ( phi <= (obj.phase_t0 - 360) )
-                        phi = phi + 360;
-                        Pulse_DigOut_Channel;
-                    end
-                    
-                end
-                
+                Pulse_DigOut_Channel;
                 % Draw the grating
                 mglClearScreen( obj.backgrndcolor ); 
                 
                 % The phase switch in the phase (phi) is because
                 % mglMakeGrating adds the phase offset; whereas we want a
                 % subtracted phase offset.
-                switch obj.subtype
-                    case 'sine'
-                        
-                        grating = mglMakeGrating(obj.physical_width/4, obj.physical_height/4, 4 * obj.grating_sf_dva, obj.grating_angle, (phi));
-
-                        grating = 255*(grating+1)/2; 
-                    case 'square'
-                        grating = mglMakeGrating(obj.physical_width, obj.physical_height, obj.grating_sf_dva, obj.grating_angle, (phi));
-
-                        grating = 255*(sign(grating)+1)/2;
-                    otherwise
-                        fprintf('\t RSM ERROR: Invalid stimulus subtype. Please specify "sine" or "square" and try again. \n');
-                        return
-                end
-
-               
-                colored_grating = cat(3, ( (grating .* obj.color(1)) + round(255 .* obj.backgrndcolor(1)) ), ( (grating .* obj.color(2)) + round(255 .* obj.backgrndcolor(2)) ), ( (grating .* obj.color(3)) + round(255 .* obj.backgrndcolor(3)) ));
                 
-                tex = mglCreateTexture(colored_grating, [], 0, {'GL_TEXTURE_MAG_FILTER','GL_LINEAR'});
-    
-                mglBltTexture( tex, [0,0, obj.physical_width, obj.physical_height ] ); 
+               
+              
+                mglBltTexture( tex1dsquare, [phi phi nan texHeight].*obj.moving_params, 0, 0, direction ); 
     
                 mglFlush();
                 obj.frames_shown = obj.frames_shown + 1;
-                
-                mglDeleteTexture(tex);
-            
                 % now update the elapsed time before looping again
-                te = mglGetSecs(local_t0);
+                te = mglGetSecs(startTime);
                 
                 delta_t = te - te_last;
                 te_last = te;
@@ -374,9 +366,9 @@ classdef	Moving_Grating < handle
                     not_done = 0;
                     
                 end % test for end
+                
 
             end % tight loop
-  
         end     % run single repetition of bar across screen
 	
         
