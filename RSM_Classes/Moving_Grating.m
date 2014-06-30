@@ -336,11 +336,12 @@ classdef	Moving_Grating < handle
             tex1dsquare = mglCreateTexture(colored_grating);
 
             startTime = mglGetSecs;
+            Pulse_DigOut_Channel;
             while( not_done )
                 
                 % update phase
                 phi = phi + (obj.phase_velocity * delta_t);
-                Pulse_DigOut_Channel;
+                
                 % Draw the grating
                 mglClearScreen( obj.backgrndcolor ); 
                 
@@ -364,6 +365,7 @@ classdef	Moving_Grating < handle
                 if ( obj.frames_shown > obj.n_frames )
                     
                     not_done = 0;
+                    Pulse_DigOut_Channel;
                     
                 end % test for end
                 
