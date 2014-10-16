@@ -50,15 +50,15 @@ mglFlush;
 
 % Finally lets initialize the DIO (we will simply use the default port
 % values specified by Justin
-% mglDigIO('init');
+mglDigIO('init');
 
 % 6501 Output line starts high (~ +4.4 V), clear the line with a pulse
-% Pulse_DigOut_Channel;
+Pulse_DigOut_Channel;
 
 % NB: THIS DOES NOT OUTPUT A PULSE. It merely causes the line voltage to
 % drop low. 
 
-% Prerun_RNstim( prerun_obj ); 
+Prerun_RNstim( prerun_obj ); 
 
 clear prerun_obj;
 

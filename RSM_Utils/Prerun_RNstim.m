@@ -45,28 +45,28 @@ fprintf('Silent prerun of RN complete.\n');
 clear stimulus
 
 
-% Second we do a raw movie stimulus.
-stimulus.type = 'RM';
-stimulus.movie_path = prerun_obj.prerun_path;
-stimulus.fn = 'prerun_dummy.rawMovie';
-stimulus.back_rgb = [0.5, 0.5, 0.5];
-stimulus.x_cen_offset = 0;   stimulus.y_cen_offset = 0;
-stimulus.interval = 1;   
-stimulus.preload = 0;
-stimulus.wait_trigger = 0;
-stimulus.wait_key = 0;
-stimulus.interval_sync = 0;
-stimulus.stop_frame = [];
-stimulus.n_repeats = 1;
-stimulus.flip_flag = 1;          
-stimulus.reverse_flag = 0;       
-stimulus.first_frame = 1;
-stimulus.last_frame = 120;        
-
-[ prerun_obj ] = q_RSM( prerun_obj, stimulus );
-[prerun_obj] = run_RSM( prerun_obj );
-
-fprintf('Silent prerun of RM complete.\n');
-
-clear stimulus
+% % Second we do a raw movie stimulus.
+% stimulus.type = 'RM';
+% stimulus.movie_path = prerun_obj.prerun_path;
+% stimulus.fn = 'catcam_forest.rawMovie';
+% stimulus.back_rgb = [0.5, 0.5, 0.5];
+% stimulus.x_cen_offset = 0;   stimulus.y_cen_offset = 0;
+% stimulus.interval = 1;   
+% stimulus.preload = 0;
+% stimulus.wait_trigger = 0;
+% stimulus.wait_key = 0;
+% stimulus.interval_sync = 0;
+% stimulus.stop_frame = [];
+% stimulus.n_repeats = 1;
+% stimulus.flip_flag = 1;          
+% stimulus.reverse_flag = 0;       
+% stimulus.first_frame = 1;
+% stimulus.last_frame = 120;        
+% 
+% [ prerun_obj ] = q_RSM( prerun_obj, stimulus );
+% [prerun_obj] = run_RSM( prerun_obj );
+% 
+% fprintf('Silent prerun of RM complete.\n');
+% 
+% clear stimulus
  

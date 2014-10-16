@@ -66,7 +66,8 @@ classdef	Counterphase_Grating < handle
         grating_sf_dva      % cyc per DVA (one DVA is 1 cm on screen)
         
         grating_angle
-       
+        
+        interval
 	
 	end			% properties block
 	
@@ -89,7 +90,13 @@ classdef	Counterphase_Grating < handle
                 return
             end
 
-        
+            if (isfield(stimuli,'interval'))
+                
+                obj.interval = stimuli.interval;          %
+            else
+                fprintf('\t RSM ERROR: stimulus interval not recognized. Please define interval value and try again. \n');
+                return
+            end
         
             if (isfield(stimuli,'phase0'))
                 if (isfield(stimuli,'temporal_period'))
@@ -316,7 +323,7 @@ classdef	Counterphase_Grating < handle
             te_last = 0;
             phi = obj.phase_t0;
             phi2 = obj.phase_t0;
-            
+            Pulse_DigOut_Channel;
             while( not_done )
     
                 % update phase
@@ -328,13 +335,13 @@ classdef	Counterphase_Grating < handle
                 if (obj.phase_velocity > 0) 
                     if ( phi >= (obj.phase_t0 + 360) )
                         phi = phi - 360;
-                        Pulse_DigOut_Channel;
+%                         Pulse_DigOut_Channel;
                     end
                 else 
                     % Then phase_velocity is negative
                     if ( phi <= (obj.phase_t0 - 360) )
                         phi = phi + 360;
-                        Pulse_DigOut_Channel;
+%                         Pulse_DigOut_Channel;
                     end
                     
                 end
@@ -396,6 +403,12 @@ classdef	Counterphase_Grating < handle
                     
                 end % test for end
             end % tight loop
+            
+            if obj.interval ~= 0
+                mglClearScreen([.5 .5 .5])
+                mglFlush
+                mglWaitSecs(obj.interval)
+            end
   
         end     % run single repetition of bar across screen
 	

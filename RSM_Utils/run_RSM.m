@@ -10,7 +10,6 @@ function[exp_obj] = run_RSM( exp_obj )
 %  copyright: (c) Date William Vinje, Eduardo Jose Chichilnisky (GPL see RSM/COPYING)
 
 
-
 not_done = 1;
 
 % Now loop through stimuli pending in the queue

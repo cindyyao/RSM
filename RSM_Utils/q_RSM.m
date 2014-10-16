@@ -80,20 +80,27 @@ switch stimulus.type
         [stim, seq, trial_num_total] = rand_stim(stimulus);
         stim_out = stimulus;
         stim_out.trial_list = seq;
+        stim_out.trials = stim;
         uisave('stim_out')
 
+        
         for i = 1:trial_num_total
             exp_obj.pending_stimuli{num_pending + i} = Moving_Bar(stim(i));
         end
         
+        duration = calc_mb_duration(exp_obj);
+        fprintf('STIMULUS DURATION: %d Seconds\n', duration)
  
 
     case 'MG',
         [stim, seq, trial_num_total] = rand_stim(stimulus);
         stim_out = stimulus;
         stim_out.trial_list = seq;
+        stim_out.trials = stim;
         uisave('stim_out')
 
+
+        
         for i = 1:trial_num_total
             exp_obj.pending_stimuli{num_pending + i} = Moving_Grating(stim(i), exp_obj);
         end
@@ -106,8 +113,9 @@ switch stimulus.type
         [stim, seq, trial_num_total] = rand_stim(stimulus);
         stim_out = stimulus;
         stim_out.trial_list = seq;
+        stim_out.trials = stim;
         uisave('stim_out')
-
+        
         for i = 1:trial_num_total
             exp_obj.pending_stimuli{num_pending + i} = Counterphase_Grating(stim(i), exp_obj);
         end
@@ -137,6 +145,19 @@ switch stimulus.type
       return
       
 end % switch   
+
+if (stimulus.wait_trigger)
+    
+    % Wait for main trigger signal from DAQ
+    fprintf('WAITING FOR TRIGGER: %s \n', stimulus.type);
+    Scan_4_Trigger( exp_obj );  % recall the timestamp occurs within Scan_4_Trigger
+                
+elseif (stimulus.wait_key)
+        fprintf('WAITING FOR KEY: %s \n', stimulus.type);
+        % wait around and check for trigger event
+        pause; % wait for key press event
+
+end  % wait for main trigger event
 
 
 

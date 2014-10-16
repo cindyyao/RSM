@@ -53,6 +53,7 @@ classdef	Moving_Grating < handle
         grating_sf_dva      % cyc per DVA (one DVA is 1 cm on screen)
         
         grating_angle
+        interval
         
 	
 	end			% properties block
@@ -85,6 +86,13 @@ classdef	Moving_Grating < handle
                 return
             end
 
+            if (isfield(stimuli,'interval'))
+                
+                obj.interval = stimuli.interval;          %
+            else
+                fprintf('\t RSM ERROR: stimulus interval not recognized. Please define interval value and try again. \n');
+                return
+            end
         
         
             if (isfield(stimuli,'phase0'))
@@ -313,7 +321,7 @@ classdef	Moving_Grating < handle
             phi = 0;
             sf = obj.grating_sf_dva;
             sp = 1/sf;
-            texWidth = 2 * obj.phase_velocity * obj.run_duration + obj.physical_width + obj.physical_height;
+            texWidth = 2 * obj.grating_sf_dva + obj.physical_width + obj.physical_height;
             texHeight = texWidth;
  
             % convert to pixels
@@ -341,6 +349,11 @@ classdef	Moving_Grating < handle
                 
                 % update phase
                 phi = phi + (obj.phase_velocity * delta_t);
+                if phi > 1/obj.grating_sf_dva
+                    phi = phi - 1/obj.grating_sf_dva;
+                elseif phi < 0
+                    phi = phi + 1/obj.grating_sf_dva;
+                end
                 
                 % Draw the grating
                 mglClearScreen( obj.backgrndcolor ); 
@@ -365,12 +378,20 @@ classdef	Moving_Grating < handle
                 if ( obj.frames_shown > obj.n_frames )
                     
                     not_done = 0;
-                    Pulse_DigOut_Channel;
+%                     Pulse_DigOut_Channel;
                     
                 end % test for end
                 
 
             end % tight loop
+            
+
+            if obj.interval ~= 0
+                mglClearScreen([.5 .5 .5])
+                mglFlush();
+                mglWaitSecs(obj.interval)
+            end
+
         end     % run single repetition of bar across screen
 	
         

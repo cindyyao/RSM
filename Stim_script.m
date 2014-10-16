@@ -80,10 +80,9 @@ stimulus.rgb_white = [1, 1, 1];
 stimulus.rgb_black = [0, 0, 0];
 stimulus.back_rgb = [0.5, 0.5, 0.5];
 stimulus.frames = 60;
-stimulus.num_reps = 3;
+stimulus.num_reps = 1;
 stimulus.wait_trigger = 0;
-stimulus.wait_key = 1;
-
+stimulus.wait_key = 0;
 run_stimulus(display, stimulus);
 clear stimulus;
 
@@ -100,17 +99,18 @@ clear_pending_stim
 
 stimulus = [];
 stimulus.type = 'MB';
-stimulus.back_rgb = [0, 0, 0];
+stimulus.num_reps = 1;
+
+stimulus.back_rgb = [0.5, 0.5, 0.5];
 stimulus.rgb = [1, 1, 1];
 stimulus.rgb = stimulus.rgb - stimulus.back_rgb;
-stimulus.bar_width = [60 120 240];
-stimulus.direction = [0 45 90];
-stimulus.delta = 5;      
-stimulus.interval = 60; %frame
-stimulus.num_reps = 1;
+stimulus.bar_width = [120];
+stimulus.direction = [0 45 90 135 180 225 270 315];
+stimulus.delta = [0.25 0.5 1 2 4 10 20];  % pixel edge length/frame    
+stimulus.interval = 30; %frame
 stimulus.wait_trigger = 0;
-stimulus.wait_key = 0;
-stimulus.repeats = 2;
+stimulus.wait_key = 1;
+stimulus.repeats = 4;
 
 run_stimulus(display, stimulus);
 clear stimulus;
@@ -125,14 +125,15 @@ clear_pending_stim
 stimulus = [];
 stimulus.type = 'MG';
 stimulus.subtype = 'square';
-stimulus.back_rgb = [0.0, 0.0, 0.0];
+stimulus.back_rgb = [0, 0, 0];
 stimulus.rgb = [1.0, 1.0, 1.0];
 stimulus.rgb = stimulus.rgb - stimulus.back_rgb;
-stimulus.phase0 = 45; 
-stimulus.temporal_period = [1 0.5];  % sec
-stimulus.spatial_period = [120 60 240];  % frame
-stimulus.direction = [315 0];       % Convention 0 deg is 3 oclock
-stimulus.frames = 300;        
+stimulus.phase0 = 0; 
+stimulus.temporal_period = [0.1];  % sec
+stimulus.spatial_period = [60];  % frame
+stimulus.direction = [0 45 90 135 180 225 270 315];       % Convention 0 deg is 3 oclock
+stimulus.frames = 480;  
+stimulus.interval = 2; %Sec
 stimulus.wait_trigger = 0;
 stimulus.wait_key = 0;
 stimulus.repeats = 2;
@@ -164,7 +165,7 @@ stimulus.frames = 300;
 stimulus.wait_trigger = 0;
 stimulus.wait_key = 0;
 stimulus.repeats = 1;
-
+stimulus.interval = 2; %Sec
 run_stimulus(display, stimulus);
 clear stimulus;
 
@@ -189,8 +190,8 @@ stimulus.seed = 11111;
 stimulus.x_start = 420;  stimulus.x_end = 1020;
 stimulus.y_start = 150;   stimulus.y_end = 750;
 stimulus.stixel_width = 15;      stimulus.stixel_height = 15;       stimulus.field_width = 40;        stimulus.field_height = 40;        
-stimulus.duration = 20;  % sec    
-stimulus.wait_trigger = 0;
+stimulus.duration = 5;  % sec    
+stimulus.wait_trigger = 1;
 stimulus.wait_key = 0;
 stimulus.interval_sync = 0;
 stimulus.stop_frame = [];

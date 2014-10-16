@@ -113,5 +113,6 @@ if rp > 1
 end
 
 seq(1, :) = 1:trial_num;
+seq = reshape(seq', 1, rp*trial_num);
         
 end

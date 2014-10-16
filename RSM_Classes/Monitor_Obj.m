@@ -53,7 +53,7 @@ classdef	Monitor_Obj < handle
 	methods
 		
         % Constructor method
-        function[obj] = Monitor_Obj_New( varargin )
+        function[obj] = Monitor_Obj( varargin )
             
             % Set our default monitor path
             obj.gamma_model = @BrainardModel;    % Based on eqt. 16 from Brainard, Pelli & Robson
