@@ -26,3 +26,1029 @@ FINISHED WITH: Focus Squares
 
 Ready for next stimulus setup; "Stop_RSM" to quit. 
 Stop_RSM
+EJC: hardcoded host and rig in Setup_Rig.m
+EJC: hardcoded monitor path in Setup_Rig.m
+
+Configured for host: alligator // Rig ID: A 
+RSM Configuring display for 60.000 [Hz] 
+Silent prerun of RN complete.
+"display" object set for monitor: RigA_CRT1.
+RSM initialization complete.
+Cut and paste desired params. Enter: "RSM" to present stimuli; "Stop_RSM" to quit. 
+
+
+
+<strong> Moving bar. </strong>
+STIMULUS DURATION: 538 Seconds
+
+******************************  Session: 16-Oct-2014_RigA  Stimulus #: 1  ******************************* 
+
+SAVING SETUP INFO: Moving_Bar 
+RUNNING STIMULUS: Moving_Bar 
+FINISHED WITH: Moving_Bar 
+
+***********************************************************************************************
+
+******************************  Session: 16-Oct-2014_RigA  Stimulus #: 2  ******************************* 
+
+SAVING SETUP INFO: Moving_Bar 
+RUNNING STIMULUS: Moving_Bar 
+{Operation terminated by user during <a href="matlab:helpUtils.errorDocCallback('Moving_Bar/Run_Bar_Rep', '/RSM/RSM_Classes/Moving_Bar.m', 218)" style="font-weight:bold">Moving_Bar/Run_Bar_Rep</a> (<a href="matlab: opentoline('/RSM/RSM_Classes/Moving_Bar.m',218,0)">line 218</a>)
+
+
+In <a href="matlab:helpUtils.errorDocCallback('Stim_Engine', '/RSM/RSM_Utils/Stim_Engine.m', 112)" style="font-weight:bold">Stim_Engine</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/Stim_Engine.m',112,0)">line 112</a>)
+        eval(exp_obj.stimulus.run_script);
+
+In <a href="matlab:helpUtils.errorDocCallback('run_RSM', '/RSM/RSM_Utils/run_RSM.m', 27)" style="font-weight:bold">run_RSM</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/run_RSM.m',27,0)">line 27</a>)
+    [ exp_obj ] = Stim_Engine( exp_obj );
+
+In <a href="matlab:helpUtils.errorDocCallback('run_stimulus', '/RSM/RSM_Utils/run_stimulus.m', 28)" style="font-weight:bold">run_stimulus</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/run_stimulus.m',28,0)">line 28</a>)
+        RSM_GLOBAL = run_RSM(RSM_GLOBAL);
+} 
+Stop_RSM
+EJC: hardcoded host and rig in Setup_Rig.m
+EJC: hardcoded monitor path in Setup_Rig.m
+
+Configured for host: alligator // Rig ID: A 
+RSM Configuring display for 119.517 [Hz] 
+(mglResolution) Could not set display parameters to [640x480], frameRate: 119 bitDepth: 32
+                 Display parameters are set to: [640x480], frameRate=75, bitDepth=32
+Silent prerun of RN complete.
+{Error using <a href="matlab:helpUtils.errorDocCallback('fscanf')" style="font-weight:bold">fscanf</a>
+Invalid file identifier.  Use fopen to generate a valid file identifier.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('Raw_Movie', '/Users/xyao/Downloads/RSM_Bundle071614/RSM_Classes/Raw_Movie.m', 224)" style="font-weight:bold">Raw_Movie</a> (<a href="matlab: opentoline('/Users/xyao/Downloads/RSM_Bundle071614/RSM_Classes/Raw_Movie.m',224,0)">line 224</a>)
+            temp = fscanf(obj.fid, '%s', 1);                     % scan the file for a
+            string
+
+Error in <a href="matlab:helpUtils.errorDocCallback('q_RSM', '/Users/xyao/Downloads/RSM_Bundle071614/RSM_Utils/q_RSM.m', 101)" style="font-weight:bold">q_RSM</a> (<a href="matlab: opentoline('/Users/xyao/Downloads/RSM_Bundle071614/RSM_Utils/q_RSM.m',101,0)">line 101</a>)
+        exp_obj.pending_stimuli{num_pending + 1} = Raw_Movie( stimulus, exp_obj );
+
+Error in <a href="matlab:helpUtils.errorDocCallback('Prerun_RNstim', '/Users/xyao/Downloads/RSM_Bundle071614/RSM_Utils/Prerun_RNstim.m', 66)" style="font-weight:bold">Prerun_RNstim</a> (<a href="matlab: opentoline('/Users/xyao/Downloads/RSM_Bundle071614/RSM_Utils/Prerun_RNstim.m',66,0)">line 66</a>)
+[ prerun_obj ] = q_RSM( prerun_obj, stimulus );
+
+Error in <a href="matlab:helpUtils.errorDocCallback('Start_RSM', '/Users/xyao/Downloads/RSM_Bundle071614/RSM_Utils/Start_RSM.m', 61)" style="font-weight:bold">Start_RSM</a> (<a href="matlab: opentoline('/Users/xyao/Downloads/RSM_Bundle071614/RSM_Utils/Start_RSM.m',61,0)">line 61</a>)
+Prerun_RNstim( prerun_obj );
+} 
+stimulus = [];
+stimulus.type = 'MG';  
+stimulus.rgb = [1.0, 1.0, 1.0];
+stimulus.back_rgb = [0.0, 0.0, 0.0];
+stimulus.phase0 = 0; 
+stimulus.temporal_period = 3;  
+stimulus.spatial_period = 60;
+stimulus.direction = 315;
+stimulus.frames = 640;        
+stimulus.wait_trigger = 0;
+stimulus.wait_key = 1;
+
+
+run_stimulus(display, stimulus);
+{Error using <a href="matlab:helpUtils.errorDocCallback('display')" style="font-weight:bold">display</a>
+Not enough input arguments.
+} 
+Stop_RSM
+EJC: hardcoded host and rig in Setup_Rig.m
+EJC: hardcoded monitor path in Setup_Rig.m
+
+Configured for host: alligator // Rig ID: A 
+RSM Configuring display for 60.000 [Hz] 
+Silent prerun of RN complete.
+"display" object set for monitor: RigA_CRT1.
+RSM initialization complete.
+Cut and paste desired params. Enter: "RSM" to present stimuli; "Stop_RSM" to quit. 
+
+mglTestTexFast
+rand: 112.27ms
+mglBindTexture: 4.70ms
+mglBltTexture: 0.44ms
+mglFlush: 1.81ms
+mglDeleteTexture: 0.03ms
+edit mglTestTex.m
+mglTestTex(2)
+Ran for: 4.99427900 sec Intended: 5.00000000 sec
+Difference from intended: -5.72100002 ms
+Number of frames lost: 0/300 (-0.11%)
+Start_RSM;
+EJC: key globals being assigned in Setup_Rig.m
+EJC: hardcoded host and rig in Setup_Rig.m
+EJC: hardcoded monitor path in Setup_Rig.m
+
+Configured for host: alligator // Rig ID: A 
+RSM Configuring display for 60.000 [Hz] 
+Silent prerun of RN complete.
+"display" object set for monitor: RigA_CRT1.
+RSM initialization complete.
+Cut and paste desired params. Enter: "RSM" to present stimuli; "Stop_RSM" to quit. 
+
+mglSetGammaTable( RSM_GLOBAL.monitor.red_table, RSM_GLOBAL.monitor.green_table, RSM_GLOBAL.monitor.blue_table );
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 16-Oct-2014_RigA  Stimulus #: 1  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+Exception in thread "AWT-EventQueue-0" java.lang.NullPointerException
+	at com.mathworks.mlwidgets.workspace.ClassicWhosInformation.<init>(ClassicWhosInformation.java:20)
+	at com.mathworks.mlwidgets.workspace.ClassicWhosInformation.getInstance(ClassicWhosInformation.java:38)
+	at com.mathworks.mlwidgets.workspace.WhosRecordlistModel.setWhosInformation(WhosRecordlistModel.java:45)
+	at com.mathworks.mlwidgets.workspace.MatlabWorkspaceModel.setSuperWhosInformation(MatlabWorkspaceModel.java:519)
+	at com.mathworks.mlwidgets.workspace.MatlabWorkspaceModel.access$400(MatlabWorkspaceModel.java:19)
+	at com.mathworks.mlwidgets.workspace.MatlabWorkspaceModel$1.run(MatlabWorkspaceModel.java:532)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:209)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:715)
+	at java.awt.EventQueue.access$400(EventQueue.java:82)
+	at java.awt.EventQueue$2.run(EventQueue.java:676)
+	at java.awt.EventQueue$2.run(EventQueue.java:674)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.AccessControlContext$1.doIntersectionPrivilege(AccessControlContext.java:86)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:685)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:296)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:211)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:196)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:188)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 16-Oct-2014_RigA  Stimulus #: 2  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 16-Oct-2014_RigA  Stimulus #: 3  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+<a href="matlab: opentoline('/RSM/RSM_Classes/Moving_Grating.m',370,1)">370 </a>                obj.frames_shown = obj.frames_shown + 1;
+if system_dependent('IsDebugMode')==1, dbquit; end
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 16-Oct-2014_RigA  Stimulus #: 3  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+<a href="matlab: opentoline('/RSM/RSM_Classes/Moving_Grating.m',370,1)">370 </a>                obj.frames_shown = obj.frames_shown + 1;
+obj.physical_width
+
+ans =
+
+    16
+
+obj.physical_height
+
+ans =
+
+    10
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+clear_screen
+phi = 0;
+moving_params = [0, sqrt(2), 1, 1];
+grating = 255*(sign(sin((0:4*2*pi/(400-1):4*2*pi) + 0))+1)/2;
+colored_grating = cat(3, ( (grating .* 1) + round(255 .* 0.5) ), ( (grating .* 1) + round(255 .* 0.5) ), ( (grating .* 1) + round(255 .* 0.5) ));
+tex1dsquare = mglCreateTexture(colored_grating);
+
+mglClearScreen( [.5 .5 .5] );               
+mglBltTexture( tex1dsquare, [phi phi nan 200].*moving_params, 0, 0, 45 ); 
+mglFlush();
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 16-Oct-2014_RigA  Stimulus #: 3  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+<a href="matlab: opentoline('/RSM/RSM_Classes/Moving_Grating.m',370,1)">370 </a>                obj.frames_shown = obj.frames_shown + 1;
+clear_screen
+phi = 0;
+moving_params = [0, sqrt(2), 1, 1];
+grating = 255*(sign(sin((0:4*2*pi/(400-1):4*2*pi) + 0))+1)/2;
+colored_grating = cat(3, ( (grating .* 1) + round(255 .* 0.5) ), ( (grating .* 1) + round(255 .* 0.5) ), ( (grating .* 1) + round(255 .* 0.5) ));
+tex1dsquare = mglCreateTexture(colored_grating);
+
+mglClearScreen( [.5 .5 .5] );               
+mglBltTexture( tex1dsquare, [phi phi nan 26.5].*moving_params, 0, 0, 45 ); 
+mglFlush();
+clear_screen
+phi = 0;
+moving_params = [0, sqrt(2), 1, 1];
+grating = 255*(sign(sin((0:4*2*pi/(400-1):4*2*pi) + 0))+1)/2;
+colored_grating = cat(3, ( (grating .* 1) + round(255 .* 0.5) ), ( (grating .* 1) + round(255 .* 0.5) ), ( (grating .* 1) + round(255 .* 0.5) ));
+tex1dsquare = mglCreateTexture(colored_grating);
+
+mglClearScreen( [.5 .5 .5] );               
+mglBltTexture( tex1dsquare, [phi phi nan 15].*moving_params, 0, 0, 45 ); 
+mglFlush();
+clear_screen
+phi = 0;
+moving_params = [0, sqrt(2), 1, 1];
+grating = 255*(sign(sin((0:4*2*pi/(400-1):4*2*pi) + 0))+1)/2;
+colored_grating = cat(3, ( (grating .* 1) + round(255 .* 0) ), ( (grating .* 1) + round(255 .* 0) ), ( (grating .* 1) + round(255 .* 0) ));
+tex1dsquare = mglCreateTexture(colored_grating);
+
+mglClearScreen( [.5 .5 .5] );               
+mglBltTexture( tex1dsquare, [phi phi nan 15].*moving_params, 0, 0, 45 ); 
+mglFlush();
+clear_screen
+phi = 0;
+moving_params = [0, sqrt(2), 1, 1];
+grating = 255*(sign(sin((0:4*2*pi/(400-1):4*2*pi) + 0))+1)/2;
+colored_grating = cat(3, ( (grating .* 1) + round(255 .* 0) ), ( (grating .* 1) + round(255 .* 0) ), ( (grating .* 1) + round(255 .* 0) ));
+tex1dsquare = mglCreateTexture(colored_grating);
+
+mglClearScreen( [.5 .5 .5] );               
+mglBltTexture( tex1dsquare, [phi phi nan 8].*moving_params, 0, 0, 45 ); 
+mglFlush();
+phi = 0.5;
+moving_params = [0, sqrt(2), 1, 1];
+grating = 255*(sign(sin((0:4*2*pi/(400-1):4*2*pi) + 0))+1)/2;
+colored_grating = cat(3, ( (grating .* 1) + round(255 .* 0) ), ( (grating .* 1) + round(255 .* 0) ), ( (grating .* 1) + round(255 .* 0) ));
+tex1dsquare = mglCreateTexture(colored_grating);
+
+mglClearScreen( [.5 .5 .5] );               
+mglBltTexture( tex1dsquare, [phi phi nan 8].*moving_params, 0, 0, 45 ); 
+mglFlush();
+phi = 0;
+moving_params = [0, sqrt(2), 1, 1];
+grating = 255*(sign(sin((0:4*2*pi/(400-1):4*2*pi) + 0))+1)/2;
+colored_grating = cat(3, ( (grating .* 1) + round(255 .* 0) ), ( (grating .* 1) + round(255 .* 0) ), ( (grating .* 1) + round(255 .* 0) ));
+tex1dsquare = mglCreateTexture(colored_grating);
+
+mglClearScreen( [.5 .5 .5] );               
+mglBltTexture( tex1dsquare, [phi phi nan 8].*moving_params, 0, 0, 45 ); 
+mglFlush();
+if system_dependent('IsDebugMode')==1, dbquit; end
+Stop_RSM
+EJC: hardcoded host and rig in Setup_Rig.m
+EJC: hardcoded monitor path in Setup_Rig.m
+
+Configured for host: alligator // Rig ID: A 
+RSM Configuring display for 60.000 [Hz] 
+Silent prerun of RN complete.
+"display" object set for monitor: RigA_CRT1.
+RSM initialization complete.
+Cut and paste desired params. Enter: "RSM" to present stimuli; "Stop_RSM" to quit. 
+
+mglSetGammaTable( RSM_GLOBAL.monitor.red_table, RSM_GLOBAL.monitor.green_table, RSM_GLOBAL.monitor.blue_table );
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 16-Oct-2014_RigA  Stimulus #: 1  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 16-Oct-2014_RigA  Stimulus #: 2  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+{Operation terminated by user during <a href="matlab:helpUtils.errorDocCallback('Moving_Grating/Run_PhaseLoop_Rep', '/RSM/RSM_Classes/Moving_Grating.m', 377)" style="font-weight:bold">Moving_Grating/Run_PhaseLoop_Rep</a> (<a href="matlab: opentoline('/RSM/RSM_Classes/Moving_Grating.m',377,0)">line 377</a>)
+
+
+In <a href="matlab:helpUtils.errorDocCallback('Stim_Engine', '/RSM/RSM_Utils/Stim_Engine.m', 112)" style="font-weight:bold">Stim_Engine</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/Stim_Engine.m',112,0)">line 112</a>)
+        eval(exp_obj.stimulus.run_script);
+
+In <a href="matlab:helpUtils.errorDocCallback('run_RSM', '/RSM/RSM_Utils/run_RSM.m', 27)" style="font-weight:bold">run_RSM</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/run_RSM.m',27,0)">line 27</a>)
+    [ exp_obj ] = Stim_Engine( exp_obj );
+
+In <a href="matlab:helpUtils.errorDocCallback('run_stimulus', '/RSM/RSM_Utils/run_stimulus.m', 28)" style="font-weight:bold">run_stimulus</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/run_stimulus.m',28,0)">line 28</a>)
+        RSM_GLOBAL = run_RSM(RSM_GLOBAL);
+} 
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 16-Oct-2014_RigA  Stimulus #: 2  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+<a href="matlab: opentoline('/RSM/RSM_Classes/Moving_Grating.m',378,1)">378 </a>                obj.frames_shown = obj.frames_shown + 1;
+if system_dependent('IsDebugMode')==1, dbquit; end
+
+
+<strong> Moving Grating. </strong>
+[Warning: The class file for 'Moving_Grating' has been changed, but the change cannot be applied because
+objects based on the old class file still exist. If you use those objects, you might get unexpected
+results. You can use the 'clear' command to remove those objects. See 'help clear' for information on
+how to remove those objects.] 
+[> In <a href="matlab: opentoline('/RSM/RSM_Utils/q_RSM.m',105,1)">q_RSM at 105</a>
+  In <a href="matlab: opentoline('/RSM/RSM_Utils/run_stimulus.m',27,1)">run_stimulus at 27</a>] 
+
+******************************  Session: 16-Oct-2014_RigA  Stimulus #: 2  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+<a href="matlab: opentoline('/RSM/RSM_Classes/Moving_Grating.m',378,1)">378 </a>                obj.frames_shown = obj.frames_shown + 1;
+if system_dependent('IsDebugMode')==1, dbquit; end
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 16-Oct-2014_RigA  Stimulus #: 2  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+<a href="matlab: opentoline('/RSM/RSM_Classes/Moving_Grating.m',378,1)">378 </a>                obj.frames_shown = obj.frames_shown + 1;
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 16-Oct-2014_RigA  Stimulus #: 2  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+<a href="matlab: opentoline('/RSM/RSM_Classes/Moving_Grating.m',378,1)">378 </a>                obj.frames_shown = obj.frames_shown + 1;
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 16-Oct-2014_RigA  Stimulus #: 2  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+<a href="matlab: opentoline('/RSM/RSM_Classes/Moving_Grating.m',378,1)">378 </a>                obj.frames_shown = obj.frames_shown + 1;
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 16-Oct-2014_RigA  Stimulus #: 2  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+<a href="matlab: opentoline('/RSM/RSM_Classes/Moving_Grating.m',378,1)">378 </a>                obj.frames_shown = obj.frames_shown + 1;
+if system_dependent('IsDebugMode')==1, dbquit; end
+Stop_RSM
+EJC: hardcoded host and rig in Setup_Rig.m
+EJC: hardcoded monitor path in Setup_Rig.m
+
+Configured for host: alligator // Rig ID: A 
+RSM Configuring display for 60.000 [Hz] 
+Silent prerun of RN complete.
+"display" object set for monitor: RigA_CRT1.
+RSM initialization complete.
+Cut and paste desired params. Enter: "RSM" to present stimuli; "Stop_RSM" to quit. 
+
+mglSetGammaTable( RSM_GLOBAL.monitor.red_table, RSM_GLOBAL.monitor.green_table, RSM_GLOBAL.monitor.blue_table );
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 16-Oct-2014_RigA  Stimulus #: 1  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 16-Oct-2014_RigA  Stimulus #: 2  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 16-Oct-2014_RigA  Stimulus #: 3  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 16-Oct-2014_RigA  Stimulus #: 4  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 16-Oct-2014_RigA  Stimulus #: 5  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 16-Oct-2014_RigA  Stimulus #: 6  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 16-Oct-2014_RigA  Stimulus #: 7  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 16-Oct-2014_RigA  Stimulus #: 8  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 16-Oct-2014_RigA  Stimulus #: 9  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 16-Oct-2014_RigA  Stimulus #: 10  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 16-Oct-2014_RigA  Stimulus #: 11  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 16-Oct-2014_RigA  Stimulus #: 12  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 16-Oct-2014_RigA  Stimulus #: 13  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 16-Oct-2014_RigA  Stimulus #: 14  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 16-Oct-2014_RigA  Stimulus #: 15  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 16-Oct-2014_RigA  Stimulus #: 16  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 16-Oct-2014_RigA  Stimulus #: 17  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+Stop
+{Undefined function or variable 'Stop'.
+} 
+Stop_RSM
+EJC: hardcoded host and rig in Setup_Rig.m
+EJC: hardcoded monitor path in Setup_Rig.m
+
+Configured for host: alligator // Rig ID: A 
+RSM Configuring display for 60.000 [Hz] 
+Silent prerun of RN complete.
+"display" object set for monitor: RigA_CRT1.
+RSM initialization complete.
+Cut and paste desired params. Enter: "RSM" to present stimuli; "Stop_RSM" to quit. 
+
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 1  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 2  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+{Operation terminated by user during <a href="matlab:helpUtils.errorDocCallback('Moving_Grating/Run_PhaseLoop_Rep', '/RSM/RSM_Classes/Moving_Grating.m', 372)" style="font-weight:bold">Moving_Grating/Run_PhaseLoop_Rep</a> (<a href="matlab: opentoline('/RSM/RSM_Classes/Moving_Grating.m',372,0)">line 372</a>)
+
+
+In <a href="matlab:helpUtils.errorDocCallback('Stim_Engine', '/RSM/RSM_Utils/Stim_Engine.m', 112)" style="font-weight:bold">Stim_Engine</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/Stim_Engine.m',112,0)">line 112</a>)
+        eval(exp_obj.stimulus.run_script);
+
+In <a href="matlab:helpUtils.errorDocCallback('run_RSM', '/RSM/RSM_Utils/run_RSM.m', 27)" style="font-weight:bold">run_RSM</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/run_RSM.m',27,0)">line 27</a>)
+    [ exp_obj ] = Stim_Engine( exp_obj );
+
+In <a href="matlab:helpUtils.errorDocCallback('run_stimulus', '/RSM/RSM_Utils/run_stimulus.m', 28)" style="font-weight:bold">run_stimulus</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/run_stimulus.m',28,0)">line 28</a>)
+        RSM_GLOBAL = run_RSM(RSM_GLOBAL);
+} 
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 2  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 3  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 4  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+{Operation terminated by user during <a href="matlab:helpUtils.errorDocCallback('Moving_Grating/Run_PhaseLoop_Rep', '/RSM/RSM_Classes/Moving_Grating.m', 372)" style="font-weight:bold">Moving_Grating/Run_PhaseLoop_Rep</a> (<a href="matlab: opentoline('/RSM/RSM_Classes/Moving_Grating.m',372,0)">line 372</a>)
+
+
+In <a href="matlab:helpUtils.errorDocCallback('Stim_Engine', '/RSM/RSM_Utils/Stim_Engine.m', 112)" style="font-weight:bold">Stim_Engine</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/Stim_Engine.m',112,0)">line 112</a>)
+        eval(exp_obj.stimulus.run_script);
+
+In <a href="matlab:helpUtils.errorDocCallback('run_RSM', '/RSM/RSM_Utils/run_RSM.m', 27)" style="font-weight:bold">run_RSM</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/run_RSM.m',27,0)">line 27</a>)
+    [ exp_obj ] = Stim_Engine( exp_obj );
+
+In <a href="matlab:helpUtils.errorDocCallback('run_stimulus', '/RSM/RSM_Utils/run_stimulus.m', 28)" style="font-weight:bold">run_stimulus</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/run_stimulus.m',28,0)">line 28</a>)
+        RSM_GLOBAL = run_RSM(RSM_GLOBAL);
+} 
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 4  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 5  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 6  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 7  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+<a href="matlab: opentoline('/RSM/RSM_Classes/Moving_Grating.m',391,1)">391 </a>            if obj.interval ~= 0
+if system_dependent('IsDebugMode')==1, dbquit; end
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 7  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+<a href="matlab: opentoline('/RSM/RSM_Classes/Moving_Grating.m',391,1)">391 </a>            if obj.interval ~= 0
+if system_dependent('IsDebugMode')==1, dbquit; end
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 7  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 8  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 9  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 10  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 11  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 12  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 13  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 14  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 15  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+<a href="matlab: opentoline('/RSM/RSM_Classes/Moving_Grating.m',388,1)">388 </a>            if obj.interval ~= 0
+if system_dependent('IsDebugMode')==1, dbquit; end
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 15  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+<a href="matlab: opentoline('/RSM/RSM_Classes/Moving_Grating.m',370,1)">370 </a>                obj.frames_shown = obj.frames_shown + 1;
+if system_dependent('IsDebugMode')==1, dbquit; end
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 15  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+<a href="matlab: opentoline('/RSM/RSM_Classes/Moving_Grating.m',388,1)">388 </a>            if obj.interval ~= 0
+
+
+<strong> Moving Grating. </strong>
+[Warning: The class file for 'Moving_Grating' has been changed, but the change cannot be applied because
+objects based on the old class file still exist. If you use those objects, you might get unexpected
+results. You can use the 'clear' command to remove those objects. See 'help clear' for information on
+how to remove those objects.] 
+[> In <a href="matlab: opentoline('/RSM/RSM_Utils/q_RSM.m',105,1)">q_RSM at 105</a>
+  In <a href="matlab: opentoline('/RSM/RSM_Utils/run_stimulus.m',27,1)">run_stimulus at 27</a>] 
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 15  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+<a href="matlab: opentoline('/RSM/RSM_Classes/Moving_Grating.m',389,1)">389 </a>            if obj.interval ~= 0
+if system_dependent('IsDebugMode')==1, dbquit; end
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 15  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 16  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 17  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 18  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 19  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+edit PulseCombo.m
+Stop_RSM
+EJC: hardcoded host and rig in Setup_Rig.m
+EJC: hardcoded monitor path in Setup_Rig.m
+
+Configured for host: alligator // Rig ID: A 
+RSM Configuring display for 60.000 [Hz] 
+Silent prerun of RN complete.
+{Error using <a href="matlab:helpUtils.errorDocCallback('fscanf')" style="font-weight:bold">fscanf</a>
+Invalid file identifier.  Use fopen to generate a valid file identifier.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('Raw_Movie', '/RSM/RSM_Classes/Raw_Movie.m', 224)" style="font-weight:bold">Raw_Movie</a> (<a href="matlab: opentoline('/RSM/RSM_Classes/Raw_Movie.m',224,0)">line 224</a>)
+            temp = fscanf(obj.fid, '%s', 1);                     % scan the file for a string
+
+Error in <a href="matlab:helpUtils.errorDocCallback('q_RSM', '/RSM/RSM_Utils/q_RSM.m', 135)" style="font-weight:bold">q_RSM</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/q_RSM.m',135,0)">line 135</a>)
+        exp_obj.pending_stimuli{num_pending + 1} = Raw_Movie( stimulus, exp_obj );
+
+Error in <a href="matlab:helpUtils.errorDocCallback('Prerun_RNstim', '/RSM/RSM_Utils/Prerun_RNstim.m', 66)" style="font-weight:bold">Prerun_RNstim</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/Prerun_RNstim.m',66,0)">line 66</a>)
+[ prerun_obj ] = q_RSM( prerun_obj, stimulus );
+
+Error in <a href="matlab:helpUtils.errorDocCallback('Start_RSM', '/RSM/RSM_Utils/Start_RSM.m', 61)" style="font-weight:bold">Start_RSM</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/Start_RSM.m',61,0)">line 61</a>)
+Prerun_RNstim( prerun_obj );
+} 
+Stop_RSM
+EJC: hardcoded host and rig in Setup_Rig.m
+EJC: hardcoded monitor path in Setup_Rig.m
+
+Configured for host: alligator // Rig ID: A 
+RSM Configuring display for 60.000 [Hz] 
+Silent prerun of RN complete.
+"display" object set for monitor: RigA_CRT1.
+RSM initialization complete.
+Cut and paste desired params. Enter: "RSM" to present stimuli; "Stop_RSM" to quit. 
+
+
+
+<strong> Focus squares. </strong>
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 1  ******************************* 
+
+SAVING SETUP INFO: Focus Squares 
+RUNNING STIMULUS: Focus Squares 
+
+Hit any key to clear screen and return to session stim selection menu: 
+
+FINISHED WITH: Focus Squares 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+?
+
+<strong> Solid full-screen color. </strong>
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 2  ******************************* 
+
+SAVING SETUP INFO: Pulse 
+RUNNING STIMULUS: Pulse 
+
+Hit any key to clear screen and return to session stim selection menu: 
+
+FINISHED WITH: Pulse 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Flashing full-screen color. </strong>
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 3  ******************************* 
+
+SAVING SETUP INFO: Pulse 
+RUNNING STIMULUS: Pulse 
+FINISHED WITH: Pulse 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Full Field Pulses. </strong>
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 4  ******************************* 
+
+SAVING SETUP INFO: Pulse 
+RUNNING STIMULUS: Pulse 
+FINISHED WITH: Pulse 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Moving bar. </strong>
+STIMULUS DURATION: 909 Seconds
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 5  ******************************* 
+
+SAVING SETUP INFO: Moving_Bar 
+RUNNING STIMULUS: Moving_Bar 
+FINISHED WITH: Moving_Bar 
+
+***********************************************************************************************
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 6  ******************************* 
+
+SAVING SETUP INFO: Moving_Bar 
+RUNNING STIMULUS: Moving_Bar 
+{Operation terminated by user during <a href="matlab:helpUtils.errorDocCallback('Moving_Bar/Run_Bar_Rep', '/RSM/RSM_Classes/Moving_Bar.m', 221)" style="font-weight:bold">Moving_Bar/Run_Bar_Rep</a> (<a href="matlab: opentoline('/RSM/RSM_Classes/Moving_Bar.m',221,0)">line 221</a>)
+
+
+In <a href="matlab:helpUtils.errorDocCallback('Stim_Engine', '/RSM/RSM_Utils/Stim_Engine.m', 112)" style="font-weight:bold">Stim_Engine</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/Stim_Engine.m',112,0)">line 112</a>)
+        eval(exp_obj.stimulus.run_script);
+
+In <a href="matlab:helpUtils.errorDocCallback('run_RSM', '/RSM/RSM_Utils/run_RSM.m', 27)" style="font-weight:bold">run_RSM</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/run_RSM.m',27,0)">line 27</a>)
+    [ exp_obj ] = Stim_Engine( exp_obj );
+
+In <a href="matlab:helpUtils.errorDocCallback('run_stimulus', '/RSM/RSM_Utils/run_stimulus.m', 28)" style="font-weight:bold">run_stimulus</a> (<a href="matlab: opentoline('/RSM/RSM_Utils/run_stimulus.m',28,0)">line 28</a>)
+        RSM_GLOBAL = run_RSM(RSM_GLOBAL);
+} 
+
+
+<strong> Moving Grating. </strong>
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 6  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 7  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 8  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 9  ******************************* 
+
+SAVING SETUP INFO: Moving_Grating 
+RUNNING STIMULUS: Moving_Grating 
+FINISHED WITH: Moving_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+
+
+<strong> Counterphase Grating. </strong>
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 10  ******************************* 
+
+SAVING SETUP INFO: Counterphase_Grating 
+RUNNING STIMULUS: Counterphase_Grating 
+FINISHED WITH: Counterphase_Grating 
+
+***********************************************************************************************
+
+******************************  Session: 17-Oct-2014_RigA  Stimulus #: 11  ******************************* 
+
+SAVING SETUP INFO: Counterphase_Grating 
+RUNNING STIMULUS: Counterphase_Grating 
+FINISHED WITH: Counterphase_Grating 
+
+***********************************************************************************************
+
+Ready for next stimulus setup; "Stop_RSM" to quit. 
+edit q_RSM.m
+Stop_RSM

@@ -703,7 +703,7 @@ classdef	PulseCombo < handle
                         
             x_vertices = [0; obj.w; obj.w; 0];
             y_vertices = [0; 0; obj.h; obj.h];
-            % First phase: turn on background flash.
+            % First phase: turn on background.
             Pulse_DigOut_Channel;
             mglQuad(x_vertices, y_vertices, obj.backgrndcolor, 0); 
                 
@@ -711,7 +711,7 @@ classdef	PulseCombo < handle
             
             
             % Now make sure the second buffer is loaded with the
-            % fore-ground
+            % background
             mglQuad(x_vertices, y_vertices, obj.backgrndcolor, 0);  
             mglFlush();
             
@@ -728,13 +728,13 @@ classdef	PulseCombo < handle
             
             
             % Now make sure the second buffer is loaded with the
-            % background
+            % fore-ground
             mglQuad(x_vertices, y_vertices, obj.color_white, 0);  
             mglFlush();
 
             RSM_Pause(obj.frames_per_halfcycle-2);
             
-            % third phase: turn on background flash.
+            % third phase: return to background.
             Pulse_DigOut_Channel;
             mglQuad(x_vertices, y_vertices, obj.backgrndcolor, 0); 
                 
@@ -742,7 +742,7 @@ classdef	PulseCombo < handle
             
             
             % Now make sure the second buffer is loaded with the
-            % fore-ground
+            % background
             mglQuad(x_vertices, y_vertices, obj.backgrndcolor, 0);  
             mglFlush();
             
@@ -750,7 +750,7 @@ classdef	PulseCombo < handle
             
  
             
-            % Now the fourth phase of the cycle, turn on black flash
+            % Now the fourth phase of the cycle, go to black
             Pulse_DigOut_Channel;
             mglQuad(x_vertices, y_vertices, obj.color_black, 0); 
             
@@ -758,7 +758,7 @@ classdef	PulseCombo < handle
             
             
             % Now make sure the second buffer is loaded with the
-            % background
+            % fore-ground
             mglQuad(x_vertices, y_vertices, obj.color_black, 0);  
             mglFlush();
 

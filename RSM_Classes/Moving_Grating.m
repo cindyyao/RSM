@@ -127,13 +127,12 @@ classdef	Moving_Grating < handle
 
                             end
                             
-                            velocity = 1/Convert_SF2DVA(stimuli.spatial_period / stimuli.temporal_period, exp_obj); % DVA/sec
-                           
-                            obj.phase_velocity = velocity;            
+                            obj.phase_velocity = 360/stimuli.temporal_period; 
+                            obj.phase_t0 = stimuli.phase0;
                             obj.grating_sf_pix = stimuli.spatial_period;
                             obj.grating_sf_dva = Convert_SF2DVA( obj.grating_sf_pix, exp_obj );
                             obj.grating_angle = stimuli.direction;
-                            obj.phase_t0 = (stimuli.phase0/360)/obj.grating_sf_dva;            
+                            
 
                        else
                            fprintf('\t RSM ERROR: height grating direction not recognized. Please define direction and try again. \n');
@@ -173,7 +172,6 @@ classdef	Moving_Grating < handle
 
             obj.run_date_time = [];
             obj.run_time_total = [];
-            obj.run_duration = obj.n_frames/exp_obj.monitor.screen_refresh_freq;
             
             obj.stim_update_freq = []; % By setting this to empty we remove artificial delay in main execution while loop
             
@@ -317,11 +315,14 @@ classdef	Moving_Grating < handle
             not_done = 1;
             te = 0; 
             delta_t = 0;
+            local_t0 = mglGetSecs;
             te_last = 0;
-            phi = 0;
-            sf = obj.grating_sf_dva;
-            sp = 1/sf;
+            phi = obj.phase_t0;
+            
+                        
             texWidth = 2 * obj.grating_sf_dva + obj.physical_width + obj.physical_height;
+            numCycles = ceil(obj.grating_sf_dva*texWidth/2)*2;
+            texWidth = numCycles/obj.grating_sf_dva;
             texHeight = texWidth;
  
             % convert to pixels
@@ -330,7 +331,6 @@ classdef	Moving_Grating < handle
             
             direction = obj.grating_angle;
 
-            numCycles = sf*texWidth;
             switch obj.subtype
                 case 'square'
                     grating = 255*(sign(sin((0:numCycles*2*pi/(texWidthPixels-1):numCycles*2*pi) + obj.phase_t0))+1)/2;
@@ -343,16 +343,16 @@ classdef	Moving_Grating < handle
             colored_grating = cat(3, ( (grating .* obj.color(1)) + round(255 .* obj.backgrndcolor(1)) ), ( (grating .* obj.color(2)) + round(255 .* obj.backgrndcolor(2)) ), ( (grating .* obj.color(3)) + round(255 .* obj.backgrndcolor(3)) ));
             tex1dsquare = mglCreateTexture(colored_grating);
 
-            startTime = mglGetSecs;
-            Pulse_DigOut_Channel;
+            
             while( not_done )
                 
                 % update phase
                 phi = phi + (obj.phase_velocity * delta_t);
-                if phi > 1/obj.grating_sf_dva
-                    phi = phi - 1/obj.grating_sf_dva;
-                elseif phi < 0
-                    phi = phi + 1/obj.grating_sf_dva;
+                
+                % test for pulse
+                if ( phi >= (obj.phase_t0 + 360) )
+                    phi = phi - 360;
+                    Pulse_DigOut_Channel;
                 end
                 
                 % Draw the grating
@@ -362,14 +362,13 @@ classdef	Moving_Grating < handle
                 % mglMakeGrating adds the phase offset; whereas we want a
                 % subtracted phase offset.
                 
-               
-              
-                mglBltTexture( tex1dsquare, [phi phi nan texHeight].*obj.moving_params, 0, 0, direction ); 
+                pos = phi/360/obj.grating_sf_dva;
+                mglBltTexture( tex1dsquare, [pos pos nan texHeight].*obj.moving_params, 0, 0, direction ); 
     
                 mglFlush();
                 obj.frames_shown = obj.frames_shown + 1;
                 % now update the elapsed time before looping again
-                te = mglGetSecs(startTime);
+                te = mglGetSecs(local_t0);
                 
                 delta_t = te - te_last;
                 te_last = te;
@@ -378,11 +377,9 @@ classdef	Moving_Grating < handle
                 if ( obj.frames_shown > obj.n_frames )
                     
                     not_done = 0;
-%                     Pulse_DigOut_Channel;
                     
                 end % test for end
                 
-
             end % tight loop
             
 

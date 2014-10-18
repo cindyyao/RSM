@@ -233,9 +233,9 @@ if ( num_pending > 0 )
         % have presumably not set up from a S-file
         % So, reset to screen coordinates
         mglScreenCoordinates();
-    else
-        mglClearScreen( exp_obj.monitor.backgrndcolor );
-        mglFlush();
+%     else
+%         mglClearScreen( exp_obj.monitor.backgrndcolor );
+%         mglFlush();
     end
  
 else

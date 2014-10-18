@@ -97,12 +97,12 @@ classdef	Moving_Bar < handle
             
             if (isfield(stimuli,'direction'))
                 obj.direction = stimuli.direction;
-                L = 3000;
+                L = 3000; % Length of the bar, the idea of making this number large is to ensure that it covers the whole display. 
                 if stimuli.direction >= 0 && stimuli.direction < 90
-                    r0 = [0, display.height];
-                    obj.x_start = [0; 0; stimuli.bar_width; stimuli.bar_width];
+                    r0 = [0, display.height]; % coordinates of one display corner.
+                    obj.x_start = [0; 0; stimuli.bar_width; stimuli.bar_width]; % bar was first set to be either vertical or horizontal (base on moving direction)
                     obj.y_start = [L; -L; -L; L];
-                    [obj.x_start, obj.y_start] = rotateData(obj.x_start, obj.y_start, r0(1), r0(2), stimuli.direction*pi/180);
+                    [obj.x_start, obj.y_start] = rotateData(obj.x_start, obj.y_start, r0(1), r0(2), stimuli.direction*pi/180); % then the bar will be rotated around a corner of display by a certain degree (base on moving direction)
                 elseif stimuli.direction >= 90 && stimuli.direction < 180
                     r0 = [display.width, display.height];
                     obj.x_start = [-L; -L; L; L];
@@ -124,9 +124,12 @@ classdef	Moving_Bar < handle
                 end
                 obj.x_start = obj.x_start';
                 obj.y_start = obj.y_start';
+                
+                % make the bar moving either vertically or horizontally
+                % based on which distance is shorter
                 x_dis = (abs(tan(stimuli.direction*pi/180)*display.height)+display.width);
                 y_dis = (abs(display.width/tan(stimuli.direction*pi/180))+display.height);
-                [dis, I] = min([x_dis, y_dis]);
+                [dis, I] = min([x_dis, y_dis]); 
                 if (isfield(stimuli,'delta'))
                     switch I
                     case 1                        
