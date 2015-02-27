@@ -1052,3 +1052,24 @@ FINISHED WITH: Counterphase_Grating
 Ready for next stimulus setup; "Stop_RSM" to quit. 
 edit q_RSM.m
 Stop_RSM
+ default_mondesc_path: []
+                 mon_num: 2
+           backgrndcolor: [0.5000 0.5000 0.5000]
+
+stimuli
+
+stimuli = 
+
+            type: 'MB'
+        num_reps: 1
+        back_rgb: [0.5000 0.5000 0.5000]
+             rgb: [0.5000 0.5000 0.5000]
+       bar_width: 120
+       direction: 270
+           delta: 10
+        interval: 0
+    wait_trigger: 0
+        wait_key: 1
+         repeats: 1
+
+Stop_RSM
