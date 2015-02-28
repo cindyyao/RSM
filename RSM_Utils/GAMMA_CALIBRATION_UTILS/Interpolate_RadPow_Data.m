@@ -16,6 +16,6 @@ function[ gunval_interp, radpow_interp ] = Interpolate_RadPow_Data( gun_vals, ra
 
 gunval_interp = linspace(0,((2^N_bits)-1),(2^N_bits));
 
-gunval_interp = gunval_interp ./ (2^N_bits-1);
+% gunval_interp = gunval_interp ./ (2^N_bits-1);
 
 radpow_interp = interp1(gun_vals, radpow_data, gunval_interp);

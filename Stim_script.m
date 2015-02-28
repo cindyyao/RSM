@@ -16,10 +16,11 @@ fprintf('\n\n<strong> Focus squares. </strong>\n');
 %-----------------------------------------------------------------------------
 clear_pending_stim
 
+
 stimulus = [];
 stimulus.type = 'FS';
-stimulus.stim_width = 900;
-stimulus.stim_height = 900;
+stimulus.stim_width = 800;
+stimulus.stim_height = 600;
 stimulus.back_rgb = [0.5, 0.5, 0.5];
 
 run_stimulus(display, stimulus);
@@ -80,7 +81,7 @@ stimulus.rgb_white = [1, 1, 1];
 stimulus.rgb_black = [0, 0, 0];
 stimulus.back_rgb = [0.5, 0.5, 0.5];
 stimulus.frames = 60;
-stimulus.num_reps = 1;
+stimulus.num_reps = 5;
 stimulus.wait_trigger = 0;
 stimulus.wait_key = 0;
 run_stimulus(display, stimulus);
@@ -129,12 +130,12 @@ stimulus.back_rgb = [0, 0, 0];
 stimulus.rgb = [1.0, 1.0, 1.0];
 stimulus.rgb = stimulus.rgb - stimulus.back_rgb;
 stimulus.phase0 = 0; 
-stimulus.temporal_period = [0.1];  % sec
-stimulus.spatial_period = [60];  % frame
+stimulus.temporal_period = [2];  % sec
+stimulus.spatial_period = [120];  % frame
 stimulus.direction = [0 45 90 135 180 225 270 315];       % Convention 0 deg is 3 oclock
-stimulus.frames = 480;  
-stimulus.interval = 2; %Sec
-stimulus.wait_trigger = 0;
+stimulus.frames = 240;  
+stimulus.interval = 0; %Sec
+stimulus.wait_trigger = 1;
 stimulus.wait_key = 0;
 stimulus.repeats = 2;
 

@@ -57,25 +57,25 @@ exp_obj.stimulus.run_date_time = clock;
 % We are now ready to run stim.
 % Convention is that we record the trigger timestamp before we flush
 % the screen.   
-% if (exp_obj.stimulus.wait_trigger)
-%     
-%     % Wait for main trigger signal from DAQ
-%     fprintf('WAITING FOR TRIGGER: %s \n', exp_obj.stimulus.stim_name);
-%     [ exp_obj.stimulus.tmain0(exp_obj.stimulus.repeat_num) ] = Scan_4_Trigger( exp_obj );  % recall the timestamp occurs within Scan_4_Trigger
-%                 
-% else
-%     if (exp_obj.stimulus.wait_key)
-%         fprintf('WAITING FOR KEY: %s \n', exp_obj.stimulus.stim_name);
-%         % wait around and check for trigger event
-%         pause;
-%         exp_obj.stimulus.tmain0(exp_obj.stimulus.repeat_num) = mglGetSecs;
-%             
-%     else
-%         exp_obj.stimulus.tmain0(exp_obj.stimulus.repeat_num) = mglGetSecs;
-%  
-%     end  % wait for key press event
-% 
-% end  % wait for main trigger event
+if (exp_obj.stimulus.wait_trigger)
+    
+    % Wait for main trigger signal from DAQ
+    fprintf('WAITING FOR TRIGGER: %s \n', exp_obj.stimulus.stim_name);
+    [ exp_obj.stimulus.tmain0(exp_obj.stimulus.repeat_num) ] = Scan_4_Trigger( exp_obj );  % recall the timestamp occurs within Scan_4_Trigger
+                
+else
+    if (exp_obj.stimulus.wait_key)
+        fprintf('WAITING FOR KEY: %s \n', exp_obj.stimulus.stim_name);
+        % wait around and check for trigger event
+        pause;
+        exp_obj.stimulus.tmain0(exp_obj.stimulus.repeat_num) = mglGetSecs;
+            
+    else
+        exp_obj.stimulus.tmain0(exp_obj.stimulus.repeat_num) = mglGetSecs;
+ 
+    end  % wait for key press event
+
+end  % wait for main trigger event
    
 exp_obj.stimulus.tmain0(exp_obj.stimulus.repeat_num) = mglGetSecs;
 % Trigger condition has now been met, on with the show!
@@ -233,9 +233,9 @@ if ( num_pending > 0 )
         % have presumably not set up from a S-file
         % So, reset to screen coordinates
         mglScreenCoordinates();
-%     else
-%         mglClearScreen( exp_obj.monitor.backgrndcolor );
-%         mglFlush();
+    else
+        mglClearScreen( exp_obj.monitor.backgrndcolor );
+        mglFlush();
     end
  
 else

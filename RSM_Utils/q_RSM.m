@@ -146,21 +146,21 @@ switch stimulus.type
       
 end % switch   
 
-if (stimulus.wait_trigger)
-    
-    % Wait for main trigger signal from DAQ
-    fprintf('WAITING FOR TRIGGER: %s \n', stimulus.type);
-    Scan_4_Trigger( exp_obj );  % recall the timestamp occurs within Scan_4_Trigger
-                
-elseif (stimulus.wait_key)
-        fprintf('WAITING FOR KEY: %s \n', stimulus.type);
-        % wait around and check for trigger event
-        pause; % wait for key press event
-
-end  % wait for main trigger event
-
-
-
-
-
-
+% if (stimulus.wait_trigger)
+%     
+%     % Wait for main trigger signal from DAQ
+%     fprintf('WAITING FOR TRIGGER: %s \n', stimulus.type);
+%     Scan_4_Trigger( exp_obj );  % recall the timestamp occurs within Scan_4_Trigger
+%                 
+% elseif (stimulus.wait_key)
+%         fprintf('WAITING FOR KEY: %s \n', stimulus.type);
+%         % wait around and check for trigger event
+%         pause; % wait for key press event
+% 
+% end  % wait for main trigger event
+% 
+% 
+% 
+% 
+% 
+% 
