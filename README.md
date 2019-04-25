@@ -1,3 +1,3 @@
 RSM
 ===
-A Library for Experiments.
+A Library for visual stimulus presentation.
